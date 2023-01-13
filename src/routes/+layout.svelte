@@ -11,7 +11,10 @@
 {#key data.currentRoute}
 	<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }} class="mx-auto px-3">
 		{#if data.session}
-			<p>{data.session.user?.name}</p>
+			<div class="flex w-full flex-row items-center justify-between">
+				<p>{data.session.user?.name}</p>
+				<button on:click={() => signOut()}>Sign out</button>
+			</div>
 		{:else}
 			<button on:click={() => signIn()}>Sign in</button>
 		{/if}
