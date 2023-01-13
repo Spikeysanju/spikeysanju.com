@@ -1,0 +1,24 @@
+<script lang="ts">
+	import Card from '$lib/components/blog/Card.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+</script>
+
+<section class="flex w-full flex-col items-center justify-center">
+	<h1 class="w-full text-start text-5xl tracking-tight">Blog.</h1>
+
+	<div class="grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.96),1fr))] gap-2">
+		{#each data.posts as item}
+			<a href={`/blog/${item.path}`}>
+				<Card title={item.meta.title} author={item.meta.author} />
+			</a>
+		{/each}
+
+		{#if data.posts.length === 0}
+			<div class="flex h-full w-full flex-col items-center justify-center">
+				<h2 class="text-2xl">No posts found.</h2>
+			</div>
+		{/if}
+	</div>
+</section>
