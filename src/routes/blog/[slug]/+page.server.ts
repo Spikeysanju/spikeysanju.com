@@ -1,5 +1,4 @@
 import prisma from '$lib/prisma/prisma';
-import { CommentProvider } from '@prisma/client';
 import { redirect, type Actions, fail } from '@sveltejs/kit';
 
 export const actions: Actions = {
@@ -40,15 +39,6 @@ export const actions: Actions = {
 				}
 				return blog;
 			});
-
-		// save the comment
-		await prisma.comment.create({
-			data: {
-				content: comment,
-				commentProvider: CommentProvider.BLOG,
-				blogId: slug
-			}
-		});
 
 		return { success: true, message: 'Comment published', type: 'success' };
 	}
