@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "amas" ALTER COLUMN "description" SET DATA TYPE TEXT,
+ALTER COLUMN "question" SET DATA TYPE TEXT;

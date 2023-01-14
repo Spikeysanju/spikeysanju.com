@@ -23,35 +23,52 @@ model User {
   comment       Comment[]
   ama           Ama[]
   sessions      Session[]
+  blog          Blog[]
 
   @@map("users")
+}
+
+model Blog {
+  id          String    @id @unique @default(cuid())
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @updatedAt @map("updated_at")
+  title       String    @db.VarChar(255)
+  description String    @db.VarChar(255)
+  content     String
+  category    String[]
+  slug        String    @unique
+  comment     Comment[]
+  userId      String?   @map("user_id")
+  user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("blogs")
 }
 
 model Ama {
   id          String    @id @unique @default(cuid())
   createdAt   DateTime? @default(now()) @map("created_at")
   updatedAt   DateTime? @updatedAt @map("updated_at")
-  title       String    @db.VarChar(255)
-  description String    @db.VarChar(255)
-  label       String
+  question    String    
+  description String    
+  flair       String
   comment     Comment[]
-  provider    String
   userId      String?   @map("user_id")
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
   @@map("amas")
 }
 
 model Comment {
-  id        String    @id @unique @default(cuid())
-  createdAt DateTime? @default(now()) @map("created_at")
-  updatedAt DateTime? @updatedAt @map("updated_at")
-  content   String
-  provider  String
-  amaId     String?   @map("ama_id")
-  ama       Ama?      @relation(fields: [amaId], references: [id], onDelete: Cascade)
-  userId    String?   @map("user_id")
-  user      User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id              String          @id @unique @default(cuid())
+  createdAt       DateTime?       @default(now()) @map("created_at")
+  updatedAt       DateTime?       @updatedAt @map("updated_at")
+  content         String
+  commentProvider CommentProvider @default(ASKMEANYTHING) @map("comment_provider")
+  blogId          String?         @map("blog_id")
+  blog            Blog?           @relation(fields: [blogId], references: [id], onDelete: Cascade)
+  amaId           String?         @map("ama_id")
+  ama             Ama?            @relation(fields: [amaId], references: [id], onDelete: Cascade)
+  userId          String?         @map("user_id")
+  user            User?           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("comments")
 }
@@ -99,4 +116,12 @@ model VerificationToken {
 enum Role {
   USER
   ADMIN
+}
+
+enum CommentProvider {
+  ASKMEANYTHING
+  BLOG
+  TOOLSIUSE
+  BOOKS
+  GUESTBOOK
 }

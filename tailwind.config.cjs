@@ -4,22 +4,7 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		fontFamily: {
-			sans: [
-				'"Helvetica Neue"',
-				'"Inter"',
-				'system-ui',
-				'-apple-system',
-				'BlinkMacSystemFont',
-				'"Segoe UI"',
-				'Roboto',
-				'Arial',
-				'"Noto Sans"',
-				'sans-serif',
-				'"Apple Color Emoji"',
-				'"Segoe UI Emoji"',
-				'"Segoe UI Symbol"',
-				'"Noto Color Emoji"'
-			]
+			satoshi: "'Satoshi', sans-serif"
 		},
 		container: {
 			center: true
@@ -30,5 +15,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/forms')]
 };

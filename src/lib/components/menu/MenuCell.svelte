@@ -5,7 +5,7 @@
 </script>
 
 <a
-	class="flex w-full items-center justify-between text-start text-2xl tracking-tight text-gray-900 transition-all delay-150 hover:underline"
+	class="delay-50 flex w-full items-center justify-between text-start text-2xl font-semibold tracking-tight text-gray-900 transition-all hover:underline"
 	{href}
 >
 	{name}

@@ -1,8 +1,9 @@
 import type { PageServerLoad } from './$types';
+import prisma from '$lib/prisma/prisma';
 
 export const load = (async () => {
+	const ama = await prisma.ama.findMany();
 	return {
-		books: 'Show your work!',
-		description: 'This is a description of the books page.'
+		ama: ama
 	};
 }) satisfies PageServerLoad;

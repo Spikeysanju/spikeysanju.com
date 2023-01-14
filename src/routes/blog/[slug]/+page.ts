@@ -4,13 +4,15 @@ export const load = (async ({ params }) => {
 	console.log('params', params.slug);
 
 	const post = await import(`/src/lib/posts/${params.slug}.md`);
-	const { title, date, author } = post.metadata;
+	const { title, date, author, image } = post.metadata;
 	const content = post.default;
 
 	return {
-		content,
-		title,
-		date,
-		author
+		title: title,
+		content: content,
+		date: date,
+		author: author,
+		slug: params.slug,
+		image: image
 	};
 }) satisfies PageLoad;

@@ -1,9 +1,11 @@
+<script lang="ts">
+	import Icon from '../icon/Icon.svelte';
+</script>
+
 <nav class="flex w-full py-3">
 	<div class="flex w-full flex-row items-center justify-between">
-		<a href="/" class="text-base font-medium tracking-tight"> Spikey Sanju</a>
+		<a href="/" class="text-lg font-bold tracking-tight"> Spikey Sanju;</a>
 
-		<div class="space-x-3">
-			<a href="/about">About</a>
-		</div>
+		<Icon name="night" width="20" height="20" />
 	</div>
 </nav>

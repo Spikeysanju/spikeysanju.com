@@ -1,13 +1,19 @@
 import { fetchMarkdownPosts } from '$lib/utils';
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import type { Data } from '$lib/type/blog-metadata';
 
 export const GET: RequestHandler = async () => {
 	const allPosts = await fetchMarkdownPosts();
 
 	const sortedPosts = allPosts.sort((a, b) => {
-		return new Date(b.meta.date) - new Date(a.meta.date);
-	});
+		return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
+	}) satisfies Data[];
 
-	return json(sortedPosts);
+	return new Response(JSON.stringify(sortedPosts), {
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		status: 200,
+		statusText: 'OK'
+	});
 };

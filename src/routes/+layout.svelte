@@ -9,7 +9,11 @@
 </script>
 
 {#key data.currentRoute}
-	<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }} class="mx-auto px-3">
+	<main
+		in:fade={{ duration: 150, delay: 150 }}
+		out:fade={{ duration: 150 }}
+		class="mx-auto max-w-2xl px-3"
+	>
 		{#if data.session}
 			<div class="flex w-full flex-row items-center justify-between">
 				<p>{data.session.user?.name}</p>

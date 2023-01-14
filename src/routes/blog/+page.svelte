@@ -6,12 +6,12 @@
 </script>
 
 <section class="flex w-full flex-col items-center justify-center">
-	<h1 class="w-full text-start text-5xl tracking-tight">Blog.</h1>
+	<h1 class="w-full text-start tracking-tight">Blog.</h1>
 
-	<div class="grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.96),1fr))] gap-2">
+	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">
 		{#each data.posts as item}
 			<a href={`/blog/${item.path}`}>
-				<Card title={item.meta.title} author={item.meta.author} />
+				<Card title={item.meta.title} author={item.meta.author} image={item.meta.image} />
 			</a>
 		{/each}
 
