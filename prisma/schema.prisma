@@ -24,6 +24,7 @@ model User {
   ama           Ama[]
   sessions      Session[]
   blog          Blog[]
+  tools         Tools[]
 
   @@map("users")
 }
@@ -48,13 +49,29 @@ model Ama {
   id          String    @id @unique @default(cuid())
   createdAt   DateTime? @default(now()) @map("created_at")
   updatedAt   DateTime? @updatedAt @map("updated_at")
-  question    String    
-  description String    
+  question    String
+  description String
   flair       String
   comment     Comment[]
   userId      String?   @map("user_id")
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@map("amas")
+}
+
+model Tools {
+  id          String    @id @unique @default(cuid())
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @updatedAt @map("updated_at")
+  name        String
+  description String
+  image       String
+  link        String
+  comment     Comment[]
+  userId      String?   @map("user_id")
+  user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("tools")
 }
 
 model Comment {
@@ -69,6 +86,8 @@ model Comment {
   ama             Ama?            @relation(fields: [amaId], references: [id], onDelete: Cascade)
   userId          String?         @map("user_id")
   user            User?           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  toolsId         String?         @map("tools_id")
+  tools           Tools?          @relation(fields: [toolsId], references: [id], onDelete: Cascade)
 
   @@map("comments")
 }
