@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from '$lib/components/blog/Card.svelte';
+	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -11,7 +11,7 @@
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">
 		{#each data.blogs as item}
 			<a href={`/blog/${item.path}`}>
-				<Card title={item.meta.title} author={item.meta.author} image={item.meta.image} />
+				<BlogCard title={item.meta.title} author={item.meta.author} image={item.meta.image} />
 			</a>
 		{/each}
 
