@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AmaCard from '$lib/components/ama/AmaCard.svelte';
+	import AmaCard from '$lib/components/ama/AmaQuestionCard.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -32,4 +32,7 @@
 			</div>
 		{/if}
 	</div>
+
+	
+
 </section>

@@ -9,15 +9,15 @@
 	<h1 class="w-full text-start tracking-tight">Blog.</h1>
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">
-		{#each data.posts as item}
+		{#each data.blogs as item}
 			<a href={`/blog/${item.path}`}>
 				<Card title={item.meta.title} author={item.meta.author} image={item.meta.image} />
 			</a>
 		{/each}
 
-		{#if data.posts.length === 0}
+		{#if data.blogs.length === 0}
 			<div class="flex h-full w-full flex-col items-center justify-center">
-				<h2 class="text-2xl">No posts found.</h2>
+				<h2 class="text-2xl">No blogs found.</h2>
 			</div>
 		{/if}
 	</div>
