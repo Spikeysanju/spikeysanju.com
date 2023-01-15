@@ -1,11 +1,11 @@
 import type { PageLoad } from './$types';
 
 export const load = (async ({ params }) => {
-	console.log('blog params', params.slug);
+	console.log('books params', params.slug);
 
-	const blog = await import(`/src/lib/data/blogs/${params.slug}.md`);
-	const { title, date, author, image } = blog.metadata;
-	const content = blog.default;
+	const books = await import(`/src/lib/data/books/${params.slug}.md`);
+	const { title, date, author, image } = books.metadata;
+	const content = books.default;
 
 	return {
 		title: title,
