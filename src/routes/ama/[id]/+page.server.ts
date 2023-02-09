@@ -4,7 +4,6 @@ import type { PageServerLoad } from './$types';
 import type { Prisma } from '@prisma/client';
 
 export const load = (async ({ params }) => {
-	
 	const ama = await prisma.ama.findUnique({
 		where: {
 			id: params.id

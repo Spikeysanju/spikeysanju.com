@@ -32,20 +32,18 @@ model User {
 }
 
 model Media {
-  id        String    @id @unique @default(cuid())
-  createdAt DateTime? @default(now()) @map("created_at")
-  updatedAt DateTime? @updatedAt @map("updated_at")
-  title      String
+  id          String    @id @unique @default(cuid())
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @updatedAt @map("updated_at")
+  title       String
   description String?
-  type      String
-  url       String
-  userId    String?   @map("user_id")
-  user      User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        String
+  url         String
+  userId      String?   @map("user_id")
+  user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("media")
 }
-
-
 
 model Blog {
   id          String    @id @unique @default(cuid())
@@ -177,4 +175,3 @@ enum CommentProvider {
   BOOKS
   GUESTBOOK
 }
-
