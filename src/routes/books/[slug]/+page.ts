@@ -13,6 +13,6 @@ export const load = (async ({ params }) => {
 		date: date,
 		author: author,
 		slug: params.slug,
-		image: image
+		image: image,
 	};
 }) satisfies PageLoad;

@@ -1,5 +1,5 @@
 import type { Data } from '$lib/type/blog-metadata';
-import { fetchBooksMarkdownPosts } from '$lib/utils';
+import { fetchBooksMarkdownPosts } from '$lib/utils/utils';
 import type { RequestHandler } from './$types';
 
 const siteURL = 'https://www.spikeysanju.com';

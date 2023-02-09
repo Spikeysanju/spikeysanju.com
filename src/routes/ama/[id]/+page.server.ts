@@ -4,6 +4,7 @@ import type { PageServerLoad } from './$types';
 import type { Prisma } from '@prisma/client';
 
 export const load = (async ({ params }) => {
+	
 	const ama = await prisma.ama.findUnique({
 		where: {
 			id: params.id
@@ -54,14 +55,24 @@ export const actions: Actions = {
 			.create({
 				data: {
 					content: comment,
-					amaId: amaId,
-					userId: 'clcv8d4j20000no51pcp04bop'
+					ama: {
+						connect: {
+							id: amaId
+						}
+					},
+					user: {
+						connect: {
+							email: session?.user?.email as string
+						}
+					}
 				} as Prisma.CommentCreateInput
 			})
 			.then(() => {
+				console.log('comment created');
 				return redirect(303, `/ama/${amaId}`);
 			})
 			.catch((err) => {
+				console.log(err);
 				return fail(400, {
 					message: err
 				});

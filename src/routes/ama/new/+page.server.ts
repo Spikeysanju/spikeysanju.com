@@ -1,5 +1,19 @@
 import { redirect, type Actions, fail } from '@sveltejs/kit';
 import prisma from '$lib/prisma/prisma';
+import type { PageServerLoad } from '../$types';
+
+export const load = (async ({ locals }) => {
+	const session = await locals.getSession();
+
+	// check if user is logged in
+	if (!session) {
+		throw redirect(303, '/signin');
+	}
+
+	return {
+		user: JSON.stringify(session)
+	};
+}) satisfies PageServerLoad;
 
 export const actions: Actions = {
 	create: async (event) => {

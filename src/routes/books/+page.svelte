@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Card from '$lib/components/blog/BlogCard.svelte';
 	import BookCard from '$lib/components/book/BookCard.svelte';
 	import type { PageData } from './$types';
 
@@ -7,7 +6,11 @@
 </script>
 
 <section class="flex w-full flex-col items-center justify-center">
-	<h1 class="w-full text-start tracking-tight">Books.</h1>
+	<h1 class="flex w-full text-start tracking-tight">Books.</h1>
+	<p class="flex w-full text-gray-500">
+		Books I've read and enjoyed. I've tried to keep this list as up to date as possible, but I'm
+		sure I've missed a few.
+	</p>
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.40),1fr))] gap-6">
 		{#each data.books as item}

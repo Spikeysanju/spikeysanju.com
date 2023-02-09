@@ -1,5 +1,22 @@
 import { redirect, type Actions, fail } from '@sveltejs/kit';
 import prisma from '$lib/prisma/prisma';
+import type { PageServerLoad } from '../$types';
+import { Role } from '@prisma/client';
+
+export const load = (async ({ locals }) => {
+	const session = await locals.getSession();
+
+	const user = await prisma.user.findUnique({
+		where: {
+			email: session?.user?.email as string
+		}
+	});
+
+	// only admins can create new people
+	if (user?.role !== Role.ADMIN) {
+		throw redirect(303, '/');
+	}
+}) satisfies PageServerLoad;
 
 export const actions: Actions = {
 	create: async (event) => {
@@ -20,8 +37,8 @@ export const actions: Actions = {
 			})
 			.then((response) => {
 				// if user is not admin, redirect to home
-				if (response?.role !== 'ADMIN') {
-					throw redirect(303, '/');
+				if (response?.role !== Role.ADMIN) {
+					throw redirect(303, '/signin');
 				}
 
 				return response;
@@ -34,24 +51,24 @@ export const actions: Actions = {
 
 		// we are save, so we can get the form data
 		const formData = await request.formData();
-		const name = formData.get('name') as string;
+		const title = formData.get('title') as string;
 		const description = formData.get('description') as string;
 		const image = formData.get('image') as string;
-		const link = formData.get('link') as string;
+		const fileType = formData.get('type') as string;
 
-		if (!name || !description || !image || !link) {
+		if (!title || !description || !image || !fileType) {
 			return fail(400, {
 				message: 'Please fill out all fields'
 			});
 		}
 
-		await prisma.tools
+		await prisma.media
 			.create({
 				data: {
-					name: name,
+					title: title,
 					description: description,
-					image: image,
-					link: link,
+					url: image,
+					type: fileType,
 					user: {
 						connect: {
 							email: session?.user?.email as string
@@ -62,9 +79,12 @@ export const actions: Actions = {
 			.then((response) => {
 				return {
 					status: 303,
+					message: 'Success - Redirecting to /photos',
+					body: response,
 					headers: {
-						location: `/tools/${response.id}`
-					}
+						location: '/photos'
+					},
+					redirect: true
 				};
 			})
 			.catch((error) => {
