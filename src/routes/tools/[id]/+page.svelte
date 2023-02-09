@@ -9,15 +9,15 @@
 
 <section class="flex w-full flex-col">
 	<div class="flex w-full flex-col space-y-3">
-		<h1>{data.tools.name}</h1>
-		<p>{data.tools.description}</p>
+		<h1>{data.tools?.name}</h1>
+		<p>{data.tools?.description}</p>
 	</div>
 
 	<div class="mt-6 flex w-full flex-col space-y-3">
 		<h3>Comments</h3>
 
 		<form method="post" action="?/create">
-			<input type="hidden" name="amaId" id="amaId" value={data.ama?.id} />
+			<input type="hidden" name="toolId" id="toolId" value={data.tools?.id} />
 
 			<input
 				name="comment"

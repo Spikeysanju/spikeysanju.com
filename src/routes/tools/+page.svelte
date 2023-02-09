@@ -7,7 +7,7 @@
 
 <section>
 	<h1>Tools.</h1>
-	<p>Here is my list of tools i use on my day to day life.</p>
+	<p class="flex w-full text-gray-500">Here is my list of tools i use on my day to day life.</p>
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.24),1fr))] gap-12">
 		{#each data.tools as item}

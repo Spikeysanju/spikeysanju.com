@@ -61,6 +61,7 @@
 		</select>
 
 		<button
+			data-sveltekit-preload-data="hover"
 			type="submit"
 			class="text-md w-full items-center rounded-md border border-transparent bg-black px-4 py-2 font-bold text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
 			>Ask ama</button

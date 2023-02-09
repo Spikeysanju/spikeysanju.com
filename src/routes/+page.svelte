@@ -40,6 +40,11 @@
 			name: 'Ama',
 			href: '/ama',
 			icon: 'ama'
+		},
+		{
+			name: 'IRL',
+			href: '/irl',
+			icon: 'irl'
 		}
 	] satisfies Links[];
 </script>

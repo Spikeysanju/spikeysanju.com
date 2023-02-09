@@ -1,4 +1,4 @@
-import { fetchBlogsMarkdownPosts } from '$lib/utils';
+import { fetchBlogsMarkdownPosts } from '$lib/utils/utils';
 import type { RequestHandler } from './$types';
 import type { Data } from '$lib/type/blog-metadata';
 

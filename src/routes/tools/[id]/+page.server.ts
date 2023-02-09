@@ -40,7 +40,7 @@ export const actions: Actions = {
 
 		// we are save, so we can get the form data
 		const formData = await request.formData();
-		const toolsId = formData.get('toolsId') as string;
+		const toolId = formData.get('toolId') as string;
 		const comment = formData.get('comment') as string;
 
 		if (!comment) {
@@ -54,12 +54,12 @@ export const actions: Actions = {
 			.create({
 				data: {
 					content: comment,
-					toolsId: toolsId,
+					toolsId: toolId,
 					userId: 'clcv8d4j20000no51pcp04bop'
 				} as Prisma.CommentCreateInput
 			})
 			.then(() => {
-				return redirect(303, `/tools/${toolsId}`);
+				return redirect(303, `/tools/${toolId}`);
 			})
 			.catch((err) => {
 				return fail(400, {

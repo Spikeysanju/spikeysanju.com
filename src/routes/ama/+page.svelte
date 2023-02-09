@@ -7,9 +7,15 @@
 
 <section>
 	<h1>Ask me anything</h1>
-	<p>You can feel free to ask any question about career, tech, design or topics.</p>
+	<p class="w-full text-gray-500">I'll try to answer as many questions as possible.</p>
 
-	<div class="mt-6 flex w-full flex-col">
+	<button
+		class="mt-4 rounded-sm bg-gray-100 px-3 py-2 font-medium text-black hover:cursor-pointer hover:bg-gray-200"
+	>
+		<a href="/ama/new">Ask a question</a>
+	</button>
+
+	<div class="mt-6 flex w-full flex-col gap-8">
 		{#each data.ama as item}
 			<a href={`/ama/${item.id}`}>
 				<AmaCard
@@ -32,7 +38,4 @@
 			</div>
 		{/if}
 	</div>
-
-	
-
 </section>

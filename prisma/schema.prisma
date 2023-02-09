@@ -11,22 +11,38 @@ datasource db {
 }
 
 model User {
-  id            String    @id @unique @default(cuid())
-  name          String?
-  email         String    @unique
-  emailVerified DateTime? @map("email_verified")
-  image         String?
-  role          Role      @default(USER)
-  createdAt     DateTime  @default(now()) @map("created_at")
-  updatedAt     DateTime  @updatedAt @map("updated_at")
-  accounts      Account[]
-  comment       Comment[]
-  ama           Ama[]
-  sessions      Session[]
-  blog          Blog[]
-  tools         Tools[]
+  id                  String                @id @unique @default(cuid())
+  name                String?
+  email               String                @unique
+  emailVerified       DateTime?             @map("email_verified")
+  image               String?
+  role                Role                  @default(USER)
+  createdAt           DateTime              @default(now()) @map("created_at")
+  updatedAt           DateTime              @updatedAt @map("updated_at")
+  accounts            Account[]
+  comment             Comment[]
+  ama                 Ama[]
+  sessions            Session[]
+  blog                Blog[]
+  tools               Tools[]
+  peopleIWannaMeetIRL PeopleIWannaMeetIRL[]
+  media               Media[]
 
   @@map("users")
+}
+
+model Media {
+  id          String    @id @unique @default(cuid())
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @updatedAt @map("updated_at")
+  title       String
+  description String?
+  type        String
+  url         String
+  userId      String?   @map("user_id")
+  user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("media")
 }
 
 model Blog {
@@ -72,6 +88,21 @@ model Tools {
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("tools")
+}
+
+model PeopleIWannaMeetIRL {
+  id        String    @id @unique @default(cuid())
+  createdAt DateTime? @default(now()) @map("created_at")
+  updatedAt DateTime? @updatedAt @map("updated_at")
+  name      String
+  image     String?
+  link      String
+  tags      String[]  @db.VarChar(255)
+  met       Boolean   @default(false)
+  userId    String?   @map("user_id")
+  user      User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("people_i_wanna_meet_irl")
 }
 
 model Comment {
