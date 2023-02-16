@@ -11,9 +11,10 @@
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">
 		{#each data.projects as item}
-			<a href={`/projects${item.path}`}>
+			<a href={`/projects/${item.path}`}>
 				<BlogCard title={item.meta.title} author={item.meta.author} image={item.meta.image} />
 			</a>
+			
 		{/each}
 
 		{#if data.projects.length === 0}

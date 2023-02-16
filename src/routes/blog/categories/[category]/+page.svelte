@@ -1,20 +1,24 @@
 <script lang="ts">
+	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
-<h1>Blog categories</h1>
+<section class="flex w-full flex-col items-center justify-center">
+	<h1 class="w-full text-start tracking-tight">{data.params.category} Blogs.</h1>
 
-<ul>
-	{#each data.posts as post}
-		<li>
-			<h2>
-				<a href={post.path}>
-					{post.meta.title}
-				</a>
-			</h2>
-			Published {post.meta.date}
-		</li>
-	{/each}
-</ul>
+	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">
+		{#each data.posts as item}
+			<a href={`/blog/${item.path}`}>
+				<BlogCard title={item.meta.title} author={item.meta.author} image={item.meta.image} />
+			</a>
+		{/each}
+
+		{#if data.posts.length === 0}
+			<div class="flex h-full w-full flex-col items-center justify-center">
+				<h2 class="text-2xl">No blogs found.</h2>
+			</div>
+		{/if}
+	</div>
+</section>

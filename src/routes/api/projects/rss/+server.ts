@@ -38,8 +38,9 @@ ${projects
 		(project) => `<item>
 <guid isPermaLink="true">${siteURL}/projects/${project.path}</guid>
 <title>${project.meta.title}</title>
-<link>${siteURL}/${project.path}</link>
+<link>${siteURL}/projects/${project.path}</link>
 <description>${project.meta.title}</description>
+<dc:creator>${project.meta.author}</dc:creator>
 <pubDate>${new Date(project.meta.date).toUTCString()}</pubDate>
 </item>`
 	)
