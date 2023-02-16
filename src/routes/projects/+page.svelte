@@ -14,7 +14,6 @@
 			<a href={`/projects/${item.path}`}>
 				<BlogCard title={item.meta.title} author={item.meta.author} image={item.meta.image} />
 			</a>
-			
 		{/each}
 
 		{#if data.projects.length === 0}
