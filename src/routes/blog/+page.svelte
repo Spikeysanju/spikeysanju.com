@@ -8,6 +8,25 @@
 <section class="flex w-full flex-col items-center justify-center">
 	<h1 class="w-full text-start tracking-tight">Blog.</h1>
 
+	<p class="w-full text-start text-gray-500">
+		{data.blogs.length}
+		{data.blogs.length === 1 ? 'post' : 'posts'}
+	</p>
+
+	{#if data.categories}
+		<div class="mb-3 mt-3 flex w-full items-center space-x-3">
+			{#each data.categories as item}
+				<a href={`/blog/categories/${item}`}>
+					<span
+						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-semibold leading-5 text-gray-800"
+					>
+						{item}
+					</span>
+				</a>
+			{/each}
+		</div>
+	{/if}
+
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">
 		{#each data.blogs as item}
 			<a href={`/blog/${item.path}`}>

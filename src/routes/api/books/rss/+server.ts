@@ -4,7 +4,8 @@ import type { RequestHandler } from './$types';
 
 const siteURL = 'https://www.spikeysanju.com';
 const siteTitle = 'Spikey Sanju';
-const siteDescription = 'A blog by Spikey Sanju';
+const siteDescription =
+	'Spikey Sanju is a blog about design, web development, programming, and technology.';
 
 export const prerender = true;
 
@@ -36,9 +37,9 @@ const render = (books: Data[]) => `<?xml version="1.0" encoding="UTF-8" ?>
 ${books
 	.map(
 		(book) => `<item>
-<guid isPermaLink="true">${siteURL}/blog/${book.path}</guid>
+<guid isPermaLink="true">${siteURL}/books/${book.path}</guid>
 <title>${book.meta.title}</title>
-<link>${siteURL}/${book.path}</link>
+<link>${siteURL}/books/${book.path}</link>
 <description>${book.meta.title}</description>
 <pubDate>${new Date(book.meta.date).toUTCString()}</pubDate>
 </item>`

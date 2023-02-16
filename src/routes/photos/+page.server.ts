@@ -7,6 +7,7 @@ export const load = (async () => {
 			title: 'asc'
 		}
 	});
+
 	return {
 		photos: photos
 	};

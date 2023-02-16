@@ -36,6 +36,25 @@ export const fetchBooksMarkdownPosts = async () => {
 	return allPosts;
 };
 
+export const fetchProjectsMarkdownPosts = async () => {
+	const allFiles = import.meta.glob(`/src/lib/data/projects/*.md`);
+	const iterableProjectFiles = Object.entries(allFiles);
+
+	const allProjects = await Promise.all(
+		iterableProjectFiles.map(async ([path, resolver]) => {
+			const { metadata }: any = await resolver();
+			const postPath = path.slice(23, -3);
+
+			return {
+				meta: metadata,
+				path: postPath
+			};
+		})
+	);
+
+	return allProjects;
+};
+
 export const fetchToolsMarkdownPosts = async () => {
 	const allFiles = import.meta.glob(`/src/lib/data/tools/*.md`);
 	const iterablePostFiles = Object.entries(allFiles);

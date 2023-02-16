@@ -1,0 +1,19 @@
+import { fetchProjectsMarkdownPosts } from '$lib/utils/utils';
+import type { RequestHandler } from './$types';
+import type { Data } from '$lib/type/blog-metadata';
+
+export const GET: RequestHandler = async () => {
+	const allProjects = await fetchProjectsMarkdownPosts();
+
+	const sortedProjects = allProjects.sort((a, b) => {
+		return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
+	}) satisfies Data[];
+
+	return new Response(JSON.stringify(sortedProjects), {
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		status: 200,
+		statusText: 'OK'
+	});
+};
