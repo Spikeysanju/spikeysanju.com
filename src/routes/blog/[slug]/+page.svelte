@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 
 	export let data: PageData;
 </script>
@@ -7,6 +8,7 @@
 <svelte:head>
 	<title>{data.title} – Spikey Sanju</title>
 	<meta property="og:title" content={data.title} />
+	<meta content="{PUBLIC_WEBSITE_URL}/og?message={data.title}" property="og:image" />
 </svelte:head>
 
 <article>

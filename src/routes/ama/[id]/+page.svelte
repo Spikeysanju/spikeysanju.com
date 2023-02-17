@@ -51,7 +51,7 @@
 
 				<button
 					type="submit"
-					class="w-full rounded bg-black py-3 px-4 font-bold text-white hover:bg-gray-900 sm:w-auto sm:flex-auto"
+					class="w-full rounded bg-black py-3 px-4 font-bold text-white shadow-lg hover:bg-gray-900 sm:w-auto sm:flex-auto"
 				>
 					Submit
 				</button>
