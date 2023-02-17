@@ -1,5 +1,5 @@
 export const fetchBlogsMarkdownPosts = async () => {
-	const allFiles = import.meta.glob(`/src/lib/data/blogs/*.md`);
+	const allFiles = import.meta.glob('/src/lib/data/blogs/*.md');
 	const iterablePostFiles = Object.entries(allFiles);
 
 	const allPosts = await Promise.all(
@@ -18,7 +18,7 @@ export const fetchBlogsMarkdownPosts = async () => {
 };
 
 export const fetchBooksMarkdownPosts = async () => {
-	const allFiles = import.meta.glob(`/src/lib/data/books/*.md`);
+	const allFiles = import.meta.glob('/src/lib/data/books/*.md');
 	const iterablePostFiles = Object.entries(allFiles);
 
 	const allPosts = await Promise.all(
@@ -37,7 +37,7 @@ export const fetchBooksMarkdownPosts = async () => {
 };
 
 export const fetchProjectsMarkdownPosts = async () => {
-	const allFiles = import.meta.glob(`/src/lib/data/projects/*.md`);
+	const allFiles = import.meta.glob('/src/lib/data/projects/*.md');
 	const iterableProjectFiles = Object.entries(allFiles);
 
 	const allProjects = await Promise.all(
@@ -55,8 +55,9 @@ export const fetchProjectsMarkdownPosts = async () => {
 	return allProjects;
 };
 
-export const fetchToolsMarkdownPosts = async () => {
-	const allFiles = import.meta.glob(`/src/lib/data/tools/*.md`);
+// fetch single blog post by slug using import.meta.glob
+export const fetchBlogPostBySlug = async (slug: string) => {
+	const allFiles = import.meta.glob('/src/lib/data/blogs/*.md');
 	const iterablePostFiles = Object.entries(allFiles);
 
 	const allPosts = await Promise.all(
@@ -71,7 +72,7 @@ export const fetchToolsMarkdownPosts = async () => {
 		})
 	);
 
-	return allPosts;
+	return allPosts.find((post) => post.path === slug);
 };
 
 export function selectImageAndUploadToServer(

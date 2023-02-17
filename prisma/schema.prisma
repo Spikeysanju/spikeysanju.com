@@ -124,11 +124,11 @@ model Comment {
 }
 
 model Account {
-  id                 String  @id @default(cuid())
+  id                 String    @id @default(cuid())
   userId             String
   type               String
   provider           String
-  providerAccountId  String  @map("provider_account_id")
+  providerAccountId  String    @map("provider_account_id")
   refresh_token      String?
   access_token       String?
   expires_at         Int?
@@ -138,7 +138,7 @@ model Account {
   session_state      String?
   oauth_token_secret String?
   oauth_token        String?
-  user               User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user               User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
   @@map("accounts")

@@ -13,9 +13,6 @@ image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/16
 import CodeHeader from '$lib/components/codeheader/CodeHeader.svelte';
 </script>
 
-# Shape Up - Stop running in circles ship what matters
-
-<slot/>
 
 ### Accessibility:
 

@@ -11,9 +11,6 @@ image: 'https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.
 import CodeHeader from '$lib/components/codeheader/CodeHeader.svelte';
 </script>
 
-# Using Data to Improve UI/UX for Startups
-
-<slot/>
 
 Data is an essential tool for understanding and improving the user experience for startups. It can inform product development, guide design decisions, and improve user engagement. Here are a few ways startups can use data to improve UI/UX:
 

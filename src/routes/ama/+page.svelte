@@ -10,7 +10,7 @@
 	<p class="w-full text-gray-500">I'll try to answer as many questions as possible.</p>
 
 	<button
-		class="mt-4 rounded-sm bg-gray-100 px-3 py-2 font-medium text-black hover:cursor-pointer hover:bg-gray-200"
+		class="mt-4 rounded-sm border border-gray-200 bg-gray-100 px-3 py-2 font-medium text-black shadow-sm hover:cursor-pointer hover:bg-gray-200"
 	>
 		<a href="/ama/new">Ask a question</a>
 	</button>

@@ -13,10 +13,6 @@ image: 'https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.
 import CodeHeader from '$lib/components/codeheader/CodeHeader.svelte';
 </script>
 
-# The Impact of User Flow on Startup Success
-
-<slot/>
-
 <br/>
 
 ### Why
