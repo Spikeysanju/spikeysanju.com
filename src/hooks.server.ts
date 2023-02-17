@@ -8,6 +8,7 @@ import type { Handle } from '@sveltejs/kit';
 
 export const handle = SvelteKitAuth({
 	adapter: PrismaAdapter(prisma) as Adapter,
+	trustHost: true,
 	providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })] as any,
 	session: {
 		// Choose how you want to save the user session.

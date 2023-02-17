@@ -20,7 +20,7 @@
 	<meta name="twitter:creator" content="@spikeysanju" />
 	<meta name="twitter:title" content={data.title} />
 	<meta name="twitter:description" content={data.slug} />
-	<meta name="twitter:image" content="{PUBLIC_WEBSITE_URL}/og?message={data.title}" />
+	<meta name="twitter:image" content="{PUBLIC_WEBSITE_URL}/api/og?message={data.title}" />
 </svelte:head>
 
 <article>

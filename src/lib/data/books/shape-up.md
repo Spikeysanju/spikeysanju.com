@@ -13,7 +13,6 @@ image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/16
 import CodeHeader from '$lib/components/codeheader/CodeHeader.svelte';
 </script>
 
-
 ### Accessibility:
 
 Accessibility is an important aspect of UI/UX design that is often overlooked by startup companies. However, creating accessible products is not only the right thing to do, but it can also improve the user experience for all users and increase your customer base. Here are five tips for creating accessible UI/UX for startups:
