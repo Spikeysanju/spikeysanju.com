@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -9,14 +10,14 @@
 	<meta name="description" content={data.slug} />
 	<meta property="og:title" content={data.title} />
 	<meta property="og:description" content={data.slug} />
-	<meta property="og:image" content={data.image} />
+	<meta content="{PUBLIC_WEBSITE_URL}/api/og?message={data.title}" property="og:image" />
 	<meta property="og:url" content={data.slug} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@spikeysanju" />
 	<meta name="twitter:creator" content="@spikeysanju" />
 	<meta name="twitter:title" content={data.title} />
 	<meta name="twitter:description" content={data.slug} />
-	<meta name="twitter:image" content={data.image} />
+	<meta name="twitter:image" content="{PUBLIC_WEBSITE_URL}/api/og?message={data.title}" />
 </svelte:head>
 
 <article>

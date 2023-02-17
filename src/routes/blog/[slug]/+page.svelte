@@ -9,7 +9,7 @@
 	<title>{data.title} – Spikey Sanju</title>
 	<meta name="description" content={data.content} />
 	<meta property="og:title" content={data.title} />
-	<meta content="{PUBLIC_WEBSITE_URL}/og?message={data.title}" property="og:image" />
+	<meta content="{PUBLIC_WEBSITE_URL}/api/og?message={data.title}" property="og:image" />
 	<meta property="og:description" content={data.slug} />
 	<meta property="og:url" content={data.slug} />
 	<meta property="og:type" content="article" />
