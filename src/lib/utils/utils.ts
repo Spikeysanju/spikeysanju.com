@@ -1,5 +1,5 @@
 export const fetchBlogsMarkdownPosts = async () => {
-	const allFiles = import.meta.glob(`/src/lib/data/blogs/*.md`);
+	const allFiles = import.meta.glob('/src/lib/data/blogs/*.md');
 	const iterablePostFiles = Object.entries(allFiles);
 
 	const allPosts = await Promise.all(
@@ -18,7 +18,7 @@ export const fetchBlogsMarkdownPosts = async () => {
 };
 
 export const fetchBooksMarkdownPosts = async () => {
-	const allFiles = import.meta.glob(`/src/lib/data/books/*.md`);
+	const allFiles = import.meta.glob('/src/lib/data/books/*.md');
 	const iterablePostFiles = Object.entries(allFiles);
 
 	const allPosts = await Promise.all(
@@ -37,7 +37,7 @@ export const fetchBooksMarkdownPosts = async () => {
 };
 
 export const fetchProjectsMarkdownPosts = async () => {
-	const allFiles = import.meta.glob(`/src/lib/data/projects/*.md`);
+	const allFiles = import.meta.glob('/src/lib/data/projects/*.md');
 	const iterableProjectFiles = Object.entries(allFiles);
 
 	const allProjects = await Promise.all(
@@ -53,25 +53,6 @@ export const fetchProjectsMarkdownPosts = async () => {
 	);
 
 	return allProjects;
-};
-
-export const fetchToolsMarkdownPosts = async () => {
-	const allFiles = import.meta.glob(`/src/lib/data/tools/*.md`);
-	const iterablePostFiles = Object.entries(allFiles);
-
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			const { metadata }: any = await resolver();
-			const postPath = path.slice(20, -3);
-
-			return {
-				meta: metadata,
-				path: postPath
-			};
-		})
-	);
-
-	return allPosts;
 };
 
 export function selectImageAndUploadToServer(

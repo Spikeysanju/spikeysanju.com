@@ -10,9 +10,9 @@
 </svelte:head>
 
 <article>
-	<svelte:component this={data.content}>
-		{#if data.image}
-			<img src={data.image} alt={data.title} class="mb-8 mt-8" />
-		{/if}
-	</svelte:component>
+	<h1>{data.title}</h1>
+	{#if data.image}
+		<img src={data.image} alt={data.title} class="mb-8 mt-8" />
+	{/if}
+	<svelte:component this={data.content} />
 </article>
