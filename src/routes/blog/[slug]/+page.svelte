@@ -7,8 +7,20 @@
 
 <svelte:head>
 	<title>{data.title} – Spikey Sanju</title>
+	<meta name="description" content={data.content} />
 	<meta property="og:title" content={data.title} />
 	<meta content="{PUBLIC_WEBSITE_URL}/og?message={data.title}" property="og:image" />
+	<meta property="og:description" content={data.slug} />
+	<meta property="og:url" content={data.slug} />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Spikey Sanju" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@spikeysanju" />
+	<meta name="twitter:creator" content="@spikeysanju" />
+	<meta name="twitter:title" content={data.title} />
+	<meta name="twitter:description" content={data.slug} />
+	<meta name="twitter:image" content="{PUBLIC_WEBSITE_URL}/og?message={data.title}" />
 </svelte:head>
 
 <article>

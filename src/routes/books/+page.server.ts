@@ -5,7 +5,11 @@ export const load = (async ({ fetch }) => {
 	const response = await fetch(`/api/books`);
 	const books = (await response.json()) as Data[];
 
+	// get all categories and remove duplicates
+	const categories = [...new Set(books.map((book) => book.meta.categories).flat())];
+
 	return {
-		books: books
+		books: books,
+		categories: categories
 	};
 }) satisfies PageServerLoad;
