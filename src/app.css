@@ -20,15 +20,15 @@
 	}
 
 	h4 {
-		@apply text-2xl font-medium leading-snug tracking-tight;
+		@apply mt-6 mb-3  text-2xl font-medium leading-snug tracking-tight;
 	}
 
 	h5 {
-		@apply text-xl font-medium leading-snug tracking-tight;
+		@apply mt-6 mb-3 text-xl font-medium leading-snug tracking-tight;
 	}
 
 	h6 {
-		@apply text-lg font-medium leading-snug tracking-tight;
+		@apply mt-6 mb-3 text-lg font-medium leading-snug tracking-tight;
 	}
 
 	p {

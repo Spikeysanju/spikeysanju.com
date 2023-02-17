@@ -22,6 +22,19 @@
 
 <article>
 	<h1>{data.title}</h1>
+	{#if data.categories}
+		<div class="mb-8 mt-3 flex w-full items-center space-x-3">
+			{#each data.categories as item}
+				<a href={`/blog/categories/${item}`}>
+					<span
+						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-medium leading-5 text-gray-800 hover:bg-gray-200"
+					>
+						{item}
+					</span>
+				</a>
+			{/each}
+		</div>
+	{/if}
 	{#if data.image}
 		<div class="flex w-full flex-col items-center justify-center">
 			<img src={data.image} alt={data.title} class="mb-8 mt-8 h-96 shadow-lg" />

@@ -3,7 +3,7 @@ import type { PageLoad } from './$types';
 export const load = (async ({ params }) => {
 	const books = await import(`../../../lib/data/books/${params.slug}.md`);
 
-	const { title, date, author, image } = books.metadata;
+	const { title, date, author, image, categories } = books.metadata;
 	const content = books.default;
 
 	return {
@@ -12,6 +12,7 @@ export const load = (async ({ params }) => {
 		date: date,
 		author: author,
 		slug: params.slug,
-		image: image
+		image: image,
+		categories: categories
 	};
 }) satisfies PageLoad;
