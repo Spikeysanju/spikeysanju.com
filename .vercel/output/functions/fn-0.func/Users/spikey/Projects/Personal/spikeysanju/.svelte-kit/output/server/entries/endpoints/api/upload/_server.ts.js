@@ -1,6 +1,9 @@
 import { C as CLOUDFLARE_SECRET } from "../../../../chunks/private.js";
 import { g as generateRandomId } from "../../../../chunks/utils.js";
 import { f as fail } from "../../../../chunks/index.js";
+const config = {
+  runtime: "nodejs18.x"
+};
 const PUT = async (event) => {
   const { image, fileType } = await event.request.json();
   const user = await event.locals.getSession();
@@ -43,5 +46,6 @@ const PUT = async (event) => {
   );
 };
 export {
-  PUT
+  PUT,
+  config
 };

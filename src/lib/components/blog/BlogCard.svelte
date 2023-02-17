@@ -4,7 +4,9 @@
 	export let image: string;
 </script>
 
-<article class="flex w-full max-w-sm flex-col">
+<article
+	class="flex w-full max-w-sm flex-col transition-all ease-linear hover:-rotate-3"
+>
 	<img src={image} alt={title} class="aspect-video" />
 
 	<div class="space-y mt-3 mb-3 flex w-full flex-col space-y-2">

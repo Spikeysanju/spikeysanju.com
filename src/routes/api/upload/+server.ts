@@ -3,7 +3,8 @@ import { generateRandomId } from '$lib/utils/utils';
 import { fail } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
-export const PUT: RequestHandler = async (event) => {
+
+export const PUT = (async (event) => {
 	const { image, fileType } = await event.request.json();
 	const user = await event.locals.getSession();
 
@@ -50,4 +51,4 @@ export const PUT: RequestHandler = async (event) => {
 			statusText: 'OK'
 		}
 	);
-};
+}) as RequestHandler;

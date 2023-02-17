@@ -1,7 +1,6 @@
 import type { Data } from '$lib/type/blog-metadata';
 import { fetchBooksMarkdownPosts } from '$lib/utils/utils';
 import type { RequestHandler } from './$types';
-import type { Config } from '@sveltejs/adapter-vercel';
 
 const siteURL = 'https://www.spikeysanju.com';
 const siteTitle = 'Spikey Sanju';
@@ -9,10 +8,6 @@ const siteDescription =
 	'Spikey Sanju is a blog about design, web development, programming, and technology.';
 
 export const prerender = true;
-
-export const config: Config = {
-	runtime: 'nodejs18.x'
-};
 
 export const GET: RequestHandler = async () => {
 	const allBooks = await fetchBooksMarkdownPosts();

@@ -4,11 +4,6 @@ import type { RequestHandler } from '../$types';
 import Satoshi from '$lib/fonts/Satoshi-Medium.woff';
 import { html as toReactNode } from 'satori-html';
 import OGImage from '$lib/components/og/OGImage.svelte';
-import type { Config } from '@sveltejs/adapter-vercel';
-
-export const config: Config = {
-	runtime: 'edge'
-};
 
 const height = 630;
 const width = 1200;

@@ -1,9 +1,6 @@
 <script lang="ts">
 	import MenuCell from '$lib/components/menu/MenuCell.svelte';
 	import type { Links } from '$lib/type/links';
-	import type { PageData } from './$types';
-
-	export let data: PageData;
 
 	const links = [
 		{
@@ -64,7 +61,7 @@
 
 		<div class="flex w-full flex-col items-center justify-between space-y-4">
 			{#each links as item}
-				<MenuCell name={item.name} href={item.href} />
+				<MenuCell name={item.name} href={item.href} icon={'rightArrow'} />
 			{/each}
 		</div>
 	</div>

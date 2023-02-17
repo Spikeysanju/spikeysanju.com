@@ -1,3 +1,6 @@
+const config = {
+  runtime: "nodejs18.x"
+};
 const load = async ({ locals, url }) => {
   return {
     session: await locals.getSession(),
@@ -5,5 +8,6 @@ const load = async ({ locals, url }) => {
   };
 };
 export {
+  config,
   load
 };

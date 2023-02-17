@@ -94,13 +94,6 @@ export const manifest = {
 				endpoint: () => import('../output/server/entries/endpoints/api/books/_server.ts.js')
 			},
 			{
-				id: "/api/og",
-				pattern: /^\/api\/og\/?$/,
-				params: [],
-				page: null,
-				endpoint: () => import('../output/server/entries/endpoints/api/og/_server.ts.js')
-			},
-			{
 				id: "/api/projects",
 				pattern: /^\/api\/projects\/?$/,
 				params: [],

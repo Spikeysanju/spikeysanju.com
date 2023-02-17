@@ -1,4 +1,7 @@
 import { f as fetchBlogsMarkdownPosts } from "../../../../chunks/utils.js";
+const config = {
+  runtime: "nodejs18.x"
+};
 const GET = async () => {
   const allPosts = await fetchBlogsMarkdownPosts();
   const sortedPosts = allPosts.sort((a, b) => {
@@ -13,5 +16,6 @@ const GET = async () => {
   });
 };
 export {
-  GET
+  GET,
+  config
 };

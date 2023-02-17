@@ -8,31 +8,31 @@
 	}
 
 	h1 {
-		@apply text-3xl font-bold leading-snug tracking-tight md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug;
+		@apply text-3xl font-medium leading-snug tracking-tight md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug;
 	}
 
 	h2 {
-		@apply text-4xl font-bold leading-snug tracking-tight;
+		@apply text-4xl font-medium leading-snug tracking-tight;
 	}
 
 	h3 {
-		@apply mt-6 mb-3 text-2xl font-bold leading-snug tracking-tight;
+		@apply mt-6 mb-3 text-2xl font-medium leading-snug tracking-tight;
 	}
 
 	h4 {
-		@apply text-2xl font-bold leading-snug tracking-tight;
+		@apply text-2xl font-medium leading-snug tracking-tight;
 	}
 
 	h5 {
-		@apply text-xl font-bold leading-snug tracking-tight;
+		@apply text-xl font-medium leading-snug tracking-tight;
 	}
 
 	h6 {
-		@apply text-lg font-bold leading-snug tracking-tight;
+		@apply text-lg font-medium leading-snug tracking-tight;
 	}
 
 	p {
-		@apply text-lg font-medium leading-7;
+		@apply text-lg font-normal leading-7;
 	}
 
 	body {
@@ -40,21 +40,21 @@
 	}
 
 	@font-face {
-		font-family: 'Satoshi';
+		font-family: 'Satoshi', sans-serif;
 		src: local('Satoshi'), url('/fonts/satoshi/woff2/Satoshi-Bold.woff2') format('woff2');
 		src: local('Satoshi'), url('/fonts/satoshi/woff/Satoshi-Bold.woff') format('woff');
 		font-weight: 700;
 	}
 
 	@font-face {
-		font-family: 'Satoshi';
+		font-family: 'Satoshi', sans-serif;
 		src: local('Satoshi'), url('/fonts/satoshi/woff2/Satoshi-Medium.woff2') format('woff2');
 		src: local('Satoshi'), url('/fonts/satoshi/woff/Satoshi-Medium.woff') format('woff');
-		font-weight: 700;
+		font-weight: 500;
 	}
 
 	@font-face {
-		font-family: 'Satoshi';
+		font-family: 'Satoshi', sans-serif;
 		src: local('Satoshi'), url('/fonts/satoshi/woff2/Satoshi-Regular.woff2') format('woff2');
 		src: local('Satoshi'), url('/fonts/satoshi/woff/Satoshi-Regular.woff') format('woff');
 		font-weight: 400;
