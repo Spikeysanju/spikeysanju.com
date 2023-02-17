@@ -55,6 +55,26 @@ export const fetchProjectsMarkdownPosts = async () => {
 	return allProjects;
 };
 
+// fetch single blog post by slug using import.meta.glob
+export const fetchBlogPostBySlug = async (slug: string) => {
+	const allFiles = import.meta.glob('/src/lib/data/blogs/*.md');
+	const iterablePostFiles = Object.entries(allFiles);
+
+	const allPosts = await Promise.all(
+		iterablePostFiles.map(async ([path, resolver]) => {
+			const { metadata }: any = await resolver();
+			const postPath = path.slice(20, -3);
+
+			return {
+				meta: metadata,
+				path: postPath
+			};
+		})
+	);
+
+	return allPosts.find((post) => post.path === slug);
+};
+
 export function selectImageAndUploadToServer(
 	file: File,
 	onSuccess: (data: string, fileType: string) => void,

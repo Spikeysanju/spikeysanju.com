@@ -1,6 +1,6 @@
 import type { Data } from '$lib/type/blog-metadata';
 import { fetchBlogsMarkdownPosts } from '$lib/utils/utils';
-import type { RequestHandler } from '../../../api/$types';
+import type { RequestHandler } from '../../$types';
 
 const siteURL = 'https://www.spikeysanju.com';
 const siteTitle = 'Spikey Sanju';

@@ -1,28 +1,14 @@
+import { fetchBlogPostBySlug } from '$lib/utils/utils';
 import type { RequestHandler } from './$types';
 
-export const GET = (async () => {
-	const route = 'impact-of-user-flow-in-startup';
-	const blog = await import(`../../../lib/data/blogs/${route}.md`);
+export const GET: RequestHandler = async () => {
+	const post = await fetchBlogPostBySlug('impact-of-user-flow-in-startup');
 
-	const { title, date, author, image, categories } = blog.metadata;
-	const content = blog.default;
-
-	return new Response(
-		JSON.stringify({
-			title: title,
-			content: content,
-			date: date,
-			author: author,
-			slug: route,
-			image: image,
-			categories: categories
-		}),
-		{
-			headers: {
-				'content-type': 'application/json'
-			},
-			status: 200,
-			statusText: 'OK'
-		}
-	);
-}) satisfies RequestHandler;
+	return new Response(JSON.stringify(post?.path), {
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		status: 200,
+		statusText: 'OK'
+	});
+};
