@@ -15,15 +15,11 @@
 				<ToolCard title={item.name} image={item.image} />
 			</a>
 		{/each}
-
-		{#if data.tools.length === 0}
-			<div class="flex h-full w-full flex-col items-center justify-center">
-				<h2 class="text-2xl">No tools found.</h2>
-
-				<a href="/tools/new" class="mt-4">
-					<button class="btn btn-primary">Add a tool</button>
-				</a>
-			</div>
-		{/if}
 	</div>
+
+	{#if data.tools.length === 0}
+		<div class="flex h-full w-full flex-col items-center justify-center">
+			<h2 class="text-2xl">No tools found.</h2>
+		</div>
+	{/if}
 </section>

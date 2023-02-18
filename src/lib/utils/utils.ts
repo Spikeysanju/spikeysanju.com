@@ -1,3 +1,7 @@
+import type { Data } from '$lib/type/blog-metadata';
+import type { Ama, Media, Tools } from '@prisma/client';
+import type { Thing, WithContext } from 'schema-dts';
+
 export const fetchBlogsMarkdownPosts = async () => {
 	const allFiles = import.meta.glob('/src/lib/data/blogs/*.md');
 	const iterablePostFiles = Object.entries(allFiles);
@@ -101,4 +105,76 @@ export function generateRandomId(): string {
 	const randomString =
 		Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 	return randomString;
+}
+
+export type Schema = Thing | WithContext<Thing>;
+
+export function serializeSchema(thing: Schema) {
+	return `<script type="application/ld+json">${JSON.stringify(thing, null, 2)}</script>`;
+}
+
+export function generateSitemap<T extends Data>(url: string, route: string, posts: T[]) {
+	return `<?xml version="1.0" encoding="UTF-8" ?>
+  <urlset
+    xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
+    xmlns:xhtml="https://www.w3.org/1999/xhtml"
+    xmlns:mobile="https://www.google.com/schemas/sitemap-mobile/1.0"
+    xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
+  >
+    <url>
+      <loc>${url}</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    ${posts
+			.map(
+				(post) =>
+					`
+      <url>
+        <loc>${url}/${route}/${post.path}</loc>
+        <changefreq>daily</changefreq>
+        <lastmod>${post.meta.date}</lastmod>
+        <priority>0.7</priority>
+      </url>
+      `
+			)
+			.join('')}
+  </urlset>`;
+}
+
+type SitemapData = Ama | Tools;
+
+export function generateSitemapForAma(url: string, route: string, posts: SitemapData[]) {
+	return `<?xml version="1.0" encoding="UTF-8" ?>
+  <urlset
+    xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
+    xmlns:xhtml="https://www.w3.org/1999/xhtml"
+    xmlns:mobile="https://www.google.com/schemas/sitemap-mobile/1.0"
+    xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
+  >
+    <url>
+      <loc>${url}</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    ${posts
+			.map(
+				(post) =>
+					`
+      <url>
+        <loc>${url}/${route}/${post.id}</loc>
+        <changefreq>daily</changefreq>
+        <lastmod>${post.createdAt}</lastmod>
+        <priority>0.7</priority>
+      </url>
+      `
+			)
+			.join('')}
+  </urlset>`;
 }

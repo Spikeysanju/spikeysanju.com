@@ -1,36 +1,42 @@
 <script lang="ts">
-	export let message: string = '';
-	export let author: string = 'Spikey Sanju';
+	import Icon from '../icon/Icon.svelte';
+
+	export let title: string = '';
+	export let content: string = '';
+	export let author: string = 'www.spikeysanju.com';
 </script>
 
-<div>
-	{#if message.length > 50}
-		{#each message.split('\n') as line}
-			<div>{line}</div>
-		{/each}
-	{:else}
-		{message}
-	{/if}
+<div class="flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6 bg-white p-12">
+	<div class="flex flex-col space-y-3">
+		{#if title.length !== 0}
+			<h1 class="flex flex-col bg-yellow-100 text-5xl text-yellow-800 underline-offset-auto">
+				{#if title.length > 40}
+					{#each title.split('\n') as line}
+						<div>{line}</div>
+					{/each}
+				{:else}
+					{title}
+				{/if}
+			</h1>
+		{/if}
 
-	<p>– {author}</p>
+		<h1 class="flex w-full flex-col text-5xl">
+			{#if content.length > 50}
+				{#each content.split('\n') as line}
+					<div>{line}</div>
+				{/each}
+			{:else}
+				{content}
+			{/if}
+		</h1>
+	</div>
+
+	<div class="flex w-full flex-row items-center justify-between space-x-12">
+		<div class="flex flex-col space-y-6">
+			<h6 class="mb-3">Sponsered by</h6>
+			<Icon width="24" height="24" name="sponsor" />
+		</div>
+
+		<h6 class="text-3xl">{author}</h6>
+	</div>
 </div>
-
-<style>
-	div {
-		font-family: 'Satoshi', sans-serif;
-		display: flex;
-		flex-direction: column;
-		font-size: 50px;
-		background-color: white;
-		color: black;
-		height: 100%;
-		width: 100%;
-		align-items: flex-start;
-		justify-content: center;
-		padding: 36px;
-	}
-
-	p {
-		text-align: left;
-	}
-</style>

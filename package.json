@@ -53,6 +53,7 @@
 		"next-auth": "^4.18.8",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.1.0",
+		"schema-dts": "^1.1.0",
 		"svelte-command-palette": "^1.2.1"
 	}
 }

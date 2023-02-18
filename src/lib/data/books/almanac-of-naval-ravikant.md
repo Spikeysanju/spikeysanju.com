@@ -2,9 +2,7 @@
 title: The Almanack Of Naval Ravikant – A Guide to Wealth and Happiness
 date: '2021-12-14'
 categories:
-  - 'design'
-  - 'development'
-  - 'engineering'
+  - 'Wealth'
 author: 'Naval Ravikant'
 image: 'https://m.media-amazon.com/images/I/61fp0RQR+9L.jpg'
 ---

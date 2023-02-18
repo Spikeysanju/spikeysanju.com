@@ -2,9 +2,7 @@
 title: Shape Up - Stop running in circles ship what matters
 date: '2021-12-14'
 categories:
-  - 'design'
-  - 'development'
-  - 'engineering'
+  - 'Startup'
 author: 'Ryan Singer'
 image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1606042963l/55987183._SY475_.jpg'
 ---

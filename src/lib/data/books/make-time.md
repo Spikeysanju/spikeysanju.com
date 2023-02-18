@@ -2,9 +2,7 @@
 title: Make Time – How to focus on what matters everyday
 date: '2021-12-14'
 categories:
-  - 'design'
-  - 'development'
-  - 'engineering'
+  - 'Productivity'
 author: 'Spikey Sanju'
 image: 'https://m.media-amazon.com/images/I/51TxfmXcA5L.jpg'
 ---
