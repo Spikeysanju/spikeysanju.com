@@ -10,6 +10,9 @@ const config = {
 		adapter: adapter()
 	},
 	preprocess: [
+		{
+			preserve: ['ld+json']
+		},
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],

@@ -2,9 +2,7 @@
 title: Atomic Habits – An Easy & Proven Way to Build Good Habits & Break Bad Ones
 date: '2021-12-14'
 categories:
-  - 'design'
-  - 'development'
-  - 'engineering'
+  - 'Productivity'
 author: 'James Clear'
 image: 'https://m.media-amazon.com/images/I/91bYsX41DVL.jpg'
 ---

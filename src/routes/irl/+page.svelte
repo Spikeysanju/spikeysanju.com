@@ -23,16 +23,5 @@
 				/>
 			</a>
 		{/each}
-
-		{#if data.peopleIWannaMeetIRL.length === 0}
-			<div class="flex h-full w-full flex-col items-center justify-center">
-				<h2 class="text-2xl">No people found.</h2>
-				<p class="text-gray-500">Be the first to ask a question.</p>
-
-				<a href="/ama/new" class="mt-4">
-					<button class="btn btn-primary">Ask a question</button>
-				</a>
-			</div>
-		{/if}
 	</div>
 </section>

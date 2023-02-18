@@ -7,20 +7,60 @@
 
 <svelte:head>
 	<title>{data.title} – Spikey Sanju</title>
-	<meta name="description" content={data.content} />
+	<meta name="description" content={data.excerpt} />
+
+	<!-- open graph /facebook -->
 	<meta property="og:title" content={data.title} />
-	<meta content="{PUBLIC_WEBSITE_URL}/api/og?message={data.title}" property="og:image" />
-	<meta property="og:description" content={data.slug} />
-	<meta property="og:url" content={data.slug} />
+	<meta
+		property="og:image"
+		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={data.title}"
+	/>
+	<meta property="og:description" content={data.excerpt} />
+	<meta property="og:url" content="{PUBLIC_WEBSITE_URL}/blog/{data.slug}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="Spikey Sanju" />
+	<meta property="og:locale" content="en_UK" />
 
+	<!-- article -->
+	<meta property="article:author" content="Spikey Sanju" />
+	<meta property="article:published_time" content={data.date} />
+	<meta property="article:modified_time" content={data.date} />
+	<meta property="article:section" content="Blog" />
+	<meta name="article:tag" content={data.categories} />
+
+	<!-- twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@spikeysanju" />
 	<meta name="twitter:creator" content="@spikeysanju" />
 	<meta name="twitter:title" content={data.title} />
 	<meta name="twitter:description" content={data.slug} />
-	<meta name="twitter:image" content="{PUBLIC_WEBSITE_URL}/api/og?message={data.title}" />
+	<meta
+		name="twitter:image"
+		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={data.title}"
+	/>
+	<meta property="twitter:url" content="{PUBLIC_WEBSITE_URL}/blog/{data.slug}" />
+
+	<!-- canonical -->
+	<link rel="canonical" href="{PUBLIC_WEBSITE_URL}/blog/{data.slug}" />
+
+	<!-- robots -->
+	<meta name="robots" content="index, follow" />
+
+	<!-- schema.org -->
+	<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		"headline": data.title,
+		"datePublished": data.date,
+		"dateModified": data.date,
+		"description": data.excerpt,
+		"author": {
+			"@type": "Person",
+			"name": "Spikey Sanju"
+		}
+		}
+	</script>
 </svelte:head>
 
 <article>

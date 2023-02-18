@@ -3,26 +3,36 @@ import { redirect, type Actions, fail } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import type { Prisma } from '@prisma/client';
 
-export const load = (async ({ params }) => {
-	const ama = await prisma.ama.findUnique({
-		where: {
-			id: params.id
-		},
-		include: {
-			user: true
-		}
-	});
+export const load = (async ({ params, locals }) => {
+	const session = await locals.getSession();
 
-	const comments = await prisma.comment.findMany({
-		where: {
-			amaId: params.id
-		},
-		include: {
-			user: true
-		}
-	});
+	// parallel requests
+	const [user, ama, comments] = await Promise.all([
+		prisma.user.findUnique({
+			where: {
+				email: session?.user?.email as string
+			}
+		}),
+		prisma.ama.findUnique({
+			where: {
+				id: params.id
+			},
+			include: {
+				user: true
+			}
+		}),
+		prisma.comment.findMany({
+			where: {
+				amaId: params.id
+			},
+			include: {
+				user: true
+			}
+		})
+	]);
 
 	return {
+		user: user,
 		ama: ama,
 		comments: comments
 	};
