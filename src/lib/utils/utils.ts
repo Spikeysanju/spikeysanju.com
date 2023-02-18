@@ -158,7 +158,7 @@ export function generateSitemapForAma(url: string, route: string, posts: Sitemap
     xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
   >
     <url>
-      <loc>${url}</loc>
+      <loc>${url}/${route}</loc>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>

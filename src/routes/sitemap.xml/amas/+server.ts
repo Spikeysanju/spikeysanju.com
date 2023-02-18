@@ -5,5 +5,12 @@ import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 
 export const GET = (async () => {
 	const amas = await prisma.ama.findMany();
-	return new Response(generateSitemapForAma(PUBLIC_WEBSITE_URL, 'ama', amas));
+	return new Response(generateSitemapForAma(PUBLIC_WEBSITE_URL, 'ama', amas), {
+		headers: {
+			'Content-Type': 'application/xml',
+			'Cache-Control': 'max-age=0, s-maxage=3600'
+		},
+		status: 200,
+		statusText: 'OK'
+	});
 }) satisfies RequestHandler;
