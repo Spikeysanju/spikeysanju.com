@@ -5,6 +5,14 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>{`Blogs in ${data.category}`} – Spikey Sanju</title>
+	<meta
+		name="description"
+		content="I write about web development, programming, and other stuff. I also write about my personal life."
+	/>
+</svelte:head>
+
 <section class="flex w-full flex-col items-center justify-center">
 	<h1 class="w-full text-start tracking-tight">{data.params.category} Blogs.</h1>
 

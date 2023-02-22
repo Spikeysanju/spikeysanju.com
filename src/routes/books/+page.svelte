@@ -5,6 +5,15 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Books – Spikey Sanju</title>
+	<meta
+		name="description"
+		content="Books I've read and enjoyed. I've tried to keep this list as up to date as possible, but I'm
+		sure I've missed a few."
+	/>
+</svelte:head>
+
 <section class="flex w-full flex-col items-center justify-center">
 	<h1 class="flex w-full text-start tracking-tight">Books.</h1>
 	<p class="flex w-full text-gray-500">

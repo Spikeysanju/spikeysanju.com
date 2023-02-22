@@ -59,10 +59,10 @@
 			</a>, where ADHD meets Innovation!
 		</h1>
 
-		<div class="flex w-full flex-col items-center justify-between space-y-4">
+		<nav class="flex w-full flex-col items-center justify-between space-y-4">
 			{#each links as item}
 				<MenuCell name={item.name} href={item.href} icon={'rightArrow'} />
 			{/each}
-		</div>
+		</nav>
 	</div>
 </section>
