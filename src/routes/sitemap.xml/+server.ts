@@ -1,7 +1,7 @@
 import type { RequestHandler } from './$types';
 import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 
-const pages: string[] = ['blog', 'book', 'photos', 'irl', 'projects', 'tools', 'about', 'ama'];
+const pages: string[] = ['blog', 'books', 'photos', 'irl', 'projects', 'tools', 'about', 'ama'];
 
 export const GET = (async () => {
 	return new Response(sitemap(pages), {

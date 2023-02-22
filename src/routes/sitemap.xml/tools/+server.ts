@@ -5,7 +5,7 @@ import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 
 export const GET = (async () => {
 	const tools = await prisma.tools.findMany();
-	return new Response(generateSitemapForAma(PUBLIC_WEBSITE_URL, 'tool', tools), {
+	return new Response(generateSitemapForAma(PUBLIC_WEBSITE_URL, 'tools', tools), {
 		headers: {
 			'Content-Type': 'application/xml',
 			'Cache-Control': 'max-age=0, s-maxage=3600'

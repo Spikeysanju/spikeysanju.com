@@ -7,7 +7,7 @@ export const GET = (async ({ fetch }) => {
 	const res = await fetch(`${PUBLIC_WEBSITE_URL}/api/projects`);
 	const posts = (await res.json()) as Data[];
 
-	return new Response(generateSitemap(PUBLIC_WEBSITE_URL, 'project', posts), {
+	return new Response(generateSitemap(PUBLIC_WEBSITE_URL, 'projects', posts), {
 		headers: {
 			'Content-Type': 'application/xml',
 			'Cache-Control': 'max-age=0, s-maxage=3600'
