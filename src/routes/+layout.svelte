@@ -185,11 +185,6 @@
 						autofocus
 						on:click={() => (showModal = false)}>Close modal</button
 					>
-					<!-- <a
-						href="auth/signin"
-						class="text-md flex w-full items-center justify-center rounded-md border border-transparent bg-black px-4 py-2 font-medium text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-						>Sign In with GitHub</a
-					> -->
 				</div>
 			</Modal>
 		{/if}
