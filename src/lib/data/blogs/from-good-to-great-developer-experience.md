@@ -6,7 +6,7 @@ categories:
   - 'Engineering'
 author: 'Spikey Sanju'
 image: 'https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
-excerpt: 'From Good to Great – Developing software is a complex and challenging process that requires patience, dedication, and most importantly, a great developer experience. A good developer experience can help you become more productive, streamline your workflows, and produce higher quality software. In this article, we will share some tips and strategies to help you elevate your developer experience to the next level.'
+excerpt: 'Developing software is a complex and challenging process that requires patience, dedication, and most importantly, a great developer experience.'
 ---
 
 <script>
