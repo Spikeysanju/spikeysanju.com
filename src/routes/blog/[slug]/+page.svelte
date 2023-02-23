@@ -45,22 +45,6 @@
 
 	<!-- robots -->
 	<meta name="robots" content="index, follow" />
-
-	<!-- schema.org -->
-	<script type="application/ld+json">
-		{
-		"@context": "https://schema.org",
-		"@type": "Article",
-		"headline": data.title,
-		"datePublished": data.date,
-		"dateModified": data.date,
-		"description": data.excerpt,
-		"author": {
-			"@type": "Person",
-			"name": "Spikey Sanju"
-		}
-		}
-	</script>
 </svelte:head>
 
 <article>
