@@ -6,6 +6,11 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Tools | Spikey Sanju</title>
+	<meta name="description" content="Tools I use on my day to day life." />
+</svelte:head>
+
 <section>
 	<h1>Tools.</h1>
 	<p class="flex w-full text-gray-500">Here is my list of tools i use on my day to day life.</p>

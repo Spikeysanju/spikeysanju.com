@@ -1,10 +1,13 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-
 	let question: string = '';
 	let description: string = '';
 	let flair: string = '';
 </script>
+
+<svelte:head>
+	<title>New Ama | Spikey Sanju</title>
+	<meta name="description" content="Ask me anything." />
+</svelte:head>
 
 <div class="flex w-full flex-col">
 	<form action="?/create" method="post" class="flex w-full flex-col space-y-3">

@@ -6,6 +6,11 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Ama | Spikey Sanju</title>
+	<meta name="description" content="Ask me anything." />
+</svelte:head>
+
 <section>
 	<h1>Ask me anything</h1>
 	<p class="w-full text-gray-500">I'll try to answer as many questions as possible.</p>

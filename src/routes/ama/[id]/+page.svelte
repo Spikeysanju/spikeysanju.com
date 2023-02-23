@@ -18,6 +18,11 @@
 	}
 </script>
 
+<svelte:head>
+	<title>{data.ama?.question} | Spikey Sanju</title>
+	<meta name="description" content={data.ama?.description} />
+</svelte:head>
+
 <section class="flex w-full flex-col">
 	<div class="flex w-full flex-col space-y-3">
 		<h1>{data.ama?.question}</h1>
