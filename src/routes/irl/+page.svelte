@@ -6,6 +6,11 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>IRL | Spikey Sanju</title>
+	<meta name="description" content="People I want to meet IRL." />
+</svelte:head>
+
 <section class="flex w-full flex-col items-center justify-center">
 	<h1 class="flex w-full">People I want to Meet IRL.</h1>
 	<p class="flex w-full text-gray-500">

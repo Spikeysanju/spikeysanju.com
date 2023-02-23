@@ -46,6 +46,14 @@
 	] satisfies Links[];
 </script>
 
+<svelte:head>
+	<title>Home | Spikey Sanju</title>
+	<meta
+		name="description"
+		content="Hi i'm Spikey Sanju, Designer & Engineer, Founder of THISUX Design Studio, where ADHD meets Innovation!"
+	/>
+</svelte:head>
+
 <section class="flex h-screen flex-col items-center justify-center space-y-8">
 	<div class="flex w-full max-w-6xl flex-col items-center justify-center space-y-8">
 		<h1

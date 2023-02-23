@@ -5,6 +5,11 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Photos | Spikey Sanju</title>
+	<meta name="description" content="Some photos I've taken over the years." />
+</svelte:head>
+
 <section class="flex w-full flex-col items-center justify-center">
 	<h1 class="flex w-full text-start tracking-tight">Photos.</h1>
 	<p class="flex w-full text-gray-500">Some photos I've taken over the years.</p>
