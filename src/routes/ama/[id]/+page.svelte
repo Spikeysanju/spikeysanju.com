@@ -81,7 +81,7 @@
 					/>
 				{/each}
 			{:else}
-				<div class="flex h-full w-full flex-col items-center justify-center bg-red-50">
+				<div class="flex h-full w-full flex-col items-center justify-center">
 					<h5>No comments found.</h5>
 					<p class="text-gray-500">Be the first to comment.</p>
 				</div>

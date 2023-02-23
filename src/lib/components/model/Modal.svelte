@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 
 	export let showModal: boolean = false;
@@ -12,8 +12,8 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
 <dialog
-	transition:slide={{ duration: 300, easing: cubicInOut }}
-	class="inset-0 z-10 flex w-full max-w-2xl overflow-y-auto rounded-lg p-5 transition-all delay-75 ease-in-out backdrop:bg-black/40"
+	transition:scale={{ duration: 300, easing: cubicInOut }}
+	class="inset-0 z-10 flex w-full max-w-2xl overflow-y-auto rounded-lg p-5 transition-all delay-75 ease-in-out backdrop:bg-black/50"
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}

@@ -149,16 +149,25 @@
 
 		{#if $page.data.session}
 			{#if $page.data.session.user?.image}
-				<span style="background-image: url('{$page.data.session.user.image}')" class="avatar" />
+				<div class="flex flex-row items-center justify-between">
+					<div class="flex flex-row items-center space-x-3">
+						<img
+							src={$page.data.session.user.image}
+							class="h-9 w-9 rounded-full object-cover"
+							alt={$page.data.session.user.name}
+						/>
+
+						<span>
+							<small>Signed in as</small><br />
+							<strong>{$page.data.session.user?.name ?? 'User'}</strong>
+						</span>
+					</div>
+
+					<button on:click={() => signOut()} class="button">Sign out</button>
+				</div>
 			{/if}
-			<span>
-				<small>Signed in as</small><br />
-				<strong>{$page.data.session.user?.name ?? 'User'}</strong>
-			</span>
-			<button on:click={() => signOut()} class="button">Sign out</button>
 		{:else}
-			<span>You are not signed in</span>
-			<button on:click={() => signIn('github')}>Sign In with GitHub</button>
+			<button on:click={() => (showModal = true)}> Sign in with GitHub </button>
 		{/if}
 
 		<Header />
@@ -188,8 +197,6 @@
 				</div>
 			</Modal>
 		{/if}
-
-		<button on:click={() => (showModal = true)}> show modal </button>
 
 		<slot />
 	</main>
