@@ -1,9 +1,6 @@
 <script lang="ts">
 	import { selectImageAndUploadToServer } from '$lib/utils/utils';
 	import type { Snapshot } from '@sveltejs/kit';
-	import type { PageData } from './$types';
-
-	export let data: PageData;
 
 	// user inputs
 	let title: string = '';
@@ -31,7 +28,6 @@
 		}
 	}
 	function onSuccess(file: string, fileType: string) {
-		console.log('Image Selected successfully: ', fileType, data);
 		uploadImage(file, fileType);
 	}
 	function onError(error: string) {

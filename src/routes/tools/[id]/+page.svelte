@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { formatDistance } from 'date-fns';
 	import AmaCommentCard from '$lib/components/ama/AmaCommentCard.svelte';
 
 	export let data: PageData;
