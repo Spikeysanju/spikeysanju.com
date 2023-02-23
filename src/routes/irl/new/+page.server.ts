@@ -14,7 +14,7 @@ export const load = (async ({ locals }) => {
 
 	// only admins can create new people
 	if (user?.role !== Role.ADMIN) {
-		throw redirect(303, '/');
+		throw redirect(303, '/irl');
 	}
 }) satisfies PageServerLoad;
 

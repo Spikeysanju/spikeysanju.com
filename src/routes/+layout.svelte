@@ -6,6 +6,8 @@
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import CommandPalette, { defineActions } from 'svelte-command-palette';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+	import Modal from '$lib/components/model/Modal.svelte';
 
 	const actions = defineActions([
 		{
@@ -119,6 +121,8 @@
 	]);
 
 	export let data: LayoutData;
+
+	let showModal: boolean = false;
 </script>
 
 {#key data.currentRoute}
@@ -143,15 +147,55 @@
 			descriptionClass="text-sm"
 		/>
 
-		{#if data.session}
-			<div class="flex w-full flex-row items-center justify-between">
-				<p>{data.session.user?.name}</p>
-				<button on:click={() => signOut()}>Sign out</button>
-			</div>
+		{#if $page.data.session}
+			{#if $page.data.session.user?.image}
+				<span style="background-image: url('{$page.data.session.user.image}')" class="avatar" />
+			{/if}
+			<span>
+				<small>Signed in as</small><br />
+				<strong>{$page.data.session.user?.name ?? 'User'}</strong>
+			</span>
+			<button on:click={() => signOut()} class="button">Sign out</button>
 		{:else}
-			<button on:click={() => signIn()}>Sign in</button>
+			<span>You are not signed in</span>
+			<button on:click={() => signIn('github')}>Sign In with GitHub</button>
 		{/if}
+
 		<Header />
+
+		{#if showModal}
+			<Modal bind:showModal>
+				<h3 slot="header">Welcome to Spikey's Portfolio</h3>
+				<div slot="content" class="flex flex-col space-y-3">
+					<p>
+						In order to interact with the portfolio like asking questions, you need to sign in with
+						GitHub.
+					</p>
+				</div>
+
+				<div slot="cta" class="flex w-full flex-col space-y-3">
+					<button
+						on:click={() => signIn()}
+						class="flex w-full items-center justify-center rounded-md bg-black px-2 py-2 font-medium text-white hover:bg-gray-900"
+						>Sign in with GitHub</button
+					>
+
+					<button
+						class="flex w-full items-center justify-center rounded-md border border-gray-300 bg-gray-100 px-2 py-2 text-black hover:bg-gray-200"
+						autofocus
+						on:click={() => (showModal = false)}>Close modal</button
+					>
+					<!-- <a
+						href="auth/signin"
+						class="text-md flex w-full items-center justify-center rounded-md border border-transparent bg-black px-4 py-2 font-medium text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+						>Sign In with GitHub</a
+					> -->
+				</div>
+			</Modal>
+		{/if}
+
+		<button on:click={() => (showModal = true)}> show modal </button>
+
 		<slot />
 	</main>
 {/key}
