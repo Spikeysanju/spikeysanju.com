@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -8,6 +9,12 @@
 <svelte:head>
 	<title>Photos – Spikey Sanju</title>
 	<meta name="description" content="Some photos I've taken over the years." />
+
+	<!-- canonical -->
+	<link rel="canonical" href="{PUBLIC_WEBSITE_URL}/photos" />
+
+	<!-- robots -->
+	<meta name="robots" content="index, follow" />
 </svelte:head>
 
 <section class="flex w-full flex-col items-center justify-center">

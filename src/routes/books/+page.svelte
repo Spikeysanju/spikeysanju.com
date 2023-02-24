@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import BookCard from '$lib/components/book/BookCard.svelte';
 	import type { PageData } from './$types';
 
@@ -12,6 +13,11 @@
 		content="Books I've read and enjoyed. I've tried to keep this list as up to date as possible, but I'm
 		sure I've missed a few."
 	/>
+	<!-- canonical -->
+	<link rel="canonical" href="{PUBLIC_WEBSITE_URL}/books" />
+
+	<!-- robots -->
+	<meta name="robots" content="index, follow" />
 </svelte:head>
 
 <section class="flex w-full flex-col items-center justify-center">

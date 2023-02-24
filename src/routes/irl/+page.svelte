@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import PeopleCard from '$lib/components/irl/PeopleCard.svelte';
 	import type { PageData } from './$types';
 
@@ -9,6 +10,12 @@
 <svelte:head>
 	<title>IRL – Spikey Sanju</title>
 	<meta name="description" content="People I want to meet IRL." />
+
+	<!-- canonical -->
+	<link rel="canonical" href="{PUBLIC_WEBSITE_URL}/irl" />
+
+	<!-- robots -->
+	<meta name="robots" content="index, follow" />
 </svelte:head>
 
 <section class="flex w-full flex-col items-center justify-center">

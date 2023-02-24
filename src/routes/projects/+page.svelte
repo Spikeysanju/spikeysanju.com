@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import type { PageData } from './$types';
 
@@ -8,6 +9,12 @@
 <svelte:head>
 	<title>Projects – Spikey Sanju</title>
 	<meta name="description" content="Projects I've worked on." />
+
+	<!-- canonical -->
+	<link rel="canonical" href="{PUBLIC_WEBSITE_URL}/projects" />
+
+	<!-- robots -->
+	<meta name="robots" content="index, follow" />
 </svelte:head>
 
 <section class="flex w-full flex-col items-center justify-center">

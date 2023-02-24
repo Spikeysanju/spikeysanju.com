@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -7,6 +8,12 @@
 <svelte:head>
 	<title>{data.title} – Spikey Sanju</title>
 	<meta name="description" content={data.description} />
+
+	<!-- canonical -->
+	<link rel="canonical" href="{PUBLIC_WEBSITE_URL}/about" />
+
+	<!-- robots -->
+	<meta name="robots" content="index, follow" />
 </svelte:head>
 
 <section>

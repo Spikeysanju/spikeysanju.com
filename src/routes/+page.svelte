@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import MenuCell from '$lib/components/menu/MenuCell.svelte';
 	import type { Links } from '$lib/type/links';
 
@@ -47,11 +48,17 @@
 </script>
 
 <svelte:head>
-	<title>Home | Spikey Sanju</title>
+	<title>Home – Spikey Sanju</title>
 	<meta
 		name="description"
 		content="Hi i'm Spikey Sanju, Designer & Engineer, Founder of THISUX Design Studio, where ADHD meets Innovation!"
 	/>
+
+	<!-- canonical -->
+	<link rel="canonical" href="{PUBLIC_WEBSITE_URL}/" />
+
+	<!-- robots -->
+	<meta name="robots" content="index, follow" />
 </svelte:head>
 
 <section class="flex h-screen flex-col items-center justify-center space-y-8">
