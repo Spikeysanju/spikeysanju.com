@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Photos | Spikey Sanju</title>
+	<title>Photos – Spikey Sanju</title>
 	<meta name="description" content="Some photos I've taken over the years." />
 </svelte:head>
 

@@ -55,6 +55,11 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Add Photo – Spikey Sanju</title>
+	<meta name="description" content="Add a new photo to the gallery" />
+</svelte:head>
+
 <div class="flex w-full flex-col">
 	<form action="?/create" method="post" class="flex w-full flex-col space-y-3">
 		<label for="name" class="block text-sm font-medium text-gray-700">Name</label>

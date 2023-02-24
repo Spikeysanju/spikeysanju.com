@@ -7,6 +7,11 @@
 	let link: string = '';
 </script>
 
+<svelte:head>
+	<title>New Tool – Spikey Sanju</title>
+	<meta name="description" content="Add a new tool to the list." />
+</svelte:head>
+
 <div class="flex w-full flex-col">
 	<form action="?/create" method="post" class="flex w-full flex-col space-y-3">
 		<label for="name" class="block text-sm font-medium text-gray-700">Name</label>

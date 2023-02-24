@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>IRL | Spikey Sanju</title>
+	<title>IRL – Spikey Sanju</title>
 	<meta name="description" content="People I want to meet IRL." />
 </svelte:head>
 

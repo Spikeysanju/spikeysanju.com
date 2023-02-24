@@ -6,6 +6,11 @@
 	let comment: string = '';
 </script>
 
+<svelte:head>
+	<title>{data.tools?.name} – Spikey Sanju</title>
+	<meta name="description" content={data.tools?.description} />
+</svelte:head>
+
 <section class="flex w-full flex-col">
 	<div class="flex w-full flex-col space-y-3">
 		<h1>{data.tools?.name}</h1>
