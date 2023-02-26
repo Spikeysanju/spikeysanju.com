@@ -9,7 +9,6 @@ const config = {
 	kit: {
 		adapter: adapter({
 			runtime: 'nodejs18.x',
-			regions: 'sfo1',
 			split: false,
 			isr: false,
 			maxDuration: 60,
