@@ -11,7 +11,7 @@ const config = {
 			runtime: 'nodejs18.x',
 			split: false,
 			isr: false,
-			maxDuration: 60,
+			maxDuration: 10,
 		})
 	},
 	preprocess: [

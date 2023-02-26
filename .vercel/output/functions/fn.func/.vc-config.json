@@ -1,6 +1,6 @@
 {
 	"runtime": "nodejs18.x",
-	"maxDuration": 60,
+	"maxDuration": 10,
 	"handler": ".svelte-kit/vercel-tmp/index.js",
 	"launcherType": "Nodejs",
 	"experimentalResponseStreaming": true
