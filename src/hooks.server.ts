@@ -10,6 +10,7 @@ import type { Provider } from '@auth/core/providers';
 export const handle = SvelteKitAuth({
 	trustHost: AUTH_TRUST_HOST === 'true' ? true : false,
 	adapter: PrismaAdapter(prisma) as Adapter,
+	secret: process.env.AUTH_SECRET,
 	providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })] as Provider[],
 	session: {
 		// Choose how you want to save the user session.
@@ -32,6 +33,12 @@ export const handle = SvelteKitAuth({
 		// need a more customized session token string, you can define your own generate function.
 		generateSessionToken: () => {
 			return crypto.randomUUID();
+		}
+	},
+	debug: true,
+	events: {
+		signIn: async (message) => {
+			console.log('✅ Successfully signed in', message);
 		}
 	}
 }) satisfies Handle;
