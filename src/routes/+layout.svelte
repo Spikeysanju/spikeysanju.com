@@ -177,7 +177,7 @@
 				</div>
 			{/if}
 		{:else}
-			<button on:click={() => (showModal = true)}> Sign in with GitHub </button>
+			<button on:click={() => signIn()}> Sign in with GitHub </button>
 		{/if}
 
 		<Header />
