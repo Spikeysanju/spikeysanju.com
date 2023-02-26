@@ -6,6 +6,6 @@ export const component = async () => (await import('../entries/pages/photos/new/
 export const file = '_app/immutable/components/pages/photos/new/_page.svelte-f0f80f2b.js';
 export { universal };
 export { server };
-export const imports = ["_app/immutable/components/pages/photos/new/_page.svelte-f0f80f2b.js","_app/immutable/chunks/index-695f9ad5.js","_app/immutable/modules/pages/photos/new/_page.ts-3f5f2547.js","_app/immutable/chunks/environment-9aa685ef.js","_app/immutable/chunks/_page-bc561f2c.js"];
+export const imports = ["_app/immutable/components/pages/photos/new/_page.svelte-f0f80f2b.js","_app/immutable/chunks/index-695f9ad5.js","_app/immutable/modules/pages/photos/new/_page.ts-3f5f2547.js","_app/immutable/chunks/environment-9aa685ef.js","_app/immutable/chunks/_page-de06eb02.js"];
 export const stylesheets = [];
 export const fonts = [];

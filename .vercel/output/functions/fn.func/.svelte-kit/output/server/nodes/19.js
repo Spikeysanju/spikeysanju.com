@@ -6,6 +6,6 @@ export const component = async () => (await import('../entries/pages/ama/_id_/_p
 export const file = '_app/immutable/components/pages/ama/_id_/_page.svelte-84997a9d.js';
 export { universal };
 export { server };
-export const imports = ["_app/immutable/components/pages/ama/_id_/_page.svelte-84997a9d.js","_app/immutable/chunks/index-695f9ad5.js","_app/immutable/chunks/AmaCommentCard-8693f6ef.js","_app/immutable/modules/pages/ama/_id_/_page.ts-3f5f2547.js","_app/immutable/chunks/environment-9aa685ef.js","_app/immutable/chunks/_page-de06eb02.js"];
+export const imports = ["_app/immutable/components/pages/ama/_id_/_page.svelte-84997a9d.js","_app/immutable/chunks/index-695f9ad5.js","_app/immutable/chunks/AmaCommentCard-8693f6ef.js","_app/immutable/modules/pages/ama/_id_/_page.ts-3f5f2547.js","_app/immutable/chunks/environment-9aa685ef.js","_app/immutable/chunks/_page-f1689897.js"];
 export const stylesheets = [];
 export const fonts = [];
