@@ -10,7 +10,6 @@
 	import Modal from '$lib/components/model/Modal.svelte';
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
-
 	const actions = defineActions([
 		{
 			actionId: 'home',
@@ -125,6 +124,9 @@
 	export let data: LayoutData;
 
 	let showModal: boolean = false;
+
+	// vercel analytics 
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <svelte:head>
@@ -134,12 +136,6 @@
 		data-website-id="ff21a4b4-b57f-40f5-904a-e6cc43a9be17"
 		src="https://analytics.spikeysanju.com/umami.js"
 	>
-	</script>
-
-	<script>
-		import { dev } from '$app/environment';
-		import { inject } from '@vercel/analytics';
-		inject({ mode: dev ? 'development' : 'production' });
 	</script>
 </svelte:head>
 
