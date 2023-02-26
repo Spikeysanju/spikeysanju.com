@@ -131,8 +131,9 @@
 		defer
 		data-website-id="ff21a4b4-b57f-40f5-904a-e6cc43a9be17"
 		src="https://analytics.spikeysanju.com/umami.js"
-	></script>></svelte:head
->
+	>
+	</script>
+</svelte:head>
 
 {#key data.currentRoute}
 	<main
