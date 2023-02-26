@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
@@ -7,7 +7,13 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			runtime: 'nodejs18.x',
+			regions: 'sfo1',
+			split: false,
+			isr: false,
+			maxDuration: 60,
+		})
 	},
 	preprocess: [
 		{
