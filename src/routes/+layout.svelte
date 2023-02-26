@@ -10,6 +10,10 @@
 	import Modal from '$lib/components/model/Modal.svelte';
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
+
+	export let data: LayoutData;
+
+	// command palette actions
 	const actions = defineActions([
 		{
 			actionId: 'home',
@@ -121,11 +125,10 @@
 		}
 	]);
 
-	export let data: LayoutData;
-
+	// login modal state
 	let showModal: boolean = false;
 
-	// vercel analytics 
+	// vercel analytics
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
