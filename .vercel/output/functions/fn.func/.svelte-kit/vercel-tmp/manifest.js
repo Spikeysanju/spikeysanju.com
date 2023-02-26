@@ -87,25 +87,11 @@ export const manifest = {
 				endpoint: () => import('../output/server/entries/endpoints/api/blogs/_server.ts.js')
 			},
 			{
-				id: "/api/blogs/rss",
-				pattern: /^\/api\/blogs\/rss\/?$/,
-				params: [],
-				page: null,
-				endpoint: () => import('../output/server/entries/endpoints/api/blogs/rss/_server.ts.js')
-			},
-			{
 				id: "/api/books",
 				pattern: /^\/api\/books\/?$/,
 				params: [],
 				page: null,
 				endpoint: () => import('../output/server/entries/endpoints/api/books/_server.ts.js')
-			},
-			{
-				id: "/api/books/rss",
-				pattern: /^\/api\/books\/rss\/?$/,
-				params: [],
-				page: null,
-				endpoint: () => import('../output/server/entries/endpoints/api/books/rss/_server.ts.js')
 			},
 			{
 				id: "/api/og",
@@ -120,13 +106,6 @@ export const manifest = {
 				params: [],
 				page: null,
 				endpoint: () => import('../output/server/entries/endpoints/api/projects/_server.ts.js')
-			},
-			{
-				id: "/api/projects/rss",
-				pattern: /^\/api\/projects\/rss\/?$/,
-				params: [],
-				page: null,
-				endpoint: () => import('../output/server/entries/endpoints/api/projects/rss/_server.ts.js')
 			},
 			{
 				id: "/api/test",

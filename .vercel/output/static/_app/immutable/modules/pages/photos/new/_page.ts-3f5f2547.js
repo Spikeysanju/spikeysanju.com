@@ -1,1 +1,1 @@
-import"../../../../chunks/environment-9aa685ef.js";import{c as o,p as s}from"../../../../chunks/_page-4c0804b7.js";export{o as csr,s as prerender};
+import"../../../../chunks/environment-9aa685ef.js";import{c as o,p as s}from"../../../../chunks/_page-bc561f2c.js";export{o as csr,s as prerender};
