@@ -5,12 +5,13 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import prisma from '$lib/prisma/prisma';
 import type { Adapter } from '@auth/core/adapters';
 import type { Handle } from '@sveltejs/kit';
+import type { Provider } from '@auth/core/providers';
 
 export const handle = SvelteKitAuth({
 	trustHost: AUTH_TRUST_HOST === 'true' ? true : false,
 	adapter: PrismaAdapter(prisma) as Adapter,
 	secret: process.env.AUTH_SECRET,
-	providers: GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }) as any,
+	providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })] as Provider[],
 	session: {
 		// Choose how you want to save the user session.
 		// The default is `"jwt"`, an encrypted JWT (JWE) stored in the session cookie.
