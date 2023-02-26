@@ -10,7 +10,7 @@
 	import Modal from '$lib/components/model/Modal.svelte';
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
-	
+
 	const actions = defineActions([
 		{
 			actionId: 'home',
@@ -136,8 +136,11 @@
 	>
 	</script>
 
-	inject({ mode: dev ? 'development' : 'production' });
-
+	<script>
+		import { dev } from '$app/environment';
+		import { inject } from '@vercel/analytics';
+		inject({ mode: dev ? 'development' : 'production' });
+	</script>
 </svelte:head>
 
 {#key data.currentRoute}
