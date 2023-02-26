@@ -8,7 +8,9 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/model/Modal.svelte';
-
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+	
 	const actions = defineActions([
 		{
 			actionId: 'home',
@@ -133,6 +135,9 @@
 		src="https://analytics.spikeysanju.com/umami.js"
 	>
 	</script>
+
+	inject({ mode: dev ? 'development' : 'production' });
+
 </svelte:head>
 
 {#key data.currentRoute}
