@@ -1,143 +1,19 @@
 {
-	"version": 3,
-	"routes": [
-		{
-			"src": "/_app/immutable/.+",
-			"headers": {
-				"cache-control": "public, immutable, max-age=31536000"
-			}
-		},
-		{
-			"handle": "filesystem"
-		},
-		{
-			"src": "^/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/about/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/ama/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/ama/new/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/ama/([^/]+?)/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/api/blogs/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/api/books/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/api/og/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/api/projects/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/api/test/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/api/upload/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/blog/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/blog/categories/([^/]+?)/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/blog/([^/]+?)/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/books/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/books/categories/([^/]+?)/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/books/([^/]+?)/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/irl/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/irl/new/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/photos/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/photos/new/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/projects/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/projects/([^/]+?)/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/sitemap\\.xml/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/sitemap\\.xml/amas/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/sitemap\\.xml/blogs/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/sitemap\\.xml/books/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/sitemap\\.xml/projects/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/sitemap\\.xml/tools/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
-			"src": "^/tools/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/tools/new/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		},
-		{
-			"src": "^/tools/([^/]+?)/?(?:/__data.json)?$",
-			"dest": "/fn-0"
-		}
-	],
-	"overrides": {}
+  "version": 3,
+  "routes": [
+    {
+      "src": "/_app/immutable/.+",
+      "headers": {
+        "cache-control": "public, immutable, max-age=31536000"
+      }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/render"
+    }
+  ],
+  "overrides": {}
 }
