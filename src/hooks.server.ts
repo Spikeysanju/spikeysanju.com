@@ -1,11 +1,11 @@
 import { SvelteKitAuth } from '@auth/sveltekit';
 import GitHub from '@auth/core/providers/github';
 import { GITHUB_ID, GITHUB_SECRET, AUTH_TRUST_HOST } from '$env/static/private';
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import prisma from '$lib/prisma/prisma';
 import type { Adapter } from '@auth/core/adapters';
 import type { Handle } from '@sveltejs/kit';
 import type { Provider } from '@auth/core/providers';
+import { PrismaAdapter } from '$lib/prisma/prisma-adapter';
 
 export const handle = SvelteKitAuth({
 	trustHost: AUTH_TRUST_HOST === 'true' ? true : false,
