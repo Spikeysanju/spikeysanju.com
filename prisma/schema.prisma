@@ -131,7 +131,7 @@ model Account {
   providerAccountId  String    @map("provider_account_id")
   refresh_token      String?
   access_token       String?
-  expires_at         Int?
+  expires_in         Int?
   token_type         String?
   scope              String?
   id_token           String?

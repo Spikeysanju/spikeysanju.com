@@ -9,11 +9,9 @@ import type { Handle } from '@sveltejs/kit';
 import type { Provider } from '@auth/core/providers';
 
 export const handle = SvelteKitAuth({
+	trustHost: true,
 	adapter: PrismaAdapter(prisma) as Adapter,
-	providers: [
-		GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
-		Instagram({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })
-	] as Provider[],
+	providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })] as Provider[],
 	session: {
 		// Choose how you want to save the user session.
 		// The default is `"jwt"`, an encrypted JWT (JWE) stored in the session cookie.
