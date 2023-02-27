@@ -8,6 +8,6 @@ export { universal };
 export const universal_id = "src/routes/ama/[id]/+page.ts";
 export { server };
 export const server_id = "src/routes/ama/[id]/+page.server.ts";
-export const imports = ["_app/immutable/entry/ama-_id_-page.svelte.59fb83ab.js","_app/immutable/chunks/index.e2d88345.js","_app/immutable/chunks/AmaCommentCard.30602a01.js","_app/immutable/entry/ama-_id_-page.ts.342c7bc7.js","_app/immutable/chunks/environment.9aa685ef.js","_app/immutable/chunks/_page.9ebf99cd.js"];
+export const imports = ["_app/immutable/entry/ama-_id_-page.svelte.59fb83ab.js","_app/immutable/chunks/index.e2d88345.js","_app/immutable/chunks/AmaCommentCard.30602a01.js","_app/immutable/entry/ama-_id_-page.ts.342c7bc7.js","_app/immutable/chunks/environment.9aa685ef.js","_app/immutable/chunks/_page.fb891264.js"];
 export const stylesheets = [];
 export const fonts = [];
