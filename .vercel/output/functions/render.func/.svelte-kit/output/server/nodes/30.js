@@ -8,6 +8,6 @@ export { universal };
 export const universal_id = "src/routes/photos/new/+page.ts";
 export { server };
 export const server_id = "src/routes/photos/new/+page.server.ts";
-export const imports = ["_app/immutable/entry/photos-new-page.svelte.f9685393.js","_app/immutable/chunks/index.e2d88345.js","_app/immutable/entry/photos-new-page.ts.342c7bc7.js","_app/immutable/chunks/environment.9aa685ef.js","_app/immutable/chunks/_page.8bf85cd1.js"];
+export const imports = ["_app/immutable/entry/photos-new-page.svelte.f9685393.js","_app/immutable/chunks/index.e2d88345.js","_app/immutable/entry/photos-new-page.ts.342c7bc7.js","_app/immutable/chunks/environment.9aa685ef.js","_app/immutable/chunks/_page.bde4290e.js"];
 export const stylesheets = [];
 export const fonts = [];
