@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -20,13 +17,13 @@ model User {
   createdAt           DateTime              @default(now()) @map("created_at")
   updatedAt           DateTime              @updatedAt @map("updated_at")
   accounts            Account[]
-  comment             Comment[]
   ama                 Ama[]
-  sessions            Session[]
   blog                Blog[]
-  tools               Tools[]
-  peopleIWannaMeetIRL PeopleIWannaMeetIRL[]
+  comment             Comment[]
   media               Media[]
+  peopleIWannaMeetIRL PeopleIWannaMeetIRL[]
+  sessions            Session[]
+  tools               Tools[]
 
   @@map("users")
 }
@@ -54,9 +51,9 @@ model Blog {
   content     String
   category    String[]
   slug        String    @unique
-  comment     Comment[]
   userId      String?   @map("user_id")
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  comment     Comment[]
 
   @@map("blogs")
 }
@@ -68,9 +65,9 @@ model Ama {
   question    String
   description String
   flair       String
-  comment     Comment[]
   userId      String?   @map("user_id")
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  comment     Comment[]
 
   @@map("amas")
 }
@@ -83,8 +80,8 @@ model Tools {
   description String
   image       String
   link        String
-  comment     Comment[]
   userId      String?   @map("user_id")
+  comment     Comment[]
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("tools")
@@ -112,33 +109,33 @@ model Comment {
   content         String
   commentProvider CommentProvider @default(ASKMEANYTHING) @map("comment_provider")
   blogId          String?         @map("blog_id")
-  blog            Blog?           @relation(fields: [blogId], references: [id], onDelete: Cascade)
   amaId           String?         @map("ama_id")
-  ama             Ama?            @relation(fields: [amaId], references: [id], onDelete: Cascade)
   userId          String?         @map("user_id")
-  user            User?           @relation(fields: [userId], references: [id], onDelete: Cascade)
   toolsId         String?         @map("tools_id")
+  ama             Ama?            @relation(fields: [amaId], references: [id], onDelete: Cascade)
+  blog            Blog?           @relation(fields: [blogId], references: [id], onDelete: Cascade)
   tools           Tools?          @relation(fields: [toolsId], references: [id], onDelete: Cascade)
+  user            User?           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("comments")
 }
 
 model Account {
-  id                 String    @id @default(cuid())
+  id                 String  @id @default(cuid())
   userId             String
   type               String
   provider           String
-  providerAccountId  String    @map("provider_account_id")
+  providerAccountId  String  @map("provider_account_id")
   refresh_token      String?
   access_token       String?
-  expires_at         Int?
   token_type         String?
   scope              String?
   id_token           String?
   session_state      String?
   oauth_token_secret String?
   oauth_token        String?
-  user               User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expires_at         Int?
+  user               User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
   @@map("accounts")

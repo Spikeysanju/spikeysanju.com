@@ -5,7 +5,6 @@ import { GITHUB_ID, GITHUB_SECRET, GOOGLE_ID, GOOGLE_SECRET } from '$env/static/
 import prisma from '$lib/prisma/prisma';
 import type { Adapter } from '@auth/core/adapters';
 import type { Handle } from '@sveltejs/kit';
-// import { PrismaAdapter } from '$lib/prisma/prisma-adapter';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 
 export const handle = SvelteKitAuth({
