@@ -5,17 +5,13 @@ import { GITHUB_ID, GITHUB_SECRET, GOOGLE_ID, GOOGLE_SECRET } from '$env/static/
 import prisma from '$lib/prisma/prisma';
 import type { Adapter } from '@auth/core/adapters';
 import type { Handle } from '@sveltejs/kit';
-// import { PrismaAdapter } from '$lib/prisma/prisma-adapter';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 
 export const handle = SvelteKitAuth({
 	trustHost: true,
 	adapter: PrismaAdapter(prisma) as Adapter,
 	secret: process.env.AUTH_SECRET,
-	providers: [
-		GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
-		Google({ clientId: GOOGLE_ID, clientSecret: GOOGLE_SECRET })
-	] as any,
+	providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })] as any,
 	session: {
 		// Choose how you want to save the user session.
 		// The default is `"jwt"`, an encrypted JWT (JWE) stored in the session cookie.
@@ -41,8 +37,8 @@ export const handle = SvelteKitAuth({
 	},
 	debug: true,
 	events: {
-		signIn: async (message) => {
-			console.log('✅ Successfully signed in', message);
+		signIn: async () => {
+			console.log('✅ Successfully signed in');
 		}
 	}
 }) satisfies Handle;
