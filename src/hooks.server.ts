@@ -5,7 +5,6 @@ import prisma from '$lib/prisma/prisma';
 import type { Adapter } from '@auth/core/adapters';
 import type { Handle } from '@sveltejs/kit';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import type { Provider } from '@auth/core/providers';
 
 export const handle = SvelteKitAuth({
 	trustHost: true,
