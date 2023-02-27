@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Spikey Sanju</title>
+<description>A blog by Spikey Sanju</description>
+<link>https://www.spikeysanju.com</link>
+<atom:link href="https://www.spikeysanju.com/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<guid isPermaLink="true">https://www.spikeysanju.com/blogs/from-good-to-great-developer-experience</guid>
+<title>From Good to Great – How to Elevate Your Developer Experience to the Next Level</title>
+<link>https://www.spikeysanju.com/blogs/from-good-to-great-developer-experience</link>
+<description>From Good to Great – How to Elevate Your Developer Experience to the Next Level</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+<dc:creator>Spikey Sanju</dc:creator>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/blogs/impact-of-user-flow-in-startup</guid>
+<title>The Impact of User Flow on Startup Success</title>
+<link>https://www.spikeysanju.com/blogs/impact-of-user-flow-in-startup</link>
+<description>The Impact of User Flow on Startup Success</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+<dc:creator>Spikey Sanju</dc:creator>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/blogs/tips-for-accessibility</guid>
+<title>5 Tips for Creating Accessible UI/UX for Startups</title>
+<link>https://www.spikeysanju.com/blogs/tips-for-accessibility</link>
+<description>5 Tips for Creating Accessible UI/UX for Startups</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+<dc:creator>Spikey Sanju</dc:creator>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/blogs/use-data-to-improve-ui-ux-in-startups</guid>
+<title>Using Data to Improve UI/UX for Startups</title>
+<link>https://www.spikeysanju.com/blogs/use-data-to-improve-ui-ux-in-startups</link>
+<description>Using Data to Improve UI/UX for Startups</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+<dc:creator>Spikey Sanju</dc:creator>
+</item>
+</channel>
+</rss>

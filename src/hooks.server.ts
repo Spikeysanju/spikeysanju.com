@@ -14,7 +14,7 @@ export const handle = SvelteKitAuth({
 	providers: [
 		GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
 		Google({ clientId: GOOGLE_ID, clientSecret: GOOGLE_SECRET })
-	] as any,
+	],
 	session: {
 		// Choose how you want to save the user session.
 		// The default is `"jwt"`, an encrypted JWT (JWE) stored in the session cookie.
