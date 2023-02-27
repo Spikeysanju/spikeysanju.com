@@ -11,7 +11,7 @@ export const handle = SvelteKitAuth({
 	trustHost: true,
 	adapter: PrismaAdapter(prisma) as Adapter,
 	secret: process.env.AUTH_SECRET,
-	providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })] as Provider[],
+	providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })] as any,
 	session: {
 		// Choose how you want to save the user session.
 		// The default is `"jwt"`, an encrypted JWT (JWE) stored in the session cookie.
