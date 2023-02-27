@@ -10,6 +10,7 @@
 	import Modal from '$lib/components/model/Modal.svelte';
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
+	import { onMount } from 'svelte';
 
 	export let data: LayoutData;
 
@@ -128,8 +129,10 @@
 	// login modal state
 	let showModal: boolean = false;
 
-	// vercel analytics
-	inject({ mode: dev ? 'development' : 'production' });
+	onMount(() => {
+		// vercel analytics
+		inject({ mode: dev ? 'development' : 'production' });
+	});
 </script>
 
 <svelte:head>
@@ -208,7 +211,6 @@
 
 					<button
 						class="flex w-full items-center justify-center rounded-md border border-gray-300 bg-gray-100 px-2 py-2 text-black hover:bg-gray-200"
-						autofocus
 						on:click={() => (showModal = false)}>Close modal</button
 					>
 				</div>
