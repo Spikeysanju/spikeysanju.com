@@ -1,6 +1,6 @@
 import { SvelteKitAuth } from '@auth/sveltekit';
 import GitHub from '@auth/core/providers/github';
-import { GITHUB_ID, GITHUB_SECRET } from '$env/static/private';
+import { GITHUB_ID, GITHUB_SECRET, AUTH_SECRET } from '$env/static/private';
 import prisma from '$lib/prisma/prisma';
 import type { Adapter } from '@auth/core/adapters';
 import type { Handle } from '@sveltejs/kit';
@@ -9,7 +9,7 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 export const handle = SvelteKitAuth({
 	trustHost: true,
 	adapter: PrismaAdapter(prisma) as Adapter,
-	secret: process.env.AUTH_SECRET,
+	secret: AUTH_SECRET,
 	providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })] as any,
 	session: {
 		// Choose how you want to save the user session.
