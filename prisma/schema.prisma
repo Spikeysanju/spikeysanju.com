@@ -81,8 +81,8 @@ model Tools {
   image       String
   link        String
   userId      String?   @map("user_id")
-  comment     Comment[]
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  comment     Comment[]
 
   @@map("tools")
 }

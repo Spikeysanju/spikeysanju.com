@@ -41,6 +41,5 @@
 				createdAt={item.createdAt ?? ''}
 			/>
 		{/each}
-		
 	</div>
 </section>
