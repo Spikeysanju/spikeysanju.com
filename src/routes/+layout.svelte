@@ -6,17 +6,10 @@
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/model/Modal.svelte';
-	import { dev } from '$app/environment';
-	import { inject } from '@vercel/analytics';
 	export let data: LayoutData;
 
 	// login modal state
 	let showModal = false;
-
-	inject({
-		mode: dev ? 'development' : 'production',
-		debug: true
-	});
 </script>
 
 <svelte:head>
