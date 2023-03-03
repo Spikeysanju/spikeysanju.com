@@ -2,6 +2,7 @@
 	import type { PageData } from './$types';
 	import { formatDistance } from 'date-fns';
 	import AmaCommentCard from '$lib/components/ama/AmaCommentCard.svelte';
+	import { enhance } from '$app/forms';
 
 	export let data: PageData;
 	let comment: string = '';
@@ -23,7 +24,7 @@
 	<meta name="description" content={data.ama?.description} />
 </svelte:head>
 
-<section class="flex w-full flex-col">
+<section class="flex min-h-screen w-full flex-col">
 	<div class="flex w-full flex-col space-y-3">
 		<h1>{data.ama?.question}</h1>
 		<p>{data.ama?.description}</p>
@@ -48,7 +49,7 @@
 		<div class="flex w-full flex-col">
 			<h3>Comments</h3>
 
-			<form method="post" action="?/create">
+			<form method="post" action="?/create" use:enhance>
 				<input type="hidden" name="amaId" id="amaId" value={data.ama?.id} />
 
 				<div

@@ -18,7 +18,7 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<section class="flex w-full flex-col items-center justify-center">
+<section class="flex w-full flex-col items-center justify-start min-h-screen">
 	<h1 class="flex w-full">People I want to Meet IRL.</h1>
 	<p class="flex w-full text-gray-500">
 		Check out my list of inspirations, people whose work & character I admire.
@@ -33,7 +33,7 @@
 		</div>
 	{/if}
 
-	<div class="flex-co mt-6 flex w-full">
+	<div class="flex-col mt-6 flex w-full">
 		{#each data.peopleIWannaMeetIRL as item}
 			<a href={item.link}>
 				<PeopleCard

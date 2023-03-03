@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import { selectImageAndUploadToServer } from '$lib/utils/utils';
 	import type { Snapshot } from '@sveltejs/kit';
 
@@ -61,7 +62,7 @@
 </svelte:head>
 
 <div class="flex w-full flex-col">
-	<form action="?/create" method="post" class="flex w-full flex-col space-y-3">
+	<form action="?/create" method="post" class="flex w-full flex-col space-y-3" use:enhance>
 		<label for="name" class="block text-sm font-medium text-gray-700">Name</label>
 		<div class="mt-1">
 			<input

@@ -13,10 +13,10 @@
 	/>
 </svelte:head>
 
-<section class="flex w-full flex-col items-center justify-center">
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
 	<h1 class="w-full text-start tracking-tight">Blog.</h1>
 
-	<p class="w-full text-start text-gray-500">
+	<p class="w-full text-start text-gray-500 dark:text-gray-400">
 		{data.blogs.length}
 		{data.blogs.length === 1 ? 'post' : 'posts'}
 	</p>

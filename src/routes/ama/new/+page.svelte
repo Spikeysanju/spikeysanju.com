@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
+
+
 	let question: string = '';
 	let description: string = '';
 	let flair: string = '';
@@ -9,8 +12,8 @@
 	<meta name="description" content="Ask me anything." />
 </svelte:head>
 
-<div class="flex w-full flex-col">
-	<form action="?/create" method="post" class="flex w-full flex-col space-y-3">
+<div class="flex min-h-screen w-full flex-col">
+	<form action="?/create" method="post" class="flex w-full flex-col space-y-3" use:enhance>
 		<label for="question" class="block text-sm font-medium text-gray-700">Question</label>
 		<div class="mt-1">
 			<input

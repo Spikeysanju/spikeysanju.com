@@ -64,7 +64,7 @@
 <section class="flex h-screen flex-col items-center justify-center space-y-8">
 	<div class="flex w-full max-w-6xl flex-col items-center justify-center space-y-8">
 		<h1
-			class="text-3xl leading-tight tracking-tight text-gray-900 sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
+			class="text-3xl leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
 		>
 			Hi i'm Spikey Sanju, Designer & Engineer, Founder of <a
 				href="https://www.thisux.com"
