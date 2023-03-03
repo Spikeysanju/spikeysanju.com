@@ -23,8 +23,9 @@
 	<meta name="description" content={data.tools?.description} />
 </svelte:head>
 
-<section class="flex min-h-screen w-full flex-col items-center justify-center">
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
 	<div class="flex w-full flex-col space-y-3">
+		<img src={data.tools?.image} alt={data.tools?.name} class="aspect-square w-24 object-cover" />
 		<h1>{data.tools?.name}</h1>
 		<p>{data.tools?.description}</p>
 	</div>
