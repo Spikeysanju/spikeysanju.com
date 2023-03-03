@@ -11,7 +11,7 @@
 	<meta name="description" content="Ask me anything." />
 </svelte:head>
 
-<section>
+<section class="min-h-screen">
 	<h1>Ask me anything</h1>
 	<p class="w-full text-gray-500">I'll try to answer as many questions as possible.</p>
 
@@ -42,9 +42,7 @@
 				<h2 class="text-2xl">No posts found.</h2>
 				<p class="text-gray-500">Be the first to ask a question.</p>
 
-				<a href="/ama/new" class="mt-4">
-					<button class="btn btn-primary">Ask a question</button>
-				</a>
+				<a href="/ama/new" class="btn btn-primary mt-4"> Ask a question </a>
 			</div>
 		{/if}
 	</div>

@@ -13,7 +13,7 @@
 	/>
 </svelte:head>
 
-<section class="flex w-full flex-col items-center justify-center">
+<section class="flex min-h-screen w-full flex-col items-center justify-center">
 	<h1 class="w-full text-start tracking-tight">{data.params.category} Blogs.</h1>
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">

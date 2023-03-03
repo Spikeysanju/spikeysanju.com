@@ -16,9 +16,9 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<section>
+<section class="h-screen">
 	<h1
-		class="text-3xl leading-tight tracking-tight text-gray-900 sm:text-4xl sm:leading-snug lg:text-4xl lg:leading-tight"
+		class="text-3xl leading-tight tracking-tight sm:text-4xl sm:leading-snug lg:text-4xl lg:leading-tight"
 	>
 		When people ask me what I do, I tell them I'm a designer and an engineer. Then they give me that
 		confused look, and I tell them, "Think of me as a visual mechanic - I fix broken interfaces and

@@ -20,9 +20,9 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<section class="flex w-full flex-col items-center justify-center">
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
 	<h1 class="flex w-full text-start tracking-tight">Books.</h1>
-	<p class="flex w-full text-gray-500">
+	<p class="flex w-full text-gray-500 dark:text-gray-400">
 		Books I've read and enjoyed. I've tried to keep this list as up to date as possible, but I'm
 		sure I've missed a few.
 	</p>
@@ -32,7 +32,7 @@
 			{#each data.categories as item}
 				<a href={`/books/categories/${item}`}>
 					<span
-						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-medium leading-5 text-gray-800 hover:bg-gray-200"
+						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-medium leading-5 text-gray-800 hover:bg-gray-200 dark:bg-purpleontop dark:text-white"
 					>
 						{item}
 					</span>

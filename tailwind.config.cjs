@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	darkMode: 'media',
+	darkMode: 'class',
 	theme: {
 		fontFamily: {
 			satoshi: "'Satoshi', sans-serif"
@@ -11,7 +11,8 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				deeppurple: '#171630'
+				deeppurple: '#0F172E',
+				purpleontop: '#162544'
 			}
 		}
 	},

@@ -13,10 +13,10 @@
 	/>
 </svelte:head>
 
-<section class="flex w-full flex-col items-center justify-center">
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
 	<h1 class="w-full text-start tracking-tight">Blog.</h1>
 
-	<p class="w-full text-start text-gray-500">
+	<p class="w-full text-start text-gray-500 dark:text-gray-400">
 		{data.blogs.length}
 		{data.blogs.length === 1 ? 'post' : 'posts'}
 	</p>
@@ -26,7 +26,7 @@
 			{#each data.categories as item}
 				<a href={`/blog/categories/${item}`}>
 					<span
-						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-medium leading-5 text-gray-800 hover:bg-gray-200"
+						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-medium leading-5 text-gray-800 hover:bg-gray-200 dark:bg-purpleontop dark:text-white"
 					>
 						{item}
 					</span>
