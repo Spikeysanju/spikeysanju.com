@@ -4,23 +4,25 @@ import type { PageServerLoad } from './$types';
 import type { Prisma } from '@prisma/client';
 
 export const load = (async ({ params }) => {
-	const tools = await prisma.tools.findUnique({
-		where: {
-			id: params.id
-		},
-		include: {
-			user: true
-		}
-	});
-
-	const comments = await prisma.comment.findMany({
-		where: {
-			toolsId: params.id
-		},
-		include: {
-			user: true
-		}
-	});
+	// parallel requests
+	const [tools, comments] = await Promise.all([
+		prisma.tools.findUnique({
+			where: {
+				id: params.id
+			},
+			include: {
+				user: true
+			}
+		}),
+		prisma.comment.findMany({
+			where: {
+				toolsId: params.id
+			},
+			include: {
+				user: true
+			}
+		})
+	]);
 
 	return {
 		tools: tools,
@@ -54,14 +56,26 @@ export const actions: Actions = {
 			.create({
 				data: {
 					content: comment,
-					toolsId: toolId,
-					userId: 'clcv8d4j20000no51pcp04bop'
+					tools: {
+						connect: {
+							id: toolId
+						}
+					},
+					user: {
+						connect: {
+							email: session?.user?.email as string
+						}
+					}
 				} as Prisma.CommentCreateInput
 			})
 			.then(() => {
-				return redirect(303, `/tools/${toolId}`);
+				return {
+					status: 201,
+					message: 'Comment created'
+				};
 			})
 			.catch((err) => {
+				console.log(err);
 				return fail(400, {
 					message: err
 				});

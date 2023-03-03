@@ -7,9 +7,7 @@
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/model/Modal.svelte';
 	export let data: LayoutData;
-
-	// login modal state
-	let showModal = false;
+	import { showLoginModal } from '$lib/store/store';
 </script>
 
 <svelte:head>
@@ -58,13 +56,13 @@
 					</div>
 				{/if}
 			{:else}
-				<button on:click={() => (showModal = true)}> Sign in with GitHub </button>
+				<button on:click={() => ($showLoginModal = true)}> Sign in with GitHub </button>
 			{/if}
 
 			<Header />
 
-			{#if showModal}
-				<Modal bind:showModal>
+			{#if $showLoginModal}
+				<Modal showModal={$showLoginModal}>
 					<h3 slot="header">Welcome to Spikey's Portfolio</h3>
 					<div slot="content" class="flex flex-col space-y-3">
 						<p>
@@ -82,7 +80,7 @@
 
 						<button
 							class="flex w-full items-center justify-center rounded-md border border-gray-300 bg-gray-100 px-2 py-2 text-black hover:bg-gray-200"
-							on:click={() => (showModal = false)}>Close modal</button
+							on:click={() => ($showLoginModal = false)}>Close modal</button
 						>
 					</div>
 				</Modal>

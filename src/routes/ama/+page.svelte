@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import AmaCard from '$lib/components/ama/AmaQuestionCard.svelte';
+	import { showLoginModal } from '$lib/store/store';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -16,13 +18,18 @@
 	<p class="w-full text-gray-500">I'll try to answer as many questions as possible.</p>
 
 	{#if $page.data.session && $page.data.session.user}
-		<div class="mt-3 flex w-full">
-			<a
-				href="ama/new"
-				class="rounded-sm border border-gray-200 bg-gray-100 px-3 py-2 font-medium text-black shadow-sm hover:cursor-pointer hover:bg-gray-200"
-				>Ask a question</a
-			>
-		</div>
+		<button
+			on:click={() => goto('/ama/new')}
+			class="mt-3 rounded-sm border border-gray-200 bg-gray-100 px-3 py-2 font-medium text-black shadow-sm hover:cursor-pointer hover:bg-gray-200"
+		>
+			Ask a question
+		</button>
+	{:else}
+		<button
+			on:click={() => ($showLoginModal = true)}
+			class="mt-3 rounded-sm border border-gray-200 bg-gray-100 px-3 py-2 font-medium text-black shadow-sm hover:cursor-pointer hover:bg-gray-200"
+			>Ask a question</button
+		>
 	{/if}
 
 	<div class="mt-6 flex w-full flex-col gap-8">

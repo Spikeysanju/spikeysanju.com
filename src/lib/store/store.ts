@@ -7,3 +7,6 @@ export const uploadedFileType = writable<string | null>(null);
 // Theme
 type Theme = 'light' | 'dark';
 export const themeStore = writable<Theme>('light');
+
+// Show/hide login modal
+export const showLoginModal = writable<boolean>(false);

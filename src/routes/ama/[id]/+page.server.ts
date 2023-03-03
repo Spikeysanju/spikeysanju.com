@@ -4,15 +4,8 @@ import type { PageServerLoad } from './$types';
 import type { Prisma } from '@prisma/client';
 
 export const load = (async ({ params, locals }) => {
-	const session = await locals.getSession();
-
 	// parallel requests
-	const [user, ama, comments] = await Promise.all([
-		prisma.user.findUnique({
-			where: {
-				email: session?.user?.email as string
-			}
-		}),
+	const [ama, comments] = await Promise.all([
 		prisma.ama.findUnique({
 			where: {
 				id: params.id
@@ -32,7 +25,6 @@ export const load = (async ({ params, locals }) => {
 	]);
 
 	return {
-		user: user,
 		ama: ama,
 		comments: comments
 	};
