@@ -5,5 +5,5 @@
 
 <div class="mt-6 flex w-full max-w-sm flex-col space-y-3">
 	<img src={image} alt={title} class="aspect-square" />
-	<h1 class="w-full text-center text-lg tracking-tight text-black">{title}</h1>
+	<h1 class="w-full text-center text-lg tracking-tight text-black dark:text-white">{title}</h1>
 </div>

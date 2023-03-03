@@ -13,10 +13,10 @@
 		<div class="flow-row item-center flex w-full justify-between">
 			<div class="flex flex-row items-center justify-center space-x-3">
 				<img src={image} alt={name} class="h-9 w-9 rounded-full" />
-				<span class="font-medium text-gray-900">{name}</span>
+				<span class="font-medium text-gray-900 dark:text-white">{name}</span>
 				{#if isAuthor === 'Author'}
 					<span
-						class="inline-flex rounded-full bg-green-100 px-2 text-xs font-medium leading-5 text-green-800 hover:bg-gray-200"
+						class="inline-flex rounded-full bg-green-100 px-2 text-xs font-medium leading-5 text-green-800 hover:bg-green-200"
 					>
 						AUTHOR
 					</span>

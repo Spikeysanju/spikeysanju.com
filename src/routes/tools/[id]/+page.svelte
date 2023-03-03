@@ -23,7 +23,7 @@
 	<meta name="description" content={data.tools?.description} />
 </svelte:head>
 
-<section class="flex w-full flex-col">
+<section class="flex min-h-screen w-full flex-col items-center justify-center">
 	<div class="flex w-full flex-col space-y-3">
 		<h1>{data.tools?.name}</h1>
 		<p>{data.tools?.description}</p>
