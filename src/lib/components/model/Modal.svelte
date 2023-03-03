@@ -2,7 +2,7 @@
 	import { scale } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 
-	export let showModal: boolean = false;
+	export let showModal = false;
 
 	let dialog: HTMLDialogElement;
 

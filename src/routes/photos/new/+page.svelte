@@ -4,10 +4,10 @@
 	import type { Snapshot } from '@sveltejs/kit';
 
 	// user inputs
-	let title: string = '';
-	let description: string = '';
-	let image: string = '';
-	let fileType: string = '';
+	let title = '';
+	let description = '';
+	let image = '';
+	let fileType = '';
 
 	// restore data from snapshot if available
 	export const snapshot: Snapshot = {
@@ -61,9 +61,10 @@
 	<meta name="description" content="Add a new photo to the gallery" />
 </svelte:head>
 
-<div class="flex w-full flex-col">
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
 	<form action="?/create" method="post" class="flex w-full flex-col space-y-3" use:enhance>
-		<label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+		<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Name</label
+		>
 		<div class="mt-1">
 			<input
 				type="text"
@@ -71,11 +72,13 @@
 				id="title"
 				autocomplete="title"
 				bind:value={title}
-				class="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm"
+				class="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black dark:border-gray-500 dark:bg-purpleontop dark:focus:border-white sm:text-sm"
 			/>
 		</div>
 
-		<label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+		<label for="description" class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+			>Description</label
+		>
 		<div class="mt-1">
 			<input
 				type="text"
@@ -83,11 +86,13 @@
 				id="description"
 				autocomplete="name"
 				bind:value={description}
-				class="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm"
+				class="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black dark:border-gray-500 dark:bg-purpleontop dark:focus:border-white sm:text-sm"
 			/>
 		</div>
 
-		<label for="image" class="block text-sm font-medium text-gray-700">Image</label>
+		<label for="image" class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+			>Image</label
+		>
 		<div class="mt-1">
 			<input
 				id="image-to-upload"
@@ -103,8 +108,8 @@
 
 		<button
 			type="submit"
-			class="text-md w-full items-center rounded-md border border-transparent bg-black px-4 py-2 font-bold text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+			class="text-md w-full items-center rounded-md border border-transparent bg-black px-4 py-2 font-bold text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 dark:bg-white dark:text-black"
 			>Add photo</button
 		>
 	</form>
-</div>
+</section>

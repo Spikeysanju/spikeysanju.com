@@ -26,7 +26,7 @@
 			{#each data.categories as item}
 				<a href={`/blog/categories/${item}`}>
 					<span
-						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-medium leading-5 text-gray-800 hover:bg-gray-200"
+						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-medium leading-5 text-gray-800 hover:bg-gray-200 dark:bg-purpleontop dark:text-white"
 					>
 						{item}
 					</span>

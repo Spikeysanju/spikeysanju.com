@@ -3,7 +3,7 @@
 	import AmaCommentCard from '$lib/components/ama/AmaCommentCard.svelte';
 
 	export let data: PageData;
-	let comment: string = '';
+	let comment = '';
 </script>
 
 <svelte:head>

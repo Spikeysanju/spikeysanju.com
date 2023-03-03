@@ -17,9 +17,11 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<section class="flex w-full flex-col items-center justify-center">
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
 	<h1 class="flex w-full text-start tracking-tight">Projects.</h1>
-	<p class="flex w-full text-gray-500">Here are some of the projects I've worked on.</p>
+	<p class="flex w-full text-gray-500 dark:text-gray-400">
+		Here are some of the projects I've worked on.
+	</p>
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">
 		{#each data.projects as item}

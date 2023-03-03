@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Icon from '../icon/Icon.svelte';
 
-	export let title: string = '';
-	export let content: string = '';
-	export let author: string = 'www.spikeysanju.com';
+	export let title = '';
+	export let content = '';
+	export let author = 'www.spikeysanju.com';
 </script>
 
 <div class="flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6 bg-white p-12">

@@ -11,7 +11,8 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				deeppurple: '#0F172E'
+				deeppurple: '#0F172E',
+				purpleontop: '#162544'
 			}
 		}
 	},

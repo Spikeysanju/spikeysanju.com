@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Icon from '../icon/Icon.svelte';
 
-	export let name: string = '';
-	export let href: string = '';
-	export let icon: string = '';
+	export let name = '';
+	export let href = '';
+	export let icon = '';
 </script>
 
 <di

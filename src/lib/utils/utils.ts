@@ -1,6 +1,5 @@
 import type { Data } from '$lib/type/blog-metadata';
-import type { Ama, Media, Tools } from '@prisma/client';
-import type { Thing, WithContext } from 'schema-dts';
+import type { Ama, Tools } from '@prisma/client';
 
 export const fetchBlogsMarkdownPosts = async () => {
 	const allFiles = import.meta.glob('/src/lib/data/blogs/*.md');
@@ -105,12 +104,6 @@ export function generateRandomId(): string {
 	const randomString =
 		Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 	return randomString;
-}
-
-export type Schema = Thing | WithContext<Thing>;
-
-export function serializeSchema(thing: Schema) {
-	return `<script type="application/ld+json">${JSON.stringify(thing, null, 2)}</script>`;
 }
 
 export function generateSitemap<T extends Data>(url: string, route: string, posts: T[]) {

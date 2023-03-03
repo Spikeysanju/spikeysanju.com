@@ -10,7 +10,7 @@
 	<meta name="description" content={data.category} />
 </svelte:head>
 
-<section class="flex w-full flex-col items-center justify-center">
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
 	<h1 class="w-full text-start tracking-tight">{data.params.category} Books.</h1>
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.40),1fr))] gap-6">

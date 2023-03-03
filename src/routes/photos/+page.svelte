@@ -17,9 +17,9 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<section class="flex w-full flex-col items-center justify-center">
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
 	<h1 class="flex w-full text-start tracking-tight">Photos.</h1>
-	<p class="flex w-full text-gray-500">Some photos I've taken over the years.</p>
+	<p class="flex w-full text-gray-500 dark:text-gray-400">Some photos I've taken over the years.</p>
 
 	{#if $page.data.session && $page.data.session.user}
 		<div class="mt-3 flex w-full">
@@ -45,10 +45,13 @@
 		class="mt-6 mb-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.60),1fr))] gap-6"
 	>
 		{#each data.photos as item}
-			<a href={`${item.url}`} class="text-gray-500 hover:text-black hover:underline">
+			<a
+				href={`${item.url}`}
+				class="text-gray-500 hover:text-black hover:underline dark:hover:text-white"
+			>
 				<div class="flex flex-col items-center justify-center space-y-3">
 					<img src={`${item.url}`} class="aspect-auto object-cover" alt={item.title} />
-					<p class="flex w-full text-sm">{item.title}</p>
+					<p class="flex w-full text-sm text-black dark:text-white">{item.title}</p>
 				</div>
 			</a>
 		{/each}

@@ -1,8 +1,8 @@
 <script lang="ts">
-	export let question: string = '';
-	export let author: string = '';
-	export let timeago: string = '';
-	export let authorImage: string = '';
+	export let question = '';
+	export let author = '';
+	export let timeago = '';
+	export let authorImage = '';
 </script>
 
 <div class="flex w-full flex-col items-center justify-center space-y-3">

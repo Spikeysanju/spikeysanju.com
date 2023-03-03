@@ -5,7 +5,7 @@
 	import { enhance } from '$app/forms';
 
 	export let data: PageData;
-	let comment: string = '';
+	let comment = '';
 
 	// check if the user is the author of the ama post or not if yes then show the author tag else show guest tag else if the user is admin then show the creator tag else show guest tag return respective tag as string with condition
 	function isAuthor(userId: string): string {
@@ -62,7 +62,7 @@
 						rows="3"
 						bind:value={comment}
 						on:keydown
-						class="w-full whitespace-pre-line rounded-md border border-gray-300 p-3"
+						class="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black dark:border-gray-500 dark:bg-purpleontop dark:focus:border-white"
 					/>
 
 					<button
