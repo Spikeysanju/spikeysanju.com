@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.title} – Spikey Sanju</title>
+	<title>Book Review: {data.title} | Spikey Sanju</title>
 	<meta name="description" content={data.excerpt} />
 
 	<!-- open graph /facebook -->

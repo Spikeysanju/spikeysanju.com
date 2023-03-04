@@ -1,5 +1,5 @@
 ---
-title: Shape Up - Stop running in circles ship what matters
+title: Shape Up – Ship What Matters, Stop Running in Circles
 date: '2021-12-14'
 categories:
   - 'Startup'

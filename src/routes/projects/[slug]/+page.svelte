@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.title} – Spikey Sanju</title>
+	<title>{data.title} | Spikey Sanju</title>
 	<meta name="description" content={data.title} />
 </svelte:head>
 

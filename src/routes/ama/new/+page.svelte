@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>New Ama – Spikey Sanju</title>
+	<title>New Ama | Spikey Sanju</title>
 	<meta name="description" content="Ask me anything." />
 </svelte:head>
 

@@ -1,5 +1,5 @@
 ---
-title: From Good to Great – How to Elevate Your Developer Experience to the Next Level
+title: Elevating Developer Experience – From Good to Great
 date: '2021-12-14'
 categories:
   - 'Development'

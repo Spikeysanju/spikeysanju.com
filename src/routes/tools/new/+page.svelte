@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>New Tool – Spikey Sanju</title>
+	<title>New Tool | Spikey Sanju</title>
 	<meta name="description" content="Add a new tool to the list." />
 </svelte:head>
 

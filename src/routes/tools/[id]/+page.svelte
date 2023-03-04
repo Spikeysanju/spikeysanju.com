@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.tools?.name} – Spikey Sanju</title>
+	<title>{data.tools?.name} | Spikey Sanju</title>
 	<meta name="description" content={data.tools?.description} />
 </svelte:head>
 

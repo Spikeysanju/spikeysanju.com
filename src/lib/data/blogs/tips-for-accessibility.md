@@ -1,5 +1,5 @@
 ---
-title: 5 Tips for Creating Accessible UI/UX for Startups
+title: Creating Accessible UI/UX – 5 Startup Tips
 date: '2021-12-14'
 categories:
   - 'Design'

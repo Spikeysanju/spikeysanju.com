@@ -48,7 +48,7 @@
 </script>
 
 <svelte:head>
-	<title>Home – Spikey Sanju</title>
+	<title>Home | Spikey Sanju</title>
 	<meta
 		name="description"
 		content="Hi i'm Spikey Sanju, Designer & Engineer, Founder of THISUX Design Studio, where ADHD meets Innovation!"

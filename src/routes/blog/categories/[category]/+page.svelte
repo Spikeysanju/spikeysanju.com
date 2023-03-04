@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>{`Blogs in ${data.category}`} – Spikey Sanju</title>
+	<title>{`Blogs in ${data.category}`} | Spikey Sanju</title>
 	<meta
 		name="description"
 		content="I write about web development, programming, and other stuff. I also write about my personal life."

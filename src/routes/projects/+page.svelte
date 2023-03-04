@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Projects – Spikey Sanju</title>
+	<title>Projects | Spikey Sanju</title>
 	<meta name="description" content="Projects I've worked on." />
 
 	<!-- canonical -->

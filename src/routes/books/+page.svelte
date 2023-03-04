@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Books – Spikey Sanju</title>
+	<title>Books | Spikey Sanju</title>
 	<meta
 		name="description"
 		content="Books I've read and enjoyed. I've tried to keep this list as up to date as possible, but I'm

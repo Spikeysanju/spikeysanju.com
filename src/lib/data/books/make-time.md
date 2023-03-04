@@ -1,5 +1,5 @@
 ---
-title: Make Time – How to focus on what matters everyday
+title: Make Time – Focus on What Matters Daily
 date: '2021-12-14'
 categories:
   - 'Productivity'

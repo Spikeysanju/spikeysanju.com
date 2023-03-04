@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Tools – Spikey Sanju</title>
+	<title>Tools | Spikey Sanju</title>
 	<meta name="description" content="Tools I use on my day to day life." />
 </svelte:head>
 

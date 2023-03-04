@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Blogs – Spikey Sanju</title>
+	<title>Blogs | Spikey Sanju</title>
 	<meta
 		name="description"
 		content="I write about web development, programming, and other stuff. I also write about my personal life."

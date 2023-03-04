@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Books in {data.category} – Spikey Sanju</title>
+	<title>Books in {data.category} | Spikey Sanju</title>
 	<meta name="description" content={data.category} />
 </svelte:head>
 

@@ -1,5 +1,5 @@
 ---
-title: The Almanack Of Naval Ravikant – A Guide to Wealth and Happiness
+title: Almanack of Naval Ravikant
 date: '2021-12-14'
 categories:
   - 'Wealth'

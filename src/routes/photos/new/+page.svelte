@@ -57,7 +57,7 @@
 </script>
 
 <svelte:head>
-	<title>Add Photo – Spikey Sanju</title>
+	<title>Add Photo | Spikey Sanju</title>
 	<meta name="description" content="Add a new photo to the gallery" />
 </svelte:head>
 

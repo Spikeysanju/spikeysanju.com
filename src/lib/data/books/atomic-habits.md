@@ -1,5 +1,5 @@
 ---
-title: Atomic Habits – An Easy & Proven Way to Build Good Habits & Break Bad Ones
+title: Atomic Habits – Build Good Habits, Break Bad Ones
 date: '2021-12-14'
 categories:
   - 'Productivity'

@@ -1,5 +1,5 @@
 ---
-title: The Impact of User Flow on Startup Success
+title: The Impact of User Flow on Startup Success 
 date: '2021-12-14'
 categories:
   - 'Development'

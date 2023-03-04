@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.ama?.question} – Spikey Sanju</title>
+	<title>{data.ama?.question} | Spikey Sanju</title>
 	<meta name="description" content={data.ama?.description} />
 </svelte:head>
 
