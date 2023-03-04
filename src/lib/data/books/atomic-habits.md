@@ -1,5 +1,5 @@
 ---
-title: Atomic Habits – Build Good Habits, Break Bad Ones
+title: Atomic Habits
 date: '2021-12-14'
 categories:
   - 'Productivity'

@@ -1,5 +1,5 @@
 ---
-title: Make Time – Focus on What Matters Daily
+title: Make Time
 date: '2021-12-14'
 categories:
   - 'Productivity'
