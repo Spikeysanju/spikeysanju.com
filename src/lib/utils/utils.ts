@@ -171,3 +171,7 @@ export function generateSitemapForAma(url: string, route: string, posts: Sitemap
 			.join('')}
   </urlset>`;
 }
+
+export function capitalizeFirstLetter(str: string): string {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}

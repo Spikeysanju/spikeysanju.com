@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BookCard from '$lib/components/book/BookCard.svelte';
+	import { capitalizeFirstLetter } from '$lib/utils/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -11,7 +12,9 @@
 </svelte:head>
 
 <section class="flex min-h-screen w-full flex-col items-center justify-start">
-	<h1 class="w-full text-start tracking-tight">{data.params.category} Books.</h1>
+	<h1 class="w-full text-start tracking-tight">
+		{capitalizeFirstLetter(data.params.category)} Books.
+	</h1>
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.40),1fr))] gap-6">
 		{#each data.books as item}

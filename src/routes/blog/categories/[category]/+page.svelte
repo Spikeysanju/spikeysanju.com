@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
+	import { capitalizeFirstLetter } from '$lib/utils/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -13,8 +14,10 @@
 	/>
 </svelte:head>
 
-<section class="flex min-h-screen w-full flex-col items-center justify-center">
-	<h1 class="w-full text-start tracking-tight">{data.params.category} Blogs.</h1>
+<section class="flex min-h-screen w-full flex-col items-center justify-start">
+	<h1 class="w-full text-start tracking-tight">
+		{capitalizeFirstLetter(data.params.category)} Blogs.
+	</h1>
 
 	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.72),1fr))] gap-6">
 		{#each data.posts as item}

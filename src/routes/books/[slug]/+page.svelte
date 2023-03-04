@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
+	import { capitalizeFirstLetter } from '$lib/utils/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -56,7 +57,7 @@
 					<span
 						class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-medium leading-5 text-gray-800 hover:bg-gray-200 dark:bg-purpleontop dark:text-white"
 					>
-						{item}
+						{capitalizeFirstLetter(item)}
 					</span>
 				</a>
 			{/each}
