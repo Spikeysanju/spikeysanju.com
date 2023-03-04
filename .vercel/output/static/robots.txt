@@ -1,0 +1,9 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.spikeysanju.com/sitemap.xml
+Sitemap: https://www.spikeysanju.com/sitemap.xml/amas
+Sitemap: https://www.spikeysanju.com/sitemap.xml/blogs
+Sitemap: https://www.spikeysanju.com/sitemap.xml/books
+Sitemap: https://www.spikeysanju.com/sitemap.xml/projects
+Sitemap: https://www.spikeysanju.com/sitemap.xml/tools

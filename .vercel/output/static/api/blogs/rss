@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Spikey Sanju</title>
+<description>A blog by Spikey Sanju</description>
+<link>https://www.spikeysanju.com</link>
+<atom:link href="https://www.spikeysanju.com/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<guid isPermaLink="true">https://www.spikeysanju.com/blogs/from-good-to-great-developer-experience</guid>
+<title>Elevating Developer Experience – From Good to Great</title>
+<link>https://www.spikeysanju.com/blogs/from-good-to-great-developer-experience</link>
+<description>Elevating Developer Experience – From Good to Great</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+<dc:creator>Spikey Sanju</dc:creator>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/blogs/impact-of-user-flow-in-startup</guid>
+<title>The Impact of User Flow on Startup Success</title>
+<link>https://www.spikeysanju.com/blogs/impact-of-user-flow-in-startup</link>
+<description>The Impact of User Flow on Startup Success</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+<dc:creator>Spikey Sanju</dc:creator>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/blogs/tips-for-accessibility</guid>
+<title>Creating Accessible UI/UX – 5 Startup Tips</title>
+<link>https://www.spikeysanju.com/blogs/tips-for-accessibility</link>
+<description>Creating Accessible UI/UX – 5 Startup Tips</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+<dc:creator>Spikey Sanju</dc:creator>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/blogs/use-data-to-improve-ui-ux-in-startups</guid>
+<title>Using Data to Improve UI/UX for Startups</title>
+<link>https://www.spikeysanju.com/blogs/use-data-to-improve-ui-ux-in-startups</link>
+<description>Using Data to Improve UI/UX for Startups</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+<dc:creator>Spikey Sanju</dc:creator>
+</item>
+</channel>
+</rss>

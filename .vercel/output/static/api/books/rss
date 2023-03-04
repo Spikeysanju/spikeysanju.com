@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Spikey Sanju</title>
+<description>Spikey Sanju is a blog about design, web development, programming, and technology.</description>
+<link>https://www.spikeysanju.com</link>
+<atom:link href="https://www.spikeysanju.com/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<guid isPermaLink="true">https://www.spikeysanju.com/books/almanac-of-naval-ravikant</guid>
+<title>Almanack of Naval Ravikant</title>
+<link>https://www.spikeysanju.com/books/almanac-of-naval-ravikant</link>
+<description>Almanack of Naval Ravikant</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/books/atomic-habits</guid>
+<title>Atomic Habits</title>
+<link>https://www.spikeysanju.com/books/atomic-habits</link>
+<description>Atomic Habits</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/books/make-time</guid>
+<title>Make Time</title>
+<link>https://www.spikeysanju.com/books/make-time</link>
+<description>Make Time</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://www.spikeysanju.com/books/shape-up</guid>
+<title>Shape Up</title>
+<link>https://www.spikeysanju.com/books/shape-up</link>
+<description>Shape Up</description>
+<pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
