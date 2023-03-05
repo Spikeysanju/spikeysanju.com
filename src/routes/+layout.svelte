@@ -6,11 +6,9 @@
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/model/Modal.svelte';
-	import { showLoginModal, lastVisit } from '$lib/store/store';
+	import { showLoginModal } from '$lib/store/store';
 
 	export let data: LayoutData;
-
-	$: $lastVisit = data.lastVisit;
 </script>
 
 <svelte:head>
@@ -38,7 +36,7 @@
 		class="mx-auto bg-white px-3 text-black dark:bg-deeppurple dark:text-white"
 		data-sveltekit-preload-data="hover"
 	>
-		<div class="mx-auto max-w-2xl bg-white px-3 text-black dark:bg-deeppurple dark:text-white">
+		<div class="mx-auto mt-3 max-w-2xl bg-white px-3 text-black dark:bg-deeppurple dark:text-white">
 			{#if $page.data.session}
 				{#if $page.data.session.user?.image}
 					<div class="flex flex-row items-center justify-between">
@@ -62,8 +60,8 @@
 				<button on:click={() => ($showLoginModal = true)}> Sign in with GitHub </button>
 			{/if}
 
-			<p class=" text-gray-500 dark:text-gray-400">
-				Last visit is from: {$lastVisit?.lastvisit?.city}, {$lastVisit?.lastvisit?.country}
+			<p id="lastvisit" class=" text-gray-500 dark:text-gray-400">
+				Last visit is from: {data.lastVisit.lastvisit?.city}, {data.lastVisit?.lastvisit?.country}
 			</p>
 
 			<Header />
