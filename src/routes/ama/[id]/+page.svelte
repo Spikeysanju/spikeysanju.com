@@ -36,7 +36,7 @@
 					alt={data.ama?.user?.name}
 					class="h-12 w-12 rounded-full"
 				/>
-				<span class="font-medium text-gray-900">{data.ama?.user?.name}</span>
+				<span class="font-medium text-black dark:text-white">{data.ama?.user?.name}</span>
 
 				<div class="text-right">
 					<span class="text-gray-500"
