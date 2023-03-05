@@ -1,3 +1,4 @@
+import type { LastVisit } from '$lib/type/lastvisit';
 import { writable } from 'svelte/store';
 
 // Uploaded file url
@@ -10,3 +11,7 @@ export const themeStore = writable<Theme>('light');
 
 // Show/hide login modal
 export const showLoginModal = writable<boolean>(false);
+
+// Last visit
+export const lastVisit = writable<LastVisit | null>(null);
+export const lastVisitAny = writable<any | null>(null);

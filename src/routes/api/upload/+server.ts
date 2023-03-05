@@ -16,7 +16,7 @@ export const PUT = (async (event) => {
 	const id = generateRandomId();
 
 	await event
-		.fetch(`https://portfolio.spikeysanju.workers.dev/${id}`, {
+		.fetch(`https://api.spikeysanju.workers.dev/upload/${id}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': fileType,

@@ -6,8 +6,11 @@
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/model/Modal.svelte';
+	import { showLoginModal, lastVisit } from '$lib/store/store';
+
 	export let data: LayoutData;
-	import { showLoginModal } from '$lib/store/store';
+
+	$: $lastVisit = data.lastVisit;
 </script>
 
 <svelte:head>
@@ -58,6 +61,10 @@
 			{:else}
 				<button on:click={() => ($showLoginModal = true)}> Sign in with GitHub </button>
 			{/if}
+
+			<p class=" text-gray-500 dark:text-gray-400">
+				Last visit is from: {$lastVisit?.lastvisit?.city}, {$lastVisit?.lastvisit?.country}
+			</p>
 
 			<Header />
 
