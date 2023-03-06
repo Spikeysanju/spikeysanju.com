@@ -3,7 +3,7 @@ import type { LayoutServerLoad } from './$types';
 
 export const load = (async ({ locals, url, fetch }) => {
 	await fetch('https://api.spikeysanju.com/lastvisit', {
-		method: 'PUT',
+		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
 		}
