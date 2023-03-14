@@ -56,10 +56,6 @@
 			</a>
 		{/each}
 
-		{#if data.photos.length === 0}
-			<div class="flex h-full w-full flex-col items-center justify-center">
-				<h2 class="text-2xl">No photos found.</h2>
-			</div>
-		{/if}
+
 	</div>
 </section>

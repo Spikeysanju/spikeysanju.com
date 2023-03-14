@@ -26,7 +26,9 @@
 		</div>
 	{/if}
 
-	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.24),1fr))] gap-12">
+	<div
+		class="mt-6 mb-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.24),1fr))] gap-12"
+	>
 		{#each data.tools as item}
 			<a href={`/tools/${item.id}`}>
 				<ToolCard title={item.name} image={item.image} />
