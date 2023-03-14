@@ -14,7 +14,7 @@
 	<meta property="og:title" content={data.title} />
 	<meta
 		property="og:image"
-		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={data.title}"
+		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={`Book Review: ${data.title}`}"
 	/>
 	<meta property="og:description" content={data.excerpt} />
 	<meta property="og:url" content="{PUBLIC_WEBSITE_URL}/books/{data.slug}" />
@@ -37,7 +37,7 @@
 	<meta name="twitter:description" content={data.slug} />
 	<meta
 		name="twitter:image"
-		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={data.title}"
+		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={`Book Review: ${data.title}`}"
 	/>
 	<meta property="twitter:url" content="{PUBLIC_WEBSITE_URL}/books/{data.slug}" />
 

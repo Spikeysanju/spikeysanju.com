@@ -7,9 +7,12 @@
 </script>
 
 <div class="flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6 bg-white p-12">
-	<div class="flex flex-col space-y-3">
+	<div id="content" class="flex flex-col space-y-3">
 		{#if title.length !== 0}
-			<h1 class="flex flex-col bg-yellow-100 text-5xl text-yellow-800 underline-offset-auto">
+			<h1
+				id="title"
+				class="flex flex-col whitespace-pre-line bg-yellow-100 text-5xl text-yellow-800 underline-offset-auto"
+			>
 				{#if title.length > 40}
 					{#each title.split('\n') as line}
 						<div>{line}</div>
@@ -20,7 +23,7 @@
 			</h1>
 		{/if}
 
-		<h1 class="flex w-full flex-col text-5xl">
+		<h1 id="description" class="flex w-full flex-col text-5xl">
 			{#if content.length > 50}
 				{#each content.split('\n') as line}
 					<div>{line}</div>
