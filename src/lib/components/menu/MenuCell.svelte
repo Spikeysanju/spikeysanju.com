@@ -6,7 +6,7 @@
 	export let icon = '';
 </script>
 
-<di
+<div
 	class="flex w-full flex-row items-center justify-between transition-all delay-75 ease-in-out hover:-rotate-1"
 >
 	<a
@@ -19,4 +19,4 @@
 	<div>
 		<Icon width="24" height="24" name={icon} />
 	</div>
-</di>
+</div>

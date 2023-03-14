@@ -21,6 +21,9 @@
 		$showLoginModal = false;
 	}}
 >
+
+<slot/>
+
 	<div on:click|stopPropagation class="space-y-3">
 		<slot name="header" />
 		<slot name="content" />
