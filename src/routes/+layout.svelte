@@ -27,6 +27,31 @@
 	<!--Safari/i0S -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<!-- Standard favicon -->
+	<link rel="icon" type="image/png" href="favicon.png" />
+
+	<!-- Android Chrome -->
+	<link rel="icon" sizes="192x192" href="android-chrome-192x192.png" />
+	<link rel="icon" sizes="512x512" href="android-chrome-512x512.png" />
+
+	<!-- iOS -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
+
+	<!-- Windows -->
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+	<!-- Other platforms -->
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Spikey's Portfolio" />
+	<meta
+		name="keywords"
+		content="Spikey Sanju, Spikey, Sanju, Portfolio, UI UX Design, Android, THISUX HQ"
+	/>
 </svelte:head>
 
 {#key data.currentRoute}
