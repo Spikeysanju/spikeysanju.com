@@ -1,5 +1,6 @@
 import type { Data } from '$lib/type/blog-metadata';
 import type { Ama, Tools } from '@prisma/client';
+import { format } from 'date-fns';
 
 export const fetchBlogsMarkdownPosts = async () => {
 	const allFiles = import.meta.glob('/src/lib/data/blogs/*.md');
@@ -163,7 +164,7 @@ export function generateSitemapForAma(url: string, route: string, posts: Sitemap
       <url>
         <loc>${url}/${route}/${post.id}</loc>
         <changefreq>daily</changefreq>
-        <lastmod>${post.createdAt}</lastmod>
+        <lastmod>${convertDateFormat(post.createdAt)}</lastmod>
         <priority>0.7</priority>
       </url>
       `
@@ -174,4 +175,14 @@ export function generateSitemapForAma(url: string, route: string, posts: Sitemap
 
 export function capitalizeFirstLetter(str: string): string {
 	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function convertDateFormat(dateString: Date | null): string {
+	if (dateString === null) {
+		return '';
+	}
+
+	const date = new Date(dateString);
+	const formattedDate = format(date, 'yyyy-MM-dd');
+	return formattedDate;
 }
