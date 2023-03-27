@@ -1,34 +1,26 @@
 import prisma from '$lib/prisma/prisma';
 import { redirect, type Actions, fail } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
-import type { Prisma } from '@prisma/client';
+import { CommentProvider, type Prisma } from '@prisma/client';
 
-export const load = (async ({ params, locals }) => {
-	// parallel requests
-	const [ama, comments] = await Promise.all([
-		prisma.ama.findUnique({
-			where: {
-				id: params.id
-			},
-			include: {
-				user: true
-			}
-		}),
-		prisma.comment.findMany({
-			where: {
-				amaId: params.id
-			},
-			include: {
-				user: true
-			}
-		})
-	]);
+export const load = async ({ params }) => {
+	const ama = await prisma.ama.findUnique({
+		where: {
+			id: params.id
+		},
+		include: {
+			user: true,
+			comment: true
+		}
+	});
+
+	if (!ama) {
+		throw redirect(303, '/ama');
+	}
 
 	return {
-		ama: ama,
-		comments: comments
+		ama: ama
 	};
-}) satisfies PageServerLoad;
+};
 
 export const actions: Actions = {
 	create: async (event) => {
@@ -56,6 +48,7 @@ export const actions: Actions = {
 			.create({
 				data: {
 					content: comment,
+					commentProvider: CommentProvider.ASKMEANYTHING,
 					ama: {
 						connect: {
 							id: amaId

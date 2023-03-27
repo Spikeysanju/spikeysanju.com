@@ -11,12 +11,12 @@
 	<meta name="description" content="Tools I use on my day to day life." />
 </svelte:head>
 
-<section class="flex min-h-screen w-full flex-col items-center justify-start">
+<section class="flex min-h-screen w-full flex-col items-center justify-start mb-3">
 	<h1 class="flex w-full items-center justify-start">Tools.</h1>
 	<p class="flex w-full text-gray-500 dark:text-gray-400">
 		Here is my list of tools i use on my day to day life.
 	</p>
-	{#if $page.data.session && $page.data.session.user}
+	{#if $page.data.session && data.currentUser?.role === 'ADMIN'}
 		<div class="mt-3 flex w-full">
 			<a
 				href="tools/new"

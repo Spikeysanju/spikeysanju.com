@@ -1,9 +1,7 @@
-import type { PageServerLoad } from './$types';
 import prisma from '$lib/prisma/prisma';
 
-export const load = (async () => {
-	const peopleIWannaMeetIRL = await prisma.peopleIWannaMeetIRL.findMany();
+export const load = async () => {
 	return {
-		peopleIWannaMeetIRL: peopleIWannaMeetIRL
+		peopleIWannaMeetIRL: await prisma.peopleIWannaMeetIRL.findMany()
 	};
-}) satisfies PageServerLoad;
+};

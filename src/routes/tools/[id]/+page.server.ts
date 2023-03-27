@@ -1,34 +1,27 @@
 import prisma from '$lib/prisma/prisma';
 import { redirect, type Actions, fail } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
-import type { Prisma } from '@prisma/client';
+import { CommentProvider, type Prisma } from '@prisma/client';
 
-export const load = (async ({ params }) => {
+export const load = async ({ params }) => {
 	// parallel requests
-	const [tools, comments] = await Promise.all([
-		prisma.tools.findUnique({
-			where: {
-				id: params.id
-			},
-			include: {
-				user: true
-			}
-		}),
-		prisma.comment.findMany({
-			where: {
-				toolsId: params.id
-			},
-			include: {
-				user: true
-			}
-		})
-	]);
+	const tools = await prisma.tools.findUnique({
+		where: {
+			id: params.id
+		},
+		include: {
+			user: true,
+			comment: true
+		}
+	});
+
+	if (!tools) {
+		throw redirect(303, '/tools');
+	}
 
 	return {
-		tools: tools,
-		comments: comments
+		tools: tools
 	};
-}) satisfies PageServerLoad;
+};
 
 export const actions: Actions = {
 	create: async (event) => {
@@ -56,6 +49,7 @@ export const actions: Actions = {
 			.create({
 				data: {
 					content: comment,
+					commentProvider: CommentProvider.TOOLSIUSE,
 					tools: {
 						connect: {
 							id: toolId

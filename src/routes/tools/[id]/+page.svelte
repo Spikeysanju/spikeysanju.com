@@ -1,11 +1,10 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import AmaCommentCard from '$lib/components/ama/AmaCommentCard.svelte';
 	import { showLoginModal } from '$lib/store/store';
 	import { page } from '$app/stores';
 	import { enhance } from '$app/forms';
 
-	export let data: PageData;
+	export let data;
 	let comment = '';
 
 	// check if the user is the author of the ama post or not if yes then show the author tag else show guest tag else if the user is admin then show the creator tag else show guest tag return respective tag as string with condition
@@ -23,7 +22,7 @@
 	<meta name="description" content={data.tools?.description} />
 </svelte:head>
 
-<section class="flex min-h-screen w-full flex-col items-center justify-start">
+<section class="mb-3 flex min-h-screen w-full flex-col items-center justify-start">
 	<div class="mt-3 flex w-full flex-col space-y-3">
 		<img src={data.tools?.image} alt={data.tools?.name} class="aspect-square w-24 object-cover" />
 		<h1>{data.tools?.name}</h1>
@@ -32,6 +31,20 @@
 
 	<div class="mt-6 flex w-full flex-col space-y-3">
 		<h3>Comments</h3>
+
+		{#if data.tools.comment.length > 0}
+			{#each data.tools.comment as item}
+				<AmaCommentCard
+					name={data.tools.user?.name ?? 'Anonymous'}
+					image={data.tools.user?.image ?? '/images/anonymous.png'}
+					content={item.content ?? ''}
+					isAuthor={isAuthor(data.tools.user?.id ?? 'Guest')}
+					createdAt={item.createdAt ?? ''}
+				/>
+			{/each}
+		{:else}
+			<p>No comments yet</p>
+		{/if}
 
 		{#if $page.data.session && $page.data.session.user}
 			<form method="post" action="?/create" use:enhance>
@@ -65,15 +78,5 @@
 				>Sign in to comment</button
 			>
 		{/if}
-
-		{#each data.comments as item}
-			<AmaCommentCard
-				name={item.user?.name ?? 'Anonymous'}
-				image={item.user?.image ?? '/images/anonymous.png'}
-				content={item.content ?? ''}
-				isAuthor={isAuthor(item.user?.id ?? 'Guest')}
-				createdAt={item.createdAt ?? ''}
-			/>
-		{/each}
 	</div>
 </section>

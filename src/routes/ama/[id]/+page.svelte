@@ -84,13 +84,13 @@
 
 			<h6 class="py-3">Recent comments</h6>
 
-			{#if data.comments.length > 0}
-				{#each data.comments as item}
+			{#if data.ama.comment.length > 0}
+				{#each data.ama.comment as item}
 					<AmaCommentCard
-						name={item.user?.name ?? 'Anonymous'}
-						image={item.user?.image ?? '/images/anonymous.png'}
+						name={data.ama.user?.name ?? 'Anonymous'}
+						image={data.ama.user?.image ?? '/images/anonymous.png'}
 						content={item.content ?? ''}
-						isAuthor={isAuthor(item.user?.id ?? 'Guest')}
+						isAuthor={isAuthor(data.ama.user?.id ?? 'Guest')}
 						createdAt={item.createdAt ?? ''}
 					/>
 				{/each}

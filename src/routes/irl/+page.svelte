@@ -2,9 +2,8 @@
 	import { page } from '$app/stores';
 	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import PeopleCard from '$lib/components/irl/PeopleCard.svelte';
-	import type { PageData } from './$types';
 
-	export let data: PageData;
+	export let data;
 </script>
 
 <svelte:head>
@@ -23,7 +22,7 @@
 	<p class="flex w-full text-gray-500 dark:text-gray-400">
 		Check out my list of inspirations, people whose work & character I admire.
 	</p>
-	{#if $page.data.session && $page.data.session.user}
+	{#if $page.data.session && data.currentUser?.role === 'ADMIN'}
 		<div class="mt-3 flex w-full">
 			<a
 				href="irl/new"
@@ -34,16 +33,20 @@
 	{/if}
 
 	<div class="mt-6 flex w-full flex-col">
-		{#each data.peopleIWannaMeetIRL as item}
-			<a href={item.link}>
-				<PeopleCard
-					name={item.name}
-					met={item.met}
-					image={item.image}
-					tags={item.tags}
-					url={'https://www.twitter.com/spikeysanju'}
-				/>
-			</a>
-		{/each}
+		{#if data.peopleIWannaMeetIRL}
+			{#each data.peopleIWannaMeetIRL as item}
+				<a href={item.link}>
+					<PeopleCard
+						name={item.name}
+						met={item.met}
+						image={item.image || ''}
+						tags={item.tags}
+						url={'https://www.twitter.com/spikeysanju'}
+					/>
+				</a>
+			{/each}
+		{:else}
+			<p class="flex w-full text-gray-500 dark:text-gray-400">No people to meet IRL yet.</p>
+		{/if}
 	</div>
 </section>

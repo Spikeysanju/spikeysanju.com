@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
-	import type { PageData } from './$types';
 
-	export let data: PageData;
+	export let data;
 </script>
 
 <svelte:head>
@@ -21,7 +20,7 @@
 	<h1 class="flex w-full text-start tracking-tight">Photos.</h1>
 	<p class="flex w-full text-gray-500 dark:text-gray-400">Some photos I've taken over the years.</p>
 
-	{#if $page.data.session && $page.data.session.user}
+	{#if $page.data.session && data.currentUser?.role === 'ADMIN'}
 		<div class="mt-3 flex w-full">
 			<a
 				href="photos/new"
@@ -55,7 +54,5 @@
 				</div>
 			</a>
 		{/each}
-
-
 	</div>
 </section>

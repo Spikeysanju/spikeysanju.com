@@ -1,14 +1,13 @@
 <script lang="ts">
 	import '../app.css';
 	import Header from '$lib/components/header/Header.svelte';
-	import type { LayoutData } from './$types';
 	import { fade } from 'svelte/transition';
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/model/Modal.svelte';
 	import { showLoginModal } from '$lib/store/store';
 
-	export let data: LayoutData;
+	export let data;
 </script>
 
 <svelte:head>
@@ -58,7 +57,7 @@
 	<main
 		in:fade={{ duration: 150, delay: 150 }}
 		out:fade={{ duration: 150 }}
-		class="mx-auto bg-white px-3 text-black dark:bg-deeppurple dark:text-white"
+		class="mx-auto bg-white px-3 font-satoshi text-black dark:bg-deeppurple dark:text-white"
 		data-sveltekit-preload-data="hover"
 	>
 		<div class="mx-auto mt-3 max-w-2xl bg-white px-3 text-black dark:bg-deeppurple dark:text-white">
