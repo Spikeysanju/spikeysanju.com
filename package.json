@@ -17,6 +17,7 @@
 		"@playwright/test": "^1.31.1",
 		"@resvg/resvg-js": "^2.4.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-vercel": "^2.4.1",
 		"@sveltejs/kit": "^1.8.5",
 		"@tailwindcss/forms": "^0.5.3",
 		"@typescript-eslint/eslint-plugin": "^5.53.0",
@@ -47,14 +48,13 @@
 		"@auth/sveltekit": "0.2.2",
 		"@next-auth/prisma-adapter": "^1.0.5",
 		"@prisma/client": "^4.10.1",
-		"@sveltejs/adapter-vercel": "^1.0.0",
 		"date-fns": "^2.29.3",
+		"gpt3-tokenizer": "^1.1.5",
 		"next-auth": "^4.18.8",
+		"openai": "^3.2.1",
 		"prisma": "^4.10.1",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.1.0",
-		"gpt3-tokenizer": "^1.1.5",
-		"openai": "^3.2.1",
 		"sse.js": "^0.6.1"
 	}
 }

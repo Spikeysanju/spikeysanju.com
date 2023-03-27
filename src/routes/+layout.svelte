@@ -85,7 +85,7 @@
 			{/if}
 
 			<p id="lastvisit" class=" text-gray-500 dark:text-gray-400">
-				Last visit is from: {data.lastVisit.lastvisit?.city}, {data.lastVisit?.lastvisit?.country}
+				Last visit is from: {data.ip}, {data.country}
 			</p>
 
 			<Header />
