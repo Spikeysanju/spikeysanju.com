@@ -8,6 +8,8 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
+		"strict": true,
+		"ignoreDeprecations": "5.0",
+		"verbatimModuleSyntax": true
 	}
 }
