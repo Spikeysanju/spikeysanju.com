@@ -1,6 +1,6 @@
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
-import Satoshi from '$lib/fonts/Satoshi-Medium.woff';
+import Satoshi from '$lib/fonts/satoshi/woff/Satoshi-Medium.woff';
 import { html as toReactNode } from 'satori-html';
 import OGImage from '$lib/components/og/OGImage.svelte';
 import type { RequestHandler } from './$types';
