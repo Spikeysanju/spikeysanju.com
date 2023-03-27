@@ -1,6 +1,11 @@
 import type { Data } from '$lib/type/blog-metadata';
 import { fetchBooksMarkdownPosts } from '$lib/utils/utils';
 import type { RequestHandler } from './$types';
+import type { Config } from '@sveltejs/adapter-vercel';
+
+export const config: Config = {
+	runtime: 'edge'
+};
 
 const siteURL = 'https://www.spikeysanju.com';
 const siteTitle = 'Spikey Sanju';

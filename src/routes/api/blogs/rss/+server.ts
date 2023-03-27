@@ -1,14 +1,17 @@
 import type { Data } from '$lib/type/blog-metadata';
 import { fetchBlogsMarkdownPosts } from '$lib/utils/utils';
-import type { RequestHandler } from '../../$types';
+import type { Config } from '@sveltejs/adapter-vercel';
 
+export const config: Config = {
+	runtime: 'edge'
+};
 const siteURL = 'https://www.spikeysanju.com';
 const siteTitle = 'Spikey Sanju';
 const siteDescription = 'A blog by Spikey Sanju';
 
 export const prerender = true;
 
-export const GET = (async () => {
+export const GET = async () => {
 	const allBlogs = await fetchBlogsMarkdownPosts();
 
 	const sortedBlogs = allBlogs.sort((a, b) => {
@@ -24,7 +27,7 @@ export const GET = (async () => {
 	};
 
 	return new Response(body, options);
-}) satisfies RequestHandler;
+};
 
 const render = (blogs: Data[]) => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">

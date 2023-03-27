@@ -2,7 +2,11 @@ import { CLOUDFLARE_SECRET } from '$env/static/private';
 import { generateRandomId } from '$lib/utils/utils';
 import { fail } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import type { Config } from '@sveltejs/adapter-vercel';
 
+export const config: Config = {
+	runtime: 'edge'
+};
 export const PUT = (async (event) => {
 	const { image, fileType } = await event.request.json();
 	const user = await event.locals.getSession();
