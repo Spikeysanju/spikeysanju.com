@@ -84,9 +84,11 @@
 				<button on:click={() => ($showLoginModal = true)}> Sign in with GitHub </button>
 			{/if}
 
-			<p id="lastvisit" class=" text-gray-500 dark:text-gray-400">
-				Last visit is from: {data.ip}, {data.country}
-			</p>
+			{#if data.city !== 'unknown' || data.country !== 'unknown'}
+				<p id="lastvisit" class=" text-gray-500 dark:text-gray-400">
+					Last visit is from: {data.city}, {data.country}
+				</p>
+			{/if}
 
 			<Header />
 

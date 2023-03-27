@@ -4,7 +4,7 @@ import type { Data } from '$lib/type/blog-metadata';
 import type { Config } from '@sveltejs/adapter-vercel';
 
 export const config: Config = {
-	runtime: 'edge'
+	runtime: 'nodejs18.x'
 };
 
 export const GET: RequestHandler = async () => {
