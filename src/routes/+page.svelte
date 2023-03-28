@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import MenuCell from '$lib/components/menu/MenuCell.svelte';
-	import Quote from '$lib/components/quote/Quote.svelte';
 	import type { Links } from '$lib/type/links';
 
 	const links = [
@@ -74,15 +73,6 @@
 				THISUX Design Studio
 			</a>, where ADHD meets Innovation!
 		</h1>
-
-		<Quote
-			quote="I'm a designer and engineer who loves to build things. I'm also a
-			co-founder of THISUX Design Studio, where ADHD meets Innovation!"
-			author="– Spikey Sanju"
-			bgColor="bg-green-300"
-			textColor="text-gray-900"
-			shadowColor="shadow-green-300/20"
-		/>
 
 		<nav class="flex w-full flex-col items-center justify-between space-y-4">
 			{#each links as item}
