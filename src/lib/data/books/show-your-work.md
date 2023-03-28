@@ -8,6 +8,10 @@ image: 'https://cdn.spikeysanju.com/books/showyourwork.png'
 excerpt: 'Discover how to build an audience for your creative work with Show Your Work by Austin Kleon - read my review now!'
 ---
 
+<script lang="ts">
+	import Quote from '$lib/components/quote/Quote.svelte';
+</script>
+
 ### Introduction
 
 Hi everyone, and welcome to my book review blog! I'm excited to share my thoughts on "Show Your Work" by Austin Kleon, a book about how to share your creative work and build an audience online.Discover how to build an audience for your creative work with 'Show Your Work' by Austin Kleon - read my review now!'
@@ -26,11 +30,28 @@ One of the things I appreciated most about this book was Kleon's emphasis on the
 
 <br/>
 
-Another aspect of "Show Your Work" that I enjoyed was the wide range of examples Kleon provides, from artists and writers to musicians and designers. It was fascinating to see how different creatives approach sharing their work, and I found myself inspired to try out new techniques and strategies. As Kleon says, `"Share what you love, and the people who love the same things will find you."`
+Another aspect of "Show Your Work" that I enjoyed was the wide range of examples Kleon provides, from artists and writers to musicians and designers. It was fascinating to see how different creatives approach sharing their work, and I found myself inspired to try out new techniques and strategies. As Kleon says,
+
+<Quote
+    		quote="Share what you love, and the people who love the same things will find you."
+    		author="Austin Kleon"
+    		bgColor="bg-yellow-300"
+    		textColor="text-gray-900"
+    		shadowColor="shadow-yellow-300/20"
+    	/>
 
 <br/>
 
-I also appreciated Kleon's advice on dealing with the fear of others stealing your ideas. As he says, `"Don’t worry about people stealing your ideas. If your ideas are any good, you’ll have to ram them down people’s throats."` This is a great reminder that the most important thing is to keep creating and sharing your work, regardless of what others may think or do.
+I also appreciated Kleon's advice on dealing with the fear of others stealing your ideas. As he says,
+<Quote
+    		quote="Don’t worry about people stealing your ideas. If your ideas are any good, you’ll have to ram them down people’s throats."
+    		author="Austin Kleon"
+    		bgColor="bg-yellow-300"
+    		textColor="text-gray-900"
+    		shadowColor="shadow-yellow-300/20"
+    	/>
+
+This is a great reminder that the most important thing is to keep creating and sharing your work, regardless of what others may think or do.
 
 ### Rating
 
@@ -38,5 +59,13 @@ I give "Show Your Work" 4.5 stars out of 5. It's a well-written and thought-prov
 
 ### Conclusion
 
-Overall, I highly recommend "Show Your Work" to anyone who wants to build an online following for their creative work. It's a quick and engaging read that's full of helpful tips and insights. Whether you're an artist, writer, musician, or any other type of creative, this book will give you the tools and inspiration you need to start sharing your work with the world. As Kleon says, `"Be open, generous, brave. Show your work, then show some more. Create a feedback loop and learn from the people who care about your stuff."`
+Overall, I highly recommend "Show Your Work" to anyone who wants to build an online following for their creative work. It's a quick and engaging read that's full of helpful tips and insights. Whether you're an artist, writer, musician, or any other type of creative, this book will give you the tools and inspiration you need to start sharing your work with the world. As Kleon says,
+
+<Quote
+    		quote="Be open, generous, brave. Show your work, then show some more. Create a feedback loop and learn from the people who care about your stuff."
+    		author="Austin Kleon"
+    		bgColor="bg-yellow-300"
+    		textColor="text-gray-900"
+    		shadowColor="shadow-yellow-300/20"
+    	/>
 <br/>
