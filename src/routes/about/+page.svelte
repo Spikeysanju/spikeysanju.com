@@ -6,9 +6,7 @@
 </script>
 
 <svelte:head>
-	<title
-		>Hi, I'm Spikey Sanju, Designer & Engineer, Founder of THISUX Design Studio | Spikey Sanju</title
-	>
+	<title>About | Spikey Sanju</title>
 	<meta name="description" content={data.description} />
 
 	<!-- canonical -->
