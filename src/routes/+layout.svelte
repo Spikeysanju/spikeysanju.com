@@ -60,7 +60,7 @@
 		class="mx-auto bg-white px-3 font-satoshi text-black dark:bg-deeppurple dark:text-white"
 		data-sveltekit-preload-data="hover"
 	>
-		<div class="mx-auto mt-3 max-w-2xl bg-white px-3 text-black dark:bg-deeppurple dark:text-white">
+		<div class="mx-auto max-w-2xl bg-white px-3 py-3 text-black dark:bg-deeppurple dark:text-white">
 			{#if $page.data.session}
 				{#if $page.data.session.user?.image}
 					<div class="flex flex-row items-center justify-between">
