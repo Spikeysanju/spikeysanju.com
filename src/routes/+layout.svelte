@@ -1,11 +1,16 @@
 <script lang="ts">
 	import '$lib/app.css';
+	import { navigating } from '$app/stores';
 	import Header from '$lib/components/header/Header.svelte';
 	import { fade } from 'svelte/transition';
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/model/Modal.svelte';
-	import { showLoginModal } from '$lib/store/store';
+	import { navigationState, showLoginModal } from '$lib/store/store';
+	import PageLoader from '$lib/components/loading/PageLoader.svelte';
+
+	$: if ($navigating) $navigationState = 'loading';
+	else $navigationState = 'loaded';
 
 	export let data;
 </script>
@@ -53,10 +58,14 @@
 	/>
 </svelte:head>
 
+{#if $navigationState === 'loading'}
+	<div out:fade={{ delay: 500 }}>
+		<PageLoader />
+	</div>
+{/if}
+
 {#key data.currentRoute}
 	<main
-		in:fade={{ duration: 150, delay: 150 }}
-		out:fade={{ duration: 150 }}
 		class="mx-auto bg-white px-3 font-satoshi text-black dark:bg-deeppurple dark:text-white"
 		data-sveltekit-preload-data="hover"
 	>
