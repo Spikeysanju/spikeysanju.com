@@ -28,7 +28,6 @@
 	<div class="whitespace-pre-line">
 		<SvelteMarkdown
 			source="
-
 Hey there, I'm Sanju, and people often ask me what I do. I tell them that I'm a designer and an engineer, which essentially means I practice **UXE (User Experience Engineering)**. My passion is designing and building things that make people's lives easier. 
 <br/>
 From a young age, I've been self-taught in the field of design and development. I have a deep love for learning and always seek out new challenges to improve my skills. I'm particularly enthusiastic about open-source projects and have contributed a lot to the community.
@@ -40,7 +39,6 @@ It's a huge achievement in my field, and I'm particularly proud of it. In additi
 I believe that any idea, no matter how small or big, can change the world. I'm passionate about making a difference in people's lives through innovative and creative ideas. My love for design and engineering drives me to work tirelessly towards realizing these goals.
 <br/>
 You can find me here [Link to all my social media accounts](https://www.spikeysanju.com/links). Feel free to reach out to me if you have any questions or want to collaborate on a project.
-
 "
 			renderers={{
 				link: Link
