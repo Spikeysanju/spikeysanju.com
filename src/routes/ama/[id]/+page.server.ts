@@ -1,6 +1,7 @@
 import prisma from '$lib/prisma/prisma';
 import { redirect, type Actions, fail } from '@sveltejs/kit';
 import { CommentProvider, type Prisma } from '@prisma/client';
+import { EMAIL_AUTH_TOKEN } from '$env/static/private';
 
 export const load = async ({ params }) => {
 	const ama = await prisma.ama.findUnique({
@@ -35,6 +36,7 @@ export const actions: Actions = {
 		// we are save, so we can get the form data
 		const formData = await request.formData();
 		const amaId = formData.get('amaId') as string;
+		const amaTitle = formData.get('amaTitle') as string;
 		const comment = formData.get('comment') as string;
 
 		if (!comment) {
@@ -61,8 +63,30 @@ export const actions: Actions = {
 					}
 				} as Prisma.CommentCreateInput
 			})
-			.then(() => {
+			.then(async () => {
 				console.log('comment created');
+
+				// Send the email
+				await event
+					.fetch('/api/mail/new-comment', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+							'X-Auth-Token': EMAIL_AUTH_TOKEN
+						},
+
+						body: JSON.stringify({
+							amaId: amaId,
+							title: amaTitle,
+							comment: comment,
+							type: 'ama',
+							username: session?.user?.name as string
+						})
+					})
+					.then((res) => {
+						console.log(res);
+					});
+
 				return redirect(303, `/ama/${amaId}`);
 			})
 			.catch((err) => {
