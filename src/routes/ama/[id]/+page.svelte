@@ -31,7 +31,7 @@
 
 		<div class="flex flex-row items-center justify-between">
 			<div class="flow-row flex w-full items-center justify-between space-x-3">
-				<div class="flex flex-row gap-3 items-center">
+				<div class="flex flex-row items-center gap-3">
 					<img
 						src={data.ama?.user?.image}
 						alt={data.ama?.user?.name}
@@ -53,6 +53,7 @@
 			{#if $page.data.session && $page.data.session.user}
 				<form method="post" action="?/create" use:enhance>
 					<input type="hidden" name="amaId" id="amaId" value={data.ama?.id} />
+					<input type="hidden" name="amaTitle" id="amaTitle" value={data.ama?.question} />
 
 					<div
 						class="flex flex-col items-end justify-center space-x-0 space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3"
