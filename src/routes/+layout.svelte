@@ -8,6 +8,7 @@
 	import Modal from '$lib/components/model/Modal.svelte';
 	import { navigationState, showLoginModal } from '$lib/store/store';
 	import PageLoader from '$lib/components/loading/PageLoader.svelte';
+	import Footer from '$lib/components/footer/Footer.svelte';
 
 	$: if ($navigating) $navigationState = 'loading';
 	else $navigationState = 'loaded';
@@ -116,5 +117,7 @@
 		{/if}
 
 		<slot />
+
+		<Footer />
 	</div>
 </main>

@@ -18,7 +18,7 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<section class="flex h-screen flex-col gap-6">
+<section class="flex flex-col gap-6">
 	<h1
 		class="text-3xl leading-tight tracking-tight sm:text-4xl sm:leading-snug lg:text-4xl lg:leading-tight"
 	>
