@@ -86,8 +86,6 @@ export const actions: Actions = {
 					.then((res) => {
 						console.log(res);
 					});
-
-				return redirect(303, `/ama/${amaId}`);
 			})
 			.catch((err) => {
 				console.log(err);
