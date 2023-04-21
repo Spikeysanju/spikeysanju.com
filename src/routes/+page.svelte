@@ -6,43 +6,39 @@
 	const links = [
 		{
 			name: 'About',
-			href: '/about',
-			icon: 'about'
+			href: '/about'
 		},
 		{
 			name: 'Blogs',
-			href: '/blog',
-			icon: 'blog'
+			href: '/blog'
 		},
 		{
 			name: 'Projects',
-			href: '/projects',
-			icon: 'projects'
+			href: '/projects'
 		},
 		{
 			name: 'Books',
-			href: '/books',
-			icon: 'books'
+			href: '/books'
 		},
 		{
 			name: 'Photos',
-			href: '/photos',
-			icon: 'photos'
+			href: '/photos'
 		},
 		{
 			name: 'Tools',
-			href: '/tools',
-			icon: 'tools'
+			href: '/tools'
 		},
 		{
 			name: 'Ama',
-			href: '/ama',
-			icon: 'ama'
+			href: '/ama'
 		},
 		{
 			name: 'IRL',
-			href: '/irl',
-			icon: 'irl'
+			href: '/irl'
+		},
+		{
+			name: 'Links',
+			href: '/links'
 		}
 	] satisfies Links[];
 </script>
