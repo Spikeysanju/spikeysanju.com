@@ -34,10 +34,9 @@ Another aspect of the book that I enjoyed was Ravikant's emphasis on the importa
 
 <Quote
     		quote="Seek wealth, not money or status. Wealth is having assets that earn while you sleep. Money is how we transfer time and wealth. Status is your place in the social hierarchy."
-    		author="Naval Ravikant"
-    		bgColor="bg-gray-900"
-    		textColor="text-white"
-    		shadowColor="shadow-gray-900/20"
+    			author="Naval Ravikant"
+    		borderColor="border-gray-300"
+    		textColor="text-gray-900"
     	/>
 
 This is a great reminder that true wealth isn't just about having a lot of money or social status; it's about having the freedom to pursue your passions and live a fulfilling life.
@@ -47,10 +46,9 @@ This is a great reminder that true wealth isn't just about having a lot of money
 Finally, I appreciated Ravikant's advice on building a strong network and investing in relationships. As he says,
 <Quote
     		quote="The most important thing you can do to be successful is to be part of a great team."
-    		author="Naval Ravikant"
-    		bgColor="bg-gray-900"
-    		textColor="text-white"
-    		shadowColor="shadow-gray-900/20"
+    			author="Naval Ravikant"
+    		borderColor="border-gray-300"
+    		textColor="text-gray-900"
     	/>
 
 This is a valuable lesson for anyone who wants to succeed in business or in life, as it emphasizes the importance of collaboration and building strong relationships with others.
@@ -66,9 +64,8 @@ If you're looking for a book that's full of wisdom and insights on how to live a
 <Quote
     		quote="Choose yourself. Don't wait for someone else to pick you."
     		author="Naval Ravikant"
-    		bgColor="bg-gray-900"
-    		textColor="text-white"
-    		shadowColor="shadow-gray-900/20"
+    		borderColor="border-gray-300"
+    		textColor="text-gray-900"
     	/>
 
 This book will give you the tools and inspiration you need to take control of your life and achieve your goals.

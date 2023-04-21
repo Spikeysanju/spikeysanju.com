@@ -30,14 +30,15 @@
 		<p>{data.ama?.description}</p>
 
 		<div class="flex flex-row items-center justify-between">
-			<div class="flow-row flex items-center justify-center space-x-3">
-				<img
-					src={data.ama?.user?.image}
-					alt={data.ama?.user?.name}
-					class="h-12 w-12 rounded-full"
-				/>
-				<span class="font-medium text-black dark:text-white">{data.ama?.user?.name}</span>
-
+			<div class="flow-row flex w-full items-center justify-between space-x-3">
+				<div class="flex flex-row gap-3 items-center">
+					<img
+						src={data.ama?.user?.image}
+						alt={data.ama?.user?.name}
+						class="h-12 w-12 rounded-full"
+					/>
+					<span class="font-medium text-black dark:text-white">{data.ama?.user?.name}</span>
+				</div>
 				<div class="text-right">
 					<span class="text-gray-500"
 						>{formatDistance(new Date(`${data.ama?.createdAt}`), new Date())}</span

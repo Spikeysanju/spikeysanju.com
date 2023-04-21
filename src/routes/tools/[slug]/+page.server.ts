@@ -6,7 +6,7 @@ export const load = async ({ params }) => {
 	// parallel requests
 	const tools = await prisma.tools.findUnique({
 		where: {
-			id: params.id
+			slug: params.slug
 		},
 		include: {
 			user: true,

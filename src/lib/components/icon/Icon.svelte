@@ -1,7 +1,18 @@
 <script lang="ts">
+	type IconSize = 'small' | 'medium' | 'large' | number;
+	export let size: IconSize = 'medium';
 	export let name: string;
-	export let width: string;
-	export let height: string;
+	export let stroke: string = 'currentColor';
+	export let strokeWidth: number = 1.5;
+	export const className: string = '';
+
+	const defaultSize = 24;
+
+	const sizeMap = {
+		large: 24,
+		medium: 20,
+		small: 16
+	};
 
 	type Icon = {
 		box: number;
@@ -35,16 +46,22 @@
 		}
 	};
 
+	$: dimension = typeof size === 'number' ? size : sizeMap[size] || defaultSize;
+
 	// get icon by name from icons object
 	const icon = icons[name];
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <svg
-	class={$$props.class}
-	{width}
-	{height}
-	viewBox="0 0 {icon.box} {icon.box}"
+	class={className}
+	{stroke}
+	xmlns="http://www.w3.org/2000/svg"
 	fill="none"
-	stroke="currentColor"
+	viewBox="0 0 24 24"
+	stroke-width={strokeWidth}
+	width={dimension}
+	height={dimension}
+	on:click
 	>{@html icon.svg}
 </svg>

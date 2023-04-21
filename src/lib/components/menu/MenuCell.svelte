@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Icon from '../icon/Icon.svelte';
-
 	export let name = '';
 	export let href = '';
 	export let icon = '';
@@ -17,6 +16,6 @@
 	</a>
 
 	<div>
-		<Icon width="24" height="24" name={icon} />
+		<Icon size="medium" name={icon} />
 	</div>
 </div>

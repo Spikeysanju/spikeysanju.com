@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import AmaCard from '$lib/components/ama/AmaQuestionCard.svelte';
 	import { showLoginModal } from '$lib/store/store';
+	import { formatDistance } from 'date-fns';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -38,7 +39,7 @@
 				<AmaCard
 					question={item.question}
 					author="Sanju S"
-					timeago="5 min ago"
+					timeago={formatDistance(new Date(`${item?.createdAt}`), new Date())}
 					authorImage="https://github.com/spikeysanju.png?size=36"
 				/>
 			</a>

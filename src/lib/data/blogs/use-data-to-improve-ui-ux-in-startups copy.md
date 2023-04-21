@@ -1,6 +1,6 @@
 ---
-title: Who am I?
-date: '2023-12-14'
+title: Using Data to Improve UI/UX for Startups
+date: '2021-12-14'
 categories:
   - 'design'
 author: 'Spikey Sanju'
