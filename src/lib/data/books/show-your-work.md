@@ -35,7 +35,7 @@ Another aspect of "Show Your Work" that I enjoyed was the wide range of examples
 <Quote
     		quote="Share what you love, and the people who love the same things will find you."
     		author="Austin Kleon"
-    		bgColor="bg-yellow-300"
+    		borderColor="border-yellow-300"
     		textColor="text-gray-900"
     		shadowColor="shadow-yellow-300/20"
     	/>
@@ -46,7 +46,7 @@ I also appreciated Kleon's advice on dealing with the fear of others stealing yo
 <Quote
     		quote="Don’t worry about people stealing your ideas. If your ideas are any good, you’ll have to ram them down people’s throats."
     		author="Austin Kleon"
-    		bgColor="bg-yellow-300"
+    		borderColor="border-yellow-300"
     		textColor="text-gray-900"
     		shadowColor="shadow-yellow-300/20"
     	/>
@@ -64,7 +64,7 @@ Overall, I highly recommend "Show Your Work" to anyone who wants to build an onl
 <Quote
     		quote="Be open, generous, brave. Show your work, then show some more. Create a feedback loop and learn from the people who care about your stuff."
     		author="Austin Kleon"
-    		bgColor="bg-yellow-300"
+    		borderColor="border-yellow-300"
     		textColor="text-gray-900"
     		shadowColor="shadow-yellow-300/20"
     	/>

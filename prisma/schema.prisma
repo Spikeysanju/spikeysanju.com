@@ -65,6 +65,7 @@ model Ama {
   question    String
   description String
   flair       String
+  slug        String?    @unique
   userId      String?   @map("user_id")
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
   comment     Comment[]
@@ -80,6 +81,7 @@ model Tools {
   description String
   image       String
   link        String
+  slug        String?    @unique
   userId      String?   @map("user_id")
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
   comment     Comment[]
