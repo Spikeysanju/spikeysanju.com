@@ -12,9 +12,9 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div on:click={handleThemeSwitch}>
 		{#if $themeStore === 'light'}
-			<Icon name={'day'} width="24" height="24" />
+			<Icon name="day" size="medium" />
 		{:else}
-			<Icon name={'night'} width="24" height="24" />
+			<Icon name="night" size="medium" />
 		{/if}
 	</div>
 </nav>

@@ -37,7 +37,6 @@ Another aspect of "Show Your Work" that I enjoyed was the wide range of examples
     		author="Austin Kleon"
     		borderColor="border-yellow-300"
     		textColor="text-gray-900"
-    		shadowColor="shadow-yellow-300/20"
     	/>
 
 <br/>
@@ -48,7 +47,6 @@ I also appreciated Kleon's advice on dealing with the fear of others stealing yo
     		author="Austin Kleon"
     		borderColor="border-yellow-300"
     		textColor="text-gray-900"
-    		shadowColor="shadow-yellow-300/20"
     	/>
 
 This is a great reminder that the most important thing is to keep creating and sharing your work, regardless of what others may think or do.
@@ -66,6 +64,5 @@ Overall, I highly recommend "Show Your Work" to anyone who wants to build an onl
     		author="Austin Kleon"
     		borderColor="border-yellow-300"
     		textColor="text-gray-900"
-    		shadowColor="shadow-yellow-300/20"
     	/>
 <br/>

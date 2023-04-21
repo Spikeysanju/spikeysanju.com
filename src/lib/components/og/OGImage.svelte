@@ -37,7 +37,7 @@
 	<div class="flex w-full flex-row items-center justify-between space-x-12">
 		<div class="flex flex-col space-y-6">
 			<h6 class="mb-3">Sponsered by</h6>
-			<Icon width="24" height="24" name="sponsor" />
+			<Icon size="medium" name="sponsor" />
 		</div>
 
 		<h6 class="text-3xl">{author}</h6>

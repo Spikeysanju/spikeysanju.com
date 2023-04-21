@@ -42,7 +42,7 @@
 		</div>
 	{/if}
 
-	<div class="mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.40),1fr))] gap-6">
+	<div class="mt-6 grid w-full grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
 		{#each data.books as item}
 			<a href={`/books/${item.path}`}>
 				<BookCard title={item.meta.title} author={item.meta.author} image={item.meta.image} />
