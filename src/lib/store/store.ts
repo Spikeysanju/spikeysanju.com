@@ -13,4 +13,4 @@ type Theme = 'light' | 'dark';
 export const themeStore = writable<Theme>('light');
 
 // Show/hide login modal
-export const showLoginModal = writable<boolean>(true);
+export const showLoginModal = writable<boolean>(false);
