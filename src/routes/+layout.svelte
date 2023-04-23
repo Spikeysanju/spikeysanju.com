@@ -42,7 +42,6 @@
 	<meta name="theme-color" content="#ffffff" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="Spikey's Portfolio" />
 	<meta
 		name="keywords"
 		content="Spikey Sanju, Spikey, Sanju, Portfolio, UI UX Design, Android, THISUX HQ"

@@ -34,7 +34,7 @@
 	<meta name="twitter:site" content="@spikeysanju" />
 	<meta name="twitter:creator" content="@spikeysanju" />
 	<meta name="twitter:title" content={data.title} />
-	<meta name="twitter:description" content={data.slug} />
+	<meta name="twitter:description" content={data.excerpt} />
 	<meta
 		name="twitter:image"
 		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={data.title}"
