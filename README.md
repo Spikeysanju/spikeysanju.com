@@ -13,7 +13,7 @@ This is my personal portfolio website built with SvelteKit using a number of int
 - 🔒 **AuthJS:** Authentication library used for adding authentication.
 - 🎨 **TailwindCSS:** Utility-first CSS framework for styling.
 - 📝 **MDsvex:** Markdown preprocessor used for compiling markdown to HTML.
-- **SvelteMarkdown:** Markdown compiler for use with Svelte components.
+- 📄 **SvelteMarkdown:** Markdown compiler for use with Svelte components.
 - ⏰ **Date-fns:** Fast and lightweight library for manipulating dates.
 
 
