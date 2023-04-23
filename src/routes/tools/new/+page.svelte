@@ -9,6 +9,31 @@
 <svelte:head>
 	<title>New Tool | Spikey Sanju</title>
 	<meta name="description" content="Add a new tool to the list." />
+
+	<meta property="og:title" content="New Tool | Spikey Sanju" />
+	<meta property="og:description" content="Add a new tool to the list." />
+	<meta property="og:url" content="https://spikeysanju.github.io/tools/new" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://spikeysanju.github.io/tools/assets/images/og-image.png" />
+	<meta property="og:image:alt" content="Spikey Sanju" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:site_name" content="Spikey Sanju" />
+	<meta property="og:updated_time" content="2021-09-10T00:00:00+00:00" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@spikeysanju" />
+	<meta name="twitter:creator" content="@spikeysanju" />
+	<meta name="twitter:title" content="New Tool | Spikey Sanju" />
+	<meta name="twitter:description" content="Add a new tool to the list." />
+	<meta name="twitter:image" content="https://spikeysanju.github.io/tools/assets/images/og-image.png" />
+	<meta name="twitter:image:alt" content="Spikey Sanju" />
+	<meta name="twitter:image:width" content="1200" />
+	<meta name="twitter:image:height" content="630" />
+	<meta name="twitter:domain" content="Spikey Sanju" />
+
+
 </svelte:head>
 
 <section class="flex min-h-screen w-full flex-col items-center justify-start">

@@ -28,7 +28,7 @@
 >
 	<div
 		on:click|stopPropagation
-		class="flex w-full flex-col space-y-6"
+		class="flex w-full flex-col gap-3"
 		on:keydown|self={(e) => {
 			if (e.key === 'Enter') {
 				e.preventDefault();
@@ -36,25 +36,18 @@
 			}
 		}}
 	>
-		<h3>Welcome to Spikey's Portfolio</h3>
-		<div class="flex flex-col space-y-3">
+		<div class="flex flex-col gap-3">
+			<div class="text-2xl font-medium">Welcome to Spikey's Portfolio</div>
 			<p>
 				In order to interact with the portfolio like asking questions, you need to sign in with
 				GitHub.
 			</p>
 		</div>
 
-		<div class="flex w-full flex-col space-y-3">
-			<button
-				on:click={() => signIn()}
-				class="flex w-full items-center justify-center rounded-md bg-black px-2 py-2 font-medium text-white hover:bg-gray-900"
-				>Sign in with GitHub</button
-			>
-
-			<!-- <button
-				class="flex w-full items-center justify-center rounded-md border border-gray-300 bg-gray-100 px-2 py-2 text-black hover:bg-gray-200"
-				on:click={() => ($showLoginModal = false)}>Close modal</button
-			> -->
-		</div>
+		<button
+			on:click={() => signIn()}
+			class="flex w-full items-center justify-center rounded-md bg-black px-2 py-2 font-medium text-white hover:bg-gray-900"
+			>Sign in with GitHub</button
+		>
 	</div>
 </dialog>

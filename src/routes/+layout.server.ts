@@ -3,7 +3,7 @@ import type { LayoutServerLoad } from './$types';
 import type { Config } from '@sveltejs/adapter-vercel';
 
 export const config: Config = {
-	runtime: 'nodejs18.x'
+	runtime: 'edge'
 };
 
 export const load = (async (event) => {
@@ -29,6 +29,6 @@ export const load = (async (event) => {
 		ip: ip,
 		city: city,
 		country: country,
-		now: new Date().toISOString(),
+		now: new Date().toISOString()
 	};
 }) satisfies LayoutServerLoad;

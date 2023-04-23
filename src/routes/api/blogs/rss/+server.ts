@@ -3,7 +3,7 @@ import { fetchBlogsMarkdownPosts } from '$lib/utils/utils';
 import type { Config } from '@sveltejs/adapter-vercel';
 
 export const config: Config = {
-	runtime: 'nodejs18.x'
+	runtime: 'edge'
 };
 const siteURL = 'https://www.spikeysanju.com';
 const siteTitle = 'Spikey Sanju';

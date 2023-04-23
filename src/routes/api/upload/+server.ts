@@ -5,7 +5,7 @@ import type { RequestHandler } from './$types';
 import type { Config } from '@sveltejs/adapter-vercel';
 
 export const config: Config = {
-	runtime: 'nodejs18.x'
+	runtime: 'edge'
 };
 export const PUT = (async (event) => {
 	const { image, fileType } = await event.request.json();
