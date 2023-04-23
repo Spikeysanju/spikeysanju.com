@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Icon from '../icon/Icon.svelte';
-
+	import Icon from './../icon/Icon.svelte';
 	export let title = '';
 	export let content = '';
 	export let author = 'www.spikeysanju.com';
