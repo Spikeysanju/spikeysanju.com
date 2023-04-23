@@ -37,7 +37,7 @@
 	<meta name="twitter:description" content={data.slug} />
 	<meta
 		name="twitter:image"
-		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={data.title}"
+		content={`${PUBLIC_WEBSITE_URL}/api/og?message=${data.excerpt}&title=${data.title}`}
 	/>
 	<meta property="twitter:url" content="{PUBLIC_WEBSITE_URL}/blog/{data.slug}" />
 
