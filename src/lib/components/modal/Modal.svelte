@@ -39,8 +39,8 @@
 		<div class="flex flex-col gap-3">
 			<div class="text-2xl font-medium">Welcome to Spikey's Portfolio</div>
 			<p>
-				In order to interact with the portfolio like asking questions, you need to sign in with
-				GitHub.
+				You need to sign in to engage with the portfolio, including asking questions and commenting
+				on Ask Me Anything and tools.
 			</p>
 		</div>
 
