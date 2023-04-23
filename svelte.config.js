@@ -14,7 +14,7 @@ const pkg = JSON.parse(json);
 const config = {
 	kit: {
 		adapter: adapter({
-			runtime: 'edge'
+			runtime: 'nodejs18.x'
 		}),
 		version: {
 			name: pkg.version

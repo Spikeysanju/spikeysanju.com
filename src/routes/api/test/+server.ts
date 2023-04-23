@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import type { Config } from '@sveltejs/adapter-vercel';
 
 export const config: Config = {
-	runtime: 'edge'
+	runtime: 'nodejs18.x'
 };
 export const GET: RequestHandler = async () => {
 	const post = await fetchBlogPostBySlug('impact-of-user-flow-in-startup');
