@@ -26,7 +26,17 @@ I really enjoyed reading "Show Your Work" and found it to be a valuable resource
 
 <br/>
 
-One of the things I appreciated most about this book was Kleon's emphasis on the importance of sharing your process, not just your finished work. He encourages readers to document their work and share it on social media, blogs, or other platforms, in order to connect with others and build a following. As Kleon says, "Become a documentarian of what you do, and why you do it." I found this idea to be especially helpful, as it can be intimidating to share work that's not "perfect" or complete. By sharing your process, you can show others that creativity is a messy, iterative process that takes time and effort.
+One of the things I appreciated most about this book was Kleon's emphasis on the importance of sharing your process, not just your finished work. He encourages readers to document their work and share it on social media, blogs, or other platforms, in order to connect with others and build a following. As Kleon says,
+
+
+<Quote
+    		quote="Become a documentarian of what you do, and why you do it."
+    		author="Austin Kleon"
+    		borderColor="border-yellow-300"
+    		textColor="text-gray-900"
+    	/>
+
+I found this idea to be especially helpful, as it can be intimidating to share work that's not "perfect" or complete. By sharing your process, you can show others that creativity is a messy, iterative process that takes time and effort.
 
 <br/>
 
