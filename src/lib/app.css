@@ -32,7 +32,7 @@
 	}
 
 	p {
-		@apply text-lg font-normal leading-7;
+		@apply mb-6 text-lg font-normal leading-7;
 	}
 
 	body {
@@ -40,6 +40,7 @@
 
 		@apply bg-white text-gray-900 dark:bg-deeppurple dark:text-white;
 	}
+
 
 	@font-face {
 		font-family: 'Satoshi';
