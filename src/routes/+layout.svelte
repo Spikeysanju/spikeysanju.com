@@ -9,9 +9,6 @@
 	import { navigationState, showLoginModal } from '$lib/store/store';
 	import PageLoader from '$lib/components/loading/PageLoader.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
-	import { inject } from '@vercel/analytics';
-
-	inject({ mode: dev ? 'development' : 'production' });
 
 	$: if ($navigating) $navigationState = 'loading';
 	else $navigationState = 'loaded';
