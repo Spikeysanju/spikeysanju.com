@@ -1,5 +1,5 @@
 import type { Data } from '$lib/type/blog-metadata';
-import type { Ama, Tools } from '@prisma/client';
+import type { Ama, PeopleIWannaMeetIRL, Tools } from '@prisma/client';
 import { format } from 'date-fns';
 
 export const fetchBlogsMarkdownPosts = async () => {
@@ -139,7 +139,7 @@ export function generateSitemap<T extends Data>(url: string, route: string, post
   </urlset>`;
 }
 
-type SitemapData = Ama | Tools;
+type SitemapData = Ama | Tools | PeopleIWannaMeetIRL;
 
 export function generateSitemapForAma(url: string, route: string, posts: SitemapData[]) {
 	return `<?xml version="1.0" encoding="UTF-8" ?>

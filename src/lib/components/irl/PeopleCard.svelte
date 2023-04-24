@@ -3,15 +3,13 @@
 
 	export let name: string;
 	export let url: string;
-	export let image: string;
 	export let met: boolean;
 
 	export let tags: string[];
 </script>
 
-<div class="mt-6 flex w-full flex-col items-center justify-between space-y-3">
+<div class="mt-6 flex w-full flex-row items-center justify-between space-y-3">
 	<div class="flex w-full items-center justify-center space-x-3">
-		<img src={image} alt={name} class="aspect-square h-12 w-12" />
 		<div class="space-y flex w-full flex-col">
 			<h1
 				class={clsx(
@@ -30,7 +28,7 @@
 		<div class="flex flex-row gap-x-2">
 			{#each tags as tag}
 				<span
-					class="py rounded-xl bg-gray-50 px-2 text-xs font-bold capitalize tracking-wider text-gray-900"
+					class="py w-fit items-center rounded-xl bg-gray-50 px-2 text-center text-xs font-bold capitalize tracking-wider text-gray-900"
 					>{tag}</span
 				>
 			{/each}
