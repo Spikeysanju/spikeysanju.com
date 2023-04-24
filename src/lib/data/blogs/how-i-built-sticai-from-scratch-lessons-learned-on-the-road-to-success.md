@@ -6,7 +6,8 @@ categories:
   - 'development'
   - 'engineering'
 author: 'Spikey Sanju'
-image: 'https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+image: 'https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+excerpt: 'I'm here to share the behind-the-scenes process of building SticAI from scratch. Join me as I discuss my workflows, challenges faced, and how I made my first sale. Let's dive into the exciting journey of building a successful product!'
 ---
 
 <script lang="ts">
@@ -86,4 +87,3 @@ In the end, it's important to remember that your goal is to create the best prod
 
 With love,
 Spikey Sanju ♥️
-
