@@ -1,6 +1,4 @@
-import type { PageLoad } from './$types';
-
-export const load = (async ({ params }) => {
+export const load = async ({ params }) => {
 	const blog = await import(`../../../lib/data/blogs/${params.slug}.md`);
 
 	const { title, date, author, image, categories, excerpt } = blog.metadata;
@@ -16,4 +14,4 @@ export const load = (async ({ params }) => {
 		image: image,
 		categories: categories
 	};
-}) satisfies PageLoad;
+};

@@ -1,9 +1,8 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import { capitalizeFirstLetter } from '$lib/utils/utils';
 
-	export let data: PageData;
+	export let data;
 </script>
 
 <svelte:head>
@@ -16,6 +15,7 @@
 		property="og:image"
 		content="{PUBLIC_WEBSITE_URL}/api/og?message={data.excerpt}&title={data.title}"
 	/>
+
 	<meta property="og:description" content={data.excerpt} />
 	<meta property="og:url" content="{PUBLIC_WEBSITE_URL}/blog/{data.slug}" />
 
