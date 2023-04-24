@@ -1,16 +1,23 @@
 <script lang="ts">
+	import { clsx } from '$lib/utils/clsx';
+	import { getRandomTailwindBgColor } from '$lib/utils/utils';
 	import Icon from './../icon/Icon.svelte';
 	export let title = '';
 	export let content = '';
 	export let author = 'www.spikeysanju.com';
 </script>
 
-<div class="flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6 bg-white p-12">
+<div
+	class={clsx(
+		'flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6  p-12',
+		getRandomTailwindBgColor()
+	)}
+>
 	<div id="content" class="flex flex-col space-y-3">
 		{#if title.length !== 0}
 			<h1
 				id="title"
-				class="flex flex-col whitespace-pre-line bg-yellow-100 text-5xl text-yellow-800 underline-offset-auto"
+				class="flex flex-col whitespace-pre-line bg-yellow-100 text-5xl font-bold text-gray-900 underline-offset-auto"
 			>
 				{#if title.length > 40}
 					{#each title.split('\n') as line}
@@ -22,7 +29,7 @@
 			</h1>
 		{/if}
 
-		<h1 id="description" class="flex w-full flex-col text-5xl">
+		<h1 id="description" class="flex w-full flex-col text-5xl text-gray-900">
 			{#if content.length > 50}
 				{#each content.split('\n') as line}
 					<div>{line}</div>
