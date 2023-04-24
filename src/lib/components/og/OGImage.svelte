@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { clsx } from '$lib/utils/clsx';
-	import { getRandomTailwindBgColor } from '$lib/utils/utils';
 	import Icon from './../icon/Icon.svelte';
 	export let title = '';
 	export let content = '';
@@ -8,10 +7,7 @@
 </script>
 
 <div
-	class={clsx(
-		'flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6  p-12',
-		getRandomTailwindBgColor()
-	)}
+	class="flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6  bg-white p-12"
 >
 	<div id="content" class="flex flex-col space-y-3">
 		{#if title.length !== 0}
