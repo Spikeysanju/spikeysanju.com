@@ -27,7 +27,7 @@ If you want to run this project locally, follow these steps:
 ### Installation
 1. Clone the repository
 ```
-git clone https://github.com/spikeysanju/spikeysanju.com
+https://github.com/Spikeysanju/spikeysanju.com.git
 ```
 2. Navigate to the project directory
 ```
