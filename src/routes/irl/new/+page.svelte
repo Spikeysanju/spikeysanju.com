@@ -54,6 +54,40 @@
 			<option>Craft</option>
 			<option>Design Engineer</option>
 			<option>Indie Hacker</option>
+			<option>Developer</option>
+			<option>Entrepreneur</option>
+			<option>Product Manager</option>
+			<option>Product Designer</option>
+			<option>Writer</option>
+			<option>Speaker</option>
+			<option>Podcaster</option>
+			<option>Youtuber</option>
+			<option>Photographer</option>
+			<option>Artist</option>
+			<option>Musician</option>
+			<option>Illustrator</option>
+			<option>Animator</option>
+			<option>Designer</option>
+			<option>Engineer</option>
+			<option>Architect</option>
+			<option>Developer</option>
+			<option>Programmer</option>
+			<option>Student</option>
+			<option>Teacher</option>
+			<option>Researcher</option>
+			<option>Scientist</option>
+			<option>Doctor</option>
+			<option>Lawyer</option>
+			<option>Politician</option>
+			<option>Journalist</option>
+			<option>Activist</option>
+			<option>Philosopher</option>
+			<option>Psychologist</option>
+			<option>Therapist</option>
+			<option>Coach</option>
+			<option>Trainer</option>
+			<option>Consultant</option>
+			<option>Advisor</option>
 		</select>
 
 		<button
