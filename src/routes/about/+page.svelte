@@ -5,9 +5,8 @@
 	import Quote from '$lib/components/quote/Quote.svelte';
 	import type { PageData } from './$types';
 	import SvelteMarkdown from 'svelte-markdown';
-	import Markdown from 'svelte-exmarkdown';
 
-	export let data: PageData;
+	export let data;
 </script>
 
 <svelte:head>
