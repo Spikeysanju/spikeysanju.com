@@ -18,6 +18,7 @@
 	/>
 	<meta property="og:description" content={data.excerpt} />
 	<meta property="og:url" content="{PUBLIC_WEBSITE_URL}/blog/{data.slug}" />
+
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="Spikey Sanju" />
 	<meta property="og:locale" content="en_UK" />
