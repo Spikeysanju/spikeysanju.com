@@ -12,11 +12,14 @@ excerpt: 'Im here to share the behind-the-scenes process of building SticAI from
 
 <script lang="ts">
 	import Quote from '$lib/components/quote/Quote.svelte';
+	import { Tweet } from 'sveltekit-embed';
 </script>
 
 ### How I Followed My Passion and Created SticAI from Scratch
 
 Last year, I took a huge leap of faith and decided to quit my job so I could build my own design agency. Being someone with ADHD, I have always been obsessed with technology and design. To me, these passions are not just a hobby, but a way to solve problems and make a difference.
+
+<Tweet tweetLink="https://twitter.com/spikeysanju/status/1650378096036413440?ref_src=twsrc%5Etfw" />
 
 ### My Journey to Efficiency: How Self-Built Tools Transformed My Workflow
 
@@ -50,6 +53,8 @@ One of the great things about SticAI is its smart navigation between prompt plac
 
 When I launched my app on Twitter and LinkedIn, I was thrilled to find that I had made 3 sales from random internet users on the first day. It was truly one of the happiest moments of my life.
 
+<Tweet tweetLink="https://twitter.com/spikeysanju/status/1646354586138038273?s=20" />
+
 I had already been running my own design agency successfully for almost a year prior to this, but that first $19 from a stranger was particularly special to me. It was a feeling of validation that made all the hard work worth it.
 
 However, I ran into an issue when I reached out to my first customer personally. They reported that something wasn't working for them and it was related to a Vercel function throwing a timeout error, which was not supposed to happen. In order to correct the problem, I scheduled a meeting with the customer and made some changes to the app. I then messaged them indicating the fix and they confirmed that everything was working as expected. To my delight, I gained 4 customers on that very 1st day!
@@ -58,11 +63,19 @@ However, I ran into an issue when I reached out to my first customer personally.
 
 On day three, I released my collection of ChatGPT prompts called **[SticAI – Prompts](https://www.sticai.com/prompts)**, which included more than 1000 prompts across 60+ categories, on SticAI Prompts. I shared it on Twitter, LinkedIn, and Reddit before going to bed, completely exhausted from working on the app for the entire week.
 
-When I woke up, what I found was truly amazing. People had shown their love and support, and I received a huge amount of responses and website visits. By the end of the day, my customer base had grown from 4 to 14, and I couldn't have been happier. This had been the moment I had been waiting for, for so many years.
+<Tweet tweetLink="https://twitter.com/spikeysanju/status/1647588665088983041?s=20" />
+
+When I woke up, what I found was truly amazing. People had shown their love and support, and I received a huge amount of responses and website visits.
+
+<Tweet tweetLink="https://twitter.com/spikeysanju/status/1648377173340983296?s=20" />
+
+By the end of the day, my customer base had grown from 4 to 14, and I couldn't have been happier. This had been the moment I had been waiting for, for so many years.
 
 ### SticChat: My Solution for a Smarter ChatGPT Experience
 
 I then introduced SticChat, which had a ChatGPT-style UI, but with SticAI's features included. Within just 8 days of launching, I had already gained 20 customers for SticAI, which was pretty impressive.
+
+<Tweet tweetLink="https://twitter.com/spikeysanju/status/1648708095441264641?s=20" />
 
 But the features of SticAI are just the proverbial tip of the iceberg. I have a lot of interesting milestones and features in development that I can't wait to share with everyone. I hope that this beautiful journey of mine with SticAI continues and that it takes me to new heights.
 
@@ -87,4 +100,3 @@ In the end, it's important to remember that your goal is to create the best prod
 
 With love,
 Spikey Sanju ♥️
-
