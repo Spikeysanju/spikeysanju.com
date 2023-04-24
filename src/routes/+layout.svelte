@@ -25,8 +25,6 @@
 	>
 	</script>
 
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 	<!--Chrome, Firefox OS & Opera -->
 	<meta name="theme-color" content="#000000" />
 	<!--Windows Phone -->

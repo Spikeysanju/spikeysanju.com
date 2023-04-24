@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { Tweet, Spotify } from 'sveltekit-embed';
-
 	import { PUBLIC_WEBSITE_URL } from '$env/static/public';
 	import MenuCell from '$lib/components/menu/MenuCell.svelte';
 	import type { Links } from '$lib/type/links';
