@@ -1,1 +1,0 @@
-function n(e,t,i){const a=new FileReader;a.readAsDataURL(e),a.onload=s=>{if(s.target!=null){const r=s.target.result;e.type.startsWith("image/")&&e.size<5*1024*1024||e.type.startsWith("video/")&&e.size<100*1024*1024?t(r,e.type):i("Please select a file with a valid type and size")}}}function d(e){return e.charAt(0).toUpperCase()+e.slice(1)}export{d as c,n as s};
