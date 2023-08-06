@@ -16,19 +16,19 @@
 	}
 
 	h3 {
-		@apply mt-6 mb-3 text-2xl font-medium leading-snug tracking-tight;
+		@apply mb-3 mt-6 text-2xl font-medium leading-snug tracking-tight;
 	}
 
 	h4 {
-		@apply mt-6 mb-3  text-2xl font-medium leading-snug tracking-tight;
+		@apply mb-3 mt-6  text-2xl font-medium leading-snug tracking-tight;
 	}
 
 	h5 {
-		@apply mt-6 mb-3 text-xl font-medium leading-snug tracking-tight;
+		@apply mb-3 mt-6 text-xl font-medium leading-snug tracking-tight;
 	}
 
 	h6 {
-		@apply mt-6 mb-3 text-lg font-medium leading-snug tracking-tight;
+		@apply mb-3 mt-6 text-lg font-medium leading-snug tracking-tight;
 	}
 
 	p {
@@ -40,7 +40,6 @@
 
 		@apply bg-white text-gray-900 dark:bg-deeppurple dark:text-white;
 	}
-
 
 	@font-face {
 		font-family: 'Satoshi';

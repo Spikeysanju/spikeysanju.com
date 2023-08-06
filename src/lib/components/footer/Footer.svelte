@@ -1,5 +1,5 @@
 <footer>
-	<div class="mx-auto max-w-7xl py-8 md:flex  md:items-center md:justify-between">
+	<div class="mx-auto max-w-7xl py-8 md:flex md:items-center md:justify-between">
 		<div class="flex justify-center space-x-6 md:order-2">
 			<a href="https://www.github.com/spikeysanju" class="text-gray-400 hover:text-gray-500">
 				<span class="sr-only">GitHub</span>

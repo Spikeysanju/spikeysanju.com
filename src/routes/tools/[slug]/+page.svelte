@@ -51,7 +51,7 @@
 				<input type="hidden" name="toolId" id="toolId" value={data.tools?.id} />
 
 				<div
-					class="flex flex-col items-end justify-center space-x-0 space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3"
+					class="flex flex-col items-end justify-center space-x-0 space-y-3 sm:flex-row sm:space-x-3 sm:space-y-0"
 				>
 					<textarea
 						name="comment"
@@ -65,7 +65,7 @@
 
 					<button
 						type="submit"
-						class="w-full rounded bg-black py-3 px-4 font-bold text-white shadow-lg hover:bg-gray-900 sm:w-auto sm:flex-auto"
+						class="w-full rounded bg-black px-4 py-3 font-bold text-white shadow-lg hover:bg-gray-900 sm:w-auto sm:flex-auto"
 					>
 						Submit
 					</button>

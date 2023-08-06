@@ -11,7 +11,7 @@
 	<meta name="description" content="Tools I use on my day to day life." />
 </svelte:head>
 
-<section class="flex min-h-screen w-full flex-col items-center justify-start mb-3">
+<section class="mb-3 flex min-h-screen w-full flex-col items-center justify-start">
 	<h1 class="flex w-full items-center justify-start">Tools.</h1>
 	<p class="flex w-full text-gray-500 dark:text-gray-400">
 		Here is my list of tools i use on my day to day life.
@@ -27,7 +27,7 @@
 	{/if}
 
 	<div
-		class="mt-6 mb-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.24),1fr))] gap-12"
+		class="mb-6 mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.24),1fr))] gap-12"
 	>
 		{#each data.tools as item}
 			<a href={`/tools/${item.slug}`}>

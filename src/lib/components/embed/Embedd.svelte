@@ -4,6 +4,6 @@
 </script>
 
 <span class="flex w-full flex-col">
-	<Tweet tweetLink={tweetLink} />
+	<Tweet {tweetLink} />
 	<Spotify spotifyLink="show/4XPl3uEEL9hvqMkoZrzbx5" />
 </span>

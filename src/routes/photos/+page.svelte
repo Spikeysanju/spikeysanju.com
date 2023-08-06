@@ -41,7 +41,7 @@
 	</div> -->
 
 	<div
-		class="mt-6 mb-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.60),1fr))] gap-6"
+		class="mb-6 mt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(theme(width.60),1fr))] gap-6"
 	>
 		{#each data.photos as item}
 			<a
