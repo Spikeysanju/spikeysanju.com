@@ -14,10 +14,7 @@
 	<meta property="og:description" content="Add a new tool to the list." />
 	<meta property="og:url" content="https://spikeysanju.github.io/tools/new" />
 	<meta property="og:type" content="website" />
-	<meta
-		property="og:image"
-		content="https://spikeysanju.github.io/tools/assets/images/og-image.png"
-	/>
+	<meta property="og:image" content="https://spikeysanju.github.io/tools/assets/images/og-image.png" />
 	<meta property="og:image:alt" content="Spikey Sanju" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -30,14 +27,13 @@
 	<meta name="twitter:creator" content="@spikeysanju" />
 	<meta name="twitter:title" content="New Tool | Spikey Sanju" />
 	<meta name="twitter:description" content="Add a new tool to the list." />
-	<meta
-		name="twitter:image"
-		content="https://spikeysanju.github.io/tools/assets/images/og-image.png"
-	/>
+	<meta name="twitter:image" content="https://spikeysanju.github.io/tools/assets/images/og-image.png" />
 	<meta name="twitter:image:alt" content="Spikey Sanju" />
 	<meta name="twitter:image:width" content="1200" />
 	<meta name="twitter:image:height" content="630" />
 	<meta name="twitter:domain" content="Spikey Sanju" />
+
+
 </svelte:head>
 
 <section class="flex min-h-screen w-full flex-col items-center justify-start">
@@ -99,7 +95,7 @@
 
 		<button
 			type="submit"
-			class="text-md w-full items-center rounded-md border border-transparent bg-black px-4 py-2 font-bold text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 dark:bg-white dark:text-black dark:hover:bg-white/80 dark:focus:ring-white"
+			class="text-md w-full items-center rounded-md border border-transparent bg-black px-4 py-2 font-bold text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2  dark:bg-white dark:text-black dark:hover:bg-white/80 dark:focus:ring-white"
 			>Add Tool</button
 		>
 	</form>

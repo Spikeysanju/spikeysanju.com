@@ -6,7 +6,9 @@
 	export let author = 'www.spikeysanju.com';
 </script>
 
-<div class="flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6 bg-white p-12">
+<div
+	class="flex h-[630px] w-[1200px] flex-col items-start justify-between space-y-6  bg-white p-12"
+>
 	<div id="content" class="flex flex-col space-y-3">
 		{#if title.length !== 0}
 			<h1

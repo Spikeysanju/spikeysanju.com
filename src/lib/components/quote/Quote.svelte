@@ -18,7 +18,7 @@
 <div
 	class={`relative flex w-full flex-col space-y-3 border-l-4 ${borderColor} p-6  ${textColor} dark:text-white`}
 >
-	<h1 class="absolute left-6 top-3 text-3xl font-bold">"</h1>
+	<h1 class="absolute top-3 left-6 text-3xl font-bold">"</h1>
 	<div class="text-2xl leading-relaxed tracking-tight sm:text-3xl">{quote}</div>
 	<p>– {author}</p>
 </div>

@@ -24,7 +24,7 @@
 			dialog.close();
 		}
 	}}
-	class="shadow-3xl z-10 w-full max-w-xl items-center justify-center rounded-lg border border-gray-200 backdrop:bg-white/20 backdrop:backdrop-blur-sm open:scale-100 open:transition-transform open:duration-300 open:ease-out"
+	class="shadow-3xl z-10 w-full max-w-xl items-center justify-center rounded-lg border border-gray-200 backdrop:bg-white/20 backdrop:backdrop-blur-sm  open:scale-100 open:transition-transform open:duration-300 open:ease-out"
 >
 	<div
 		on:click|stopPropagation
