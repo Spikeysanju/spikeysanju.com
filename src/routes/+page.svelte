@@ -32,10 +32,6 @@
 			name: 'Ama',
 			href: '/ama'
 		},
-		// {
-		// 	name: 'IRL',
-		// 	href: '/irl'
-		// },
 		{
 			name: 'Links',
 			href: '/links'
