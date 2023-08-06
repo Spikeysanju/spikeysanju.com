@@ -16,28 +16,36 @@ This is my personal portfolio website built with SvelteKit using a number of int
 - 📄 **SvelteMarkdown:** Markdown compiler for use with Svelte components.
 - ⏰ **Date-fns:** Fast and lightweight library for manipulating dates.
 
-
 ## Getting Started
 
 If you want to run this project locally, follow these steps:
 
 ### Prerequisites
+
 - Node.js (version >= 16.0.0)
 
 ### Installation
+
 1. Clone the repository
+
 ```
 https://github.com/Spikeysanju/spikeysanju.com.git
 ```
+
 2. Navigate to the project directory
+
 ```
 cd repo
 ```
+
 3. Install dependencies
+
 ```
 npm install
 ```
+
 4. Create environment variables file in root directory with following variables:
+
 ```
 # DATABASE CONFIG
 DATABASE_URL="postgresql://acme:password@localhost:5432/acme"
@@ -66,20 +74,24 @@ EMAIL_URL="your email workers url"
 AUTHOR_NAME="Acme"
 
 ```
+
 5. Run the development server
+
 ```
 npm run dev
 ```
 
 ## Contributions
+
 Contributions to this project are welcome. If you find any bugs or want to add new features, feel free to create an issue or submit a pull request.
 
 ## License
+
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-   http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
