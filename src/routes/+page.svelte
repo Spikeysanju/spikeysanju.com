@@ -53,10 +53,10 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<section class="flex min-h-screen flex-col items-center justify-center space-y-8">
+<section class="flex min-h-screen flex-col items-center justify-start space-y-8 py-6">
 	<div class="flex w-full max-w-6xl flex-col items-center justify-center space-y-8">
 		<h1
-			class="text-3xl leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
+			class="w-full text-start text-[min(8vw,50px)] font-medium tracking-tighter text-gray-900 dark:text-white"
 		>
 			Hi i'm Spikey Sanju, Designer & Engineer, Founder of <a
 				href="https://www.thisux.com"

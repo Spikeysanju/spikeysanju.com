@@ -9,6 +9,10 @@
 	import { navigationState, showLoginModal } from '$lib/store/store';
 	import PageLoader from '$lib/components/loading/PageLoader.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
+	import { MENU } from '$lib/data/static/static.js';
+	import { clsx } from '$lib/utils/clsx.js';
+
+	$: path = $page.url.pathname;
 
 	$: if ($navigating) $navigationState = 'loading';
 	else $navigationState = 'loaded';
@@ -87,6 +91,52 @@
 			<p id="lastvisit" class=" text-gray-500 dark:text-gray-400">
 				Last visit is from: {data.city}, {data.country}
 			</p>
+		{/if}
+
+		{#if path !== '/'}
+			<div class="flex w-full items-center justify-center">
+				<nav class="hidden w-full md:block">
+					<ul
+						class="my-5 flex w-full flex-wrap items-center justify-center gap-3 rounded-full bg-white px-2 text-sm font-normal shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 dark:bg-gray-800/90 dark:ring-white/10"
+					>
+						{#each MENU as item}
+							<li>
+								<a
+									class={clsx(
+										'plain relative block p-2 px-3 text-sm font-medium transition hover:text-gray-500 dark:hover:text-gray-400',
+										path === item.route
+											? 'font-bold text-gray-900 dark:text-gray-300'
+											: 'text-gray-500 dark:text-gray-400'
+									)}
+									href={item.route}>{item.title}</a
+								>
+							</li>
+						{/each}
+					</ul>
+				</nav>
+
+				<nav
+					class="fixed bottom-0 m-5 flex w-full flex-wrap items-center justify-center gap-3 rounded-full bg-white px-2 text-sm font-normal shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 dark:bg-gray-800/90 dark:ring-white/10 md:hidden"
+				>
+					<div class="overflow-x-auto">
+						<ul class="ml-6 mr-6 flex w-full items-start justify-center space-x-3">
+							{#each MENU as item}
+								<li class="w-full items-start justify-center py-3">
+									<a
+										class={clsx(
+											'p-3 text-sm font-medium transition hover:text-gray-500 dark:hover:text-gray-400',
+											path === item.route
+												? 'font-bold text-gray-900 dark:text-gray-300'
+												: 'text-gray-500 dark:text-gray-400'
+										)}
+										href={item.route}>{item.title}</a
+									>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				</nav>
+			</div>
 		{/if}
 
 		<Header />
